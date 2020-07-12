@@ -1,0 +1,5 @@
+document.body.innerHTML += ('<div id="preloader-body"><div class="loader"> <div class = "text" > Loading... < /div> <div class = "horizontal" ><div class = "circlesup" ><div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> < /div > <div class = "circlesdwn" ><div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> < /div > </div> <div class = "vertical" ><div class = "circlesup" ><div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> < /div > <div class = "circlesdwn" ><div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > < /div> <div class = "circle" > </div> </div> </div> </div> </div> ');
+window.onload = function () {
+    // document.getElementsByClassName("loader").style.display = "none";
+    document.getElementById('preloader-body').style.display = "none";
+}
