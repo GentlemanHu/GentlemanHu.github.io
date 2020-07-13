@@ -4325,7 +4325,7 @@ img {
   background-color: #ff7242;
 }
 #vcomment textarea {
-  background: url("https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io/img/comment_bg.png") 100% 100% no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@latest/img/comment_bg.png") 100% 100% no-repeat;
   color: #fff;
 }
 #vcomment .vimg {
