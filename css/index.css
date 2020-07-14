@@ -4322,7 +4322,7 @@ img {
   background-color: #ff7242;
 }
 #vcomment textarea {
-  background: url("/img/comment_bg.png") 100% 100% no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@bb98e28/img/comment_bg.png") 100% 100% no-repeat;
   color: #fff;
 }
 #vcomment .vimg {
