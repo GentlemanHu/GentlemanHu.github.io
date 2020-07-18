@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-07-15T04:30:41.201Z</updated>
+  <updated>2020-07-18T09:43:15.506Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <link href="http://crushing.xyz/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/"/>
+    <id>http://crushing.xyz/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</id>
+    <published>2020-07-18T09:22:54.000Z</published>
+    <updated>2020-07-18T09:43:15.506Z</updated>
+    
+    <summary type="html">
+    
+      我的GitHub,我的祖传代码
+    
+    </summary>
+    
+    
+      <category term="日常杂记" scheme="http://crushing.xyz/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="随手记" scheme="http://crushing.xyz/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    
+      <category term="GitHub" scheme="http://crushing.xyz/tags/GitHub/"/>
+    
+      <category term="祖传代码" scheme="http://crushing.xyz/tags/%E7%A5%96%E4%BC%A0%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>backdrop-filter毛玻璃效果</title>
