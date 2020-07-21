@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-07-18T09:43:15.506Z</updated>
+  <updated>2020-07-21T13:56:36.272Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git submodule git子模块闲搞</title>
+    <link href="http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/"/>
+    <id>http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</id>
+    <published>2020-07-21T10:58:35.000Z</published>
+    <updated>2020-07-21T13:56:36.272Z</updated>
+    
+    <summary type="html">
+    
+      git submodule一些折腾
+    
+    </summary>
+    
+    
+      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="GitHub" scheme="http://crushing.xyz/tags/GitHub/"/>
+    
+      <category term="Git" scheme="http://crushing.xyz/tags/Git/"/>
+    
+      <category term="博客" scheme="http://crushing.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Git submodule" scheme="http://crushing.xyz/tags/Git-submodule/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub Archive Program,我的祖传代码</title>
@@ -78,7 +105,7 @@
         
         
           
-        &lt;div id=&quot;aplayer-ewFAxoUU&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
+        &lt;div id=&quot;aplayer-HnKFNntl&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
             &lt;pre
         
       
@@ -89,11 +116,11 @@
       <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
     
     
+      <category term="随手记" scheme="http://crushing.xyz/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    
       <category term="Java" scheme="http://crushing.xyz/tags/Java/"/>
     
       <category term="编程日常" scheme="http://crushing.xyz/tags/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="随手记" scheme="http://crushing.xyz/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
