@@ -1946,8 +1946,8 @@ blockquote footer cite:before {
 #aside_content .card-widget {
   overflow: hidden;
   border-radius: 8px;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+  backdrop-filter: blur(20px) saturate(150%) !important;
   -webkit-box-shadow: 0 7px 12px 9px rgba(7,17,27,0.06);
   box-shadow: 0 7px 12px 9px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
@@ -2639,8 +2639,8 @@ _:future,
   position: fixed;
   top: -60px;
   z-index: 91;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
   -webkit-box-shadow: 0 10px 9px -10px rgba(0,0,0,0.9);
   box-shadow: 0 10px 9px -10px rgba(0,0,0,0.9);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -2674,8 +2674,8 @@ _:future,
 }
 #nav.visible .menus_item_child {
   background-color: transparent;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
 }
 #nav #site-name {
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
@@ -2738,8 +2738,8 @@ _:future,
   margin-top: 8px;
   padding: 0;
   width: max-content;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
   -webkit-box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
   box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
   -webkit-animation: sub_menus 0.3s 0.1s ease both;
@@ -2830,8 +2830,9 @@ _:future,
   display: none;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: blur(25px) saturate(120%) !important;
+  backdrop-filter: blur(25px) saturate(120%) !important;
 }
 #mobile-sidebar #mobile-sidebar-menus {
   position: fixed;
@@ -2842,8 +2843,8 @@ _:future,
   overflow-y: auto;
   width: 250px;
   height: 100%;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -2984,8 +2985,8 @@ _:future,
   padding: 0;
   height: 280px;
   border-radius: 8px;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
@@ -3136,8 +3137,8 @@ _:future,
   padding: 50px 40px;
   border-radius: 8px;
   background-color: transparent;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+  backdrop-filter: blur(20px) saturate(150%) !important;
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
@@ -3426,8 +3427,8 @@ _:future,
 }
 #archive {
   background-color: transparent;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+  backdrop-filter: blur(20px) saturate(150%) !important;
 }
 #pagination {
   overflow: hidden;
@@ -4019,7 +4020,7 @@ img {
   margin: 0;
   padding: 1rem 0.5rem;
   border-radius: 4px;
-  background: #f5f5f5;
+  background: #ff9a8b;
 }
 .post-reward .reward-button .reward-main .reward-all:before {
   position: absolute;
@@ -4266,11 +4267,13 @@ img {
   padding: 1rem 0 2rem 0.5rem;
   width: 300px;
   height: 100%;
-  background-color: transparent;
-  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-  backdrop-filter: blur(25px) saturate(180%) !important;
-  -webkit-box-shadow: -0.25rem 0 0.25rem rgba(246,248,250,0.6) inset;
-  box-shadow: -0.25rem 0 0.25rem rgba(246,248,250,0.6) inset;
+  background-image: -webkit-linear-gradient(320deg, #9095b1 0%, #7eb9ad 46%, #ffcc70 100%);
+  background-image: -moz-linear-gradient(320deg, #9095b1 0%, #7eb9ad 46%, #ffcc70 100%);
+  background-image: -o-linear-gradient(320deg, #9095b1 0%, #7eb9ad 46%, #ffcc70 100%);
+  background-image: -ms-linear-gradient(320deg, #9095b1 0%, #7eb9ad 46%, #ffcc70 100%);
+  background-image: linear-gradient(130deg, #9095b1 0%, #7eb9ad 46%, #ffcc70 100%);
+  -webkit-box-shadow: -0.25rem 0 0.25rem rgba(126,185,173,0.6) inset;
+  box-shadow: -0.25rem 0 0.25rem rgba(126,185,173,0.6) inset;
   opacity: 0.9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
@@ -4293,8 +4296,12 @@ img {
   padding-bottom: 5rem;
   height: 90vh;
 }
+#sidebar .sidebar-toc .toc-text {
+  color: #3cf5cb;
+}
 #sidebar .sidebar-toc .toc-link {
   display: block;
+  color: #3cf5cb;
   padding-left: 0.2rem;
   border-right: 3px solid transparent;
   -webkit-transition: all 0.2s ease-in-out;
@@ -4334,6 +4341,9 @@ img {
     right: -250px;
     left: auto;
     z-index: 103;
+    background: transparent !important;
+    -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+    backdrop-filter: blur(10px) saturate(150%) !important;
     width: 250px;
     opacity: 1;
     -ms-filter: none;
@@ -5106,7 +5116,7 @@ blockquote.pullquote.right {
   }
 }
 [data-theme='dark'] body {
-  background-color: #0d0d0d;
+  background-color: #0d0d0d !important;
   color: rgba(255,255,255,0.6);
 }
 [data-theme='dark'] ::-webkit-scrollbar-thumb {
@@ -5404,7 +5414,7 @@ blockquote.pullquote.right {
   color: rgba(255,255,255,0.6);
 }
 [data-theme='light'] .read-mode {
-  background: #d8cba2;
+  background: #d8cba2 !important !important;
 }
 [data-theme='light'] .read-mode #page-header.post-bg a {
   color: #f5f5f5 !important;
@@ -5428,11 +5438,11 @@ blockquote.pullquote.right {
 }
 [data-theme='light'] .read-mode #article-container blockquote {
   border-left: 0.2rem solid #ddd;
-  background-color: #d8cba2;
+  background-color: #d8cba2 !important;
 }
 [data-theme='light'] .read-mode #article-container ol:before,
 [data-theme='light'] .read-mode #article-container li:before {
-  background: #d8cba2;
+  background: #d8cba2 !important;
   color: #4c4948;
 }
 [data-theme='light'] .read-mode #article-container ul >li:before {
@@ -5440,7 +5450,7 @@ blockquote.pullquote.right {
 }
 [data-theme='light'] .read-mode #article-container hr {
   border: 2px dashed #d6dbdf;
-  background: #d8cba2;
+  background: #d8cba2 !important;
 }
 [data-theme='light'] .read-mode #article-container hr:before {
   color: #b9c2c9;
@@ -5450,14 +5460,14 @@ blockquote.pullquote.right {
 }
 [data-theme='light'] .read-mode #article-container .hide-button,
 [data-theme='light'] .read-mode #article-container .btn-beautify {
-  background: #d8cba2 !important;
+  background: #d8cba2 !important !important;
   color: #4c4948 !important;
 }
 [data-theme='light'] .read-mode #article-container .btn-beautify {
   border: 1px solid #b9c2c9;
 }
 [data-theme='light'] .read-mode #article-container .btn-beautify.button--animated:before {
-  background: #d8cba2;
+  background: #d8cba2 !important;
 }
 [data-theme='light'] .read-mode #article-container .hide-inline >.hide-button,
 [data-theme='light'] .read-mode #article-container .hide-block >.hide-button {
@@ -5465,11 +5475,11 @@ blockquote.pullquote.right {
 }
 [data-theme='light'] .read-mode #article-container .hide-inline > .button--animated:before,
 [data-theme='light'] .read-mode #article-container .hide-block > .button--animated:before {
-  background: #d8cba2;
+  background: #d8cba2 !important;
 }
 [data-theme='light'] .read-mode #article-container .note {
   border: 2px solid #eee;
-  background-color: #d8cba2;
+  background-color: #d8cba2 !important;
 }
 [data-theme='light'] .read-mode #article-container .tabs {
   border: 1px solid #b9c2c9;
@@ -5582,7 +5592,7 @@ blockquote.pullquote.right {
   display: none !important;
 }
 .read-mode #web_bg {
-  background: none;
+  background: #d8cba2;
 }
 .read-mode #article-container h1,
 .read-mode #article-container h2,
