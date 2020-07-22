@@ -3,13 +3,13 @@
   <entry>
     <title>GitHub Archive Program,我的祖传代码</title>
     <url>/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
 <p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
 <blockquote>
 <p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
 </blockquote>
 <h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
 <p>nice~</p>
 <p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
 <hr>
@@ -29,24 +29,24 @@
     <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
 <li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
 <blockquote>
 <p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
 </blockquote>
 </li>
 <li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
 </li>
 <li><p>通过backdrop-filter可以很好解决问题</p>
 </li>
 </ul>
 <h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
 </li>
 </ul>
 <blockquote>
@@ -57,7 +57,7 @@
 <ul>
 <li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
 </li>
 <li><p>chrome很好的支持了,nice~</p>
 </li>
@@ -65,7 +65,7 @@
 <h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
 <li><p>经过试验,的确firefox看不到,很影响阅读</p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
 </li>
 <li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
 </li>
@@ -74,7 +74,7 @@
 </ul>
 <h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
 <h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
 </li>
 <li><p>效果也是不错的,不过需要绝对布局</p>
 </li>
@@ -90,7 +90,7 @@
 <h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
 <li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
 </li>
 <li><p>这样可以动态实现毛玻璃了</p>
 </li>
@@ -123,12 +123,12 @@
 <ul>
 <li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
 <li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
 </ul>
 <h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
 <li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
 <blockquote>
 <p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
 </blockquote>
@@ -140,15 +140,15 @@
 </li>
 </ul>
 <h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
 </li>
 <li><p>再次google后，</p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
 </li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
 </li>
 <li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
 <p>然而，在从远程拉取后，又出现了一个问题。。。</p>
@@ -158,11 +158,11 @@
 <p>git pull后，子模块内是空的！</p>
 </blockquote>
 <ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
 <li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
 <li>再再次google后</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
 <li>需要在子模块内再次拉取才行</li>
 </ul>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
@@ -213,12 +213,12 @@
     <title>关于invoke和call的区别</title>
     <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
     <content><![CDATA[
-        <div id="aplayer-vvxqapPo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-DYzzbnOk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-vvxqapPo"),
+            element: document.getElementById("aplayer-DYzzbnOk"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -247,7 +247,7 @@
 <p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
 </blockquote>
 </blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@d7322bb/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
 <h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
       <categories>
         <category>编程杂记</category>

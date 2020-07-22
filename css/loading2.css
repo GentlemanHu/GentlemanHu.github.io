@@ -6,6 +6,7 @@
     bottom: 0;
     background-image: linear-gradient(130deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     z-index: 9999;
+ 
 }
 .cube-folding {
   width: 50px;
