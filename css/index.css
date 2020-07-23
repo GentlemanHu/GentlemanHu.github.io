@@ -88,7 +88,7 @@ h5,
 h6 {
   position: relative;
   margin: 1rem 0 0.7rem;
-  color: #344c67;
+  color: #c4c798;
   font-weight: bold;
 }
 h1 code,
@@ -1946,8 +1946,8 @@ blockquote footer cite:before {
 #aside_content .card-widget {
   overflow: hidden;
   border-radius: 8px;
-  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
-  backdrop-filter: blur(20px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
   -webkit-box-shadow: 0 7px 12px 9px rgba(7,17,27,0.06);
   box-shadow: 0 7px 12px 9px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
@@ -2985,15 +2985,15 @@ _:future,
   padding: 0;
   height: 280px;
   border-radius: 8px;
-  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
-  backdrop-filter: blur(10px) saturate(150%) !important;
-  -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-backdrop-filter: blur(15px) saturate(90%) !important;
+  backdrop-filter: blur(15px) saturate(90%) !important;
+  -webkit-box-shadow: 6 14px 18px 16px rgba(40,174,179,0.315) !important;
+  box-shadow: 6 14px 18px 16px rgba(40,174,179,0.315) !important;
+  -webkit-transition: all 0.3s !important;
+  -moz-transition: all 0.3s !important;
+  -o-transition: all 0.3s !important;
+  -ms-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 #recent-posts > .recent-post-item:hover {
   -webkit-box-shadow: 0 26px 29px 21px rgba(255,255,255,0.35);
@@ -3137,8 +3137,8 @@ _:future,
   padding: 50px 40px;
   border-radius: 8px;
   background-color: transparent;
-  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
-  backdrop-filter: blur(20px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
@@ -3427,8 +3427,8 @@ _:future,
 }
 #archive {
   background-color: transparent;
-  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
-  backdrop-filter: blur(20px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
 }
 #pagination {
   overflow: hidden;
@@ -4375,6 +4375,9 @@ img {
 }
 #vcomment textarea {
   background: url("https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/comment_bg.png") 100% 100% no-repeat;
+  color: #fff;
+}
+#vcomment .vcontent p {
   color: #fff;
 }
 #vcomment .vimg {
@@ -5716,6 +5719,11 @@ blockquote.pullquote.right {
   -o-animation: titlescale 0.5s;
   -ms-animation: titlescale 0.5s;
   animation: titlescale 0.5s;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px) saturate(120%) !important;
+  backdrop-filter: blur(10px) saturate(120%) !important;
+  -webkit-box-shadow: 0 26px 29px 21px rgba(255,255,255,0.35);
+  box-shadow: 0 26px 29px 21px rgba(255,255,255,0.35);
 }
 #local-search .local-search-box {
   margin: 0 auto;
