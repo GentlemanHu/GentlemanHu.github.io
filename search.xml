@@ -1,261 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>backdrop-filter毛玻璃效果</title>
-    <url>/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/</url>
-    <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
-<li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
-<blockquote>
-<p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
-</blockquote>
-</li>
-<li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
-</li>
-<li><p>通过backdrop-filter可以很好解决问题</p>
-</li>
-</ul>
-<h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
-</li>
-<li><p>chrome很好的支持了,nice~</p>
-</li>
-</ul>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
-<li><p>经过试验,的确firefox看不到,很影响阅读</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
-</li>
-<li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
-</li>
-<li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p>
-</li>
-</ul>
-<h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
-<h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
-</li>
-<li><p>效果也是不错的,不过需要绝对布局</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<ul>
-<li>根据需求可以改改</li>
-</ul>
-<h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
-<li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
-</li>
-<li><p>这样可以动态实现毛玻璃了</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<hr>
-<h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p>
-</li>
-<li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p>
-</li>
-<li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p>
-</li>
-<li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>git submodule git子模块闲搞</title>
+      <link href="/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/"/>
+      <url>/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote><p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p></blockquote><ul><li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li><li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li><li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li></ul><h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul><li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p><blockquote><p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p></blockquote></li><li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p><blockquote><p><code>git submodule add “path to theme” “themes/butterfly”</code> </p></blockquote></li></ul><h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p></li><li><p>再次google后，</p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p></li><li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p><p>然而，在从远程拉取后，又出现了一个问题。。。</p></li></ul><h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote><p>git pull后，子模块内是空的！</p></blockquote><ul><li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li><li>而且github仓库文件夹出现了<code>文件夹@字母</code></li><li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li><li>再再次google后</li><li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li><li>需要在子模块内再次拉取才行</li></ul><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul><li>面向google编程，面向成功~</li><li>不想看文档，不想看帮助，那就多google</li><li>不管结果如何，先把错误复制到google搜索一顿再说</li><li>总之，google是走向成功的阶梯</li><li>“省力不省功”</li></ul><hr><hr><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p></li><li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p></li><li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p></li><li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p></li></ul>]]></content>
+      
+      
       <categories>
-        <category>日常杂记</category>
+          
+          <category> 编程杂记 </category>
+          
       </categories>
-      <tags>
-        <tag>随手记</tag>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git submodule git子模块闲搞</title>
-    <url>/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</url>
-    <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
-<p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p>
-</blockquote>
-<ul>
-<li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
-<li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
-</ul>
-<h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
-<li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
-<blockquote>
-<p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
-</blockquote>
-</li>
-<li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p>
-<blockquote>
-<p><code>git submodule add “path to theme” “themes/butterfly”</code> </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
-</li>
-<li><p>再次google后，</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
-</li>
-<li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
-<p>然而，在从远程拉取后，又出现了一个问题。。。</p>
-</li>
-</ul>
-<h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote>
-<p>git pull后，子模块内是空的！</p>
-</blockquote>
-<ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
-<li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
-<li>再再次google后</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
-<li>需要在子模块内再次拉取才行</li>
-</ul>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
-<li>面向google编程，面向成功~</li>
-<li>不想看文档，不想看帮助，那就多google</li>
-<li>不管结果如何，先把错误复制到google搜索一顿再说</li>
-<li>总之，google是走向成功的阶梯</li>
-<li>“省力不省功”</li>
-</ul>
-<hr>
-<hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p>
-</li>
-<li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p>
-</li>
-<li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p>
-</li>
-<li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p>
-</li>
-</ul>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> Git submodule </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GitHub Archive Program,我的祖传代码</title>
+      <link href="/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/"/>
+      <url>/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</url>
+      
+        <content type="html"><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p><p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p><blockquote><p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p></blockquote><h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p><p>nice~</p><p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p><hr>]]></content>
+      
+      
       <categories>
-        <category>编程杂记</category>
+          
+          <category> 日常杂记 </category>
+          
       </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-        <tag>博客</tag>
-        <tag>Git submodule</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于invoke和call的区别</title>
-    <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
-    <content><![CDATA[
-        <div id="aplayer-zpslbxft" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-zpslbxft"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "Heros",
-              author: "Alesso",
-              url: "http://m8.music.126.net/20200714225809/4e28c9ad4993a41f04bf6c98cc4c2e7f/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3036082078/9446/0bff/358e/510606204501e2c9b5163bd00ad31b20.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul>
-<li><p>Function calling is when you call a function yourself in a program.</p>
-</li>
-<li><p>While function invoking is when it gets called automatically.</p>
-</li>
-</ul>
-<blockquote>
-<p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
-</blockquote>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
-<h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 随手记 </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> 祖传代码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>backdrop-filter毛玻璃效果</title>
+      <link href="/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/"/>
+      <url>/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/</url>
+      
+        <content type="html"><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul><li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p><blockquote><p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p></blockquote></li><li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p></li><li><p>通过backdrop-filter可以很好解决问题</p></li></ul><h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p></li></ul><blockquote><blockquote><p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p></blockquote></blockquote><ul><li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p></li><li><p>chrome很好的支持了,nice~</p></li></ul><h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul><li><p>经过试验,的确firefox看不到,很影响阅读</p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p></li><li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p></li><li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p></li></ul><h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p><h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p></li><li><p>效果也是不错的,不过需要绝对布局</p></li></ul><blockquote><blockquote><p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p></blockquote></blockquote><ul><li>根据需求可以改改</li></ul><h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul><li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p></li><li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p></li><li><p>这样可以动态实现毛玻璃了</p></li></ul><blockquote><blockquote><p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p></blockquote></blockquote><hr><h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p></li><li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p></li><li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p></li><li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于invoke和call的区别</title>
+      <link href="/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/"/>
+      <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[        <div id="aplayer-FlNddUvy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-FlNddUvy"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "Heros",              author: "Alesso",              url: "http://m8.music.126.net/20200714225809/4e28c9ad4993a41f04bf6c98cc4c2e7f/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3036082078/9446/0bff/358e/510606204501e2c9b5163bd00ad31b20.mp3",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul><li><p>Function calling is when you call a function yourself in a program.</p></li><li><p>While function invoking is when it gets called automatically.</p></li></ul><blockquote><p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p></blockquote><blockquote><blockquote><p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p></blockquote></blockquote><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p><h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
+      
+      
       <categories>
-        <category>编程杂记</category>
+          
+          <category> 编程杂记 </category>
+          
       </categories>
-      <tags>
-        <tag>随手记</tag>
-        <tag>Java</tag>
-        <tag>编程日常</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 随手记 </tag>
+            
+            <tag> Java </tag>
+            
+            <tag> 编程日常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/07/hello-world/"/>
+      <url>/2020/04/07/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
