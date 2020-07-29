@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-07-21T14:07:39.529Z</updated>
+  <updated>2020-07-29T04:25:52.762Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ide般的vim--SpaceVim</title>
+    <link href="http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/"/>
+    <id>http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/</id>
+    <published>2020-07-28T14:05:34.000Z</published>
+    <updated>2020-07-29T04:25:52.762Z</updated>
+    
+    <summary type="html">
+    
+      把vim折腾成ide
+    
+    </summary>
+    
+    
+      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="Linux折腾" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Vim" scheme="http://crushing.xyz/tags/Vim/"/>
+    
+      <category term="Ide" scheme="http://crushing.xyz/tags/Ide/"/>
+    
+      <category term="SpaceVim" scheme="http://crushing.xyz/tags/SpaceVim/"/>
+    
+      <category term="VScode" scheme="http://crushing.xyz/tags/VScode/"/>
+    
+      <category term="Linux" scheme="http://crushing.xyz/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>git submodule git子模块闲搞</title>
