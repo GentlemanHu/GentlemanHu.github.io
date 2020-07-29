@@ -125,89 +125,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git submodule git子模块闲搞</title>
-    <url>/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</url>
-    <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
-<p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p>
-</blockquote>
-<ul>
-<li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
-<li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
-</ul>
-<h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
-<li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
-<blockquote>
-<p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
-</blockquote>
-</li>
-<li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p>
-<blockquote>
-<p><code>git submodule add “path to theme” “themes/butterfly”</code> </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
-</li>
-<li><p>再次google后，</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
-</li>
-<li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
-<p>然而，在从远程拉取后，又出现了一个问题。。。</p>
-</li>
-</ul>
-<h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote>
-<p>git pull后，子模块内是空的！</p>
-</blockquote>
-<ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
-<li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
-<li>再再次google后</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
-<li>需要在子模块内再次拉取才行</li>
-</ul>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
-<li>面向google编程，面向成功~</li>
-<li>不想看文档，不想看帮助，那就多google</li>
-<li>不管结果如何，先把错误复制到google搜索一顿再说</li>
-<li>总之，google是走向成功的阶梯</li>
-<li>“省力不省功”</li>
-</ul>
-<hr>
-<hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p>
-</li>
-<li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p>
-</li>
-<li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p>
-</li>
-<li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-        <tag>博客</tag>
-        <tag>Git submodule</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ide般的vim--SpaceVim</title>
     <url>/2020/07/28/ide-ban-de-vim-spacevim/</url>
     <content><![CDATA[<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729111613.png" alt=""></p>
@@ -439,12 +356,12 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
     <title>关于invoke和call的区别</title>
     <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
     <content><![CDATA[
-        <div id="aplayer-pWWFYDns" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-CwPfQuOr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-pWWFYDns"),
+            element: document.getElementById("aplayer-CwPfQuOr"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -483,6 +400,89 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
         <tag>Java</tag>
         <tag>编程日常</tag>
         <tag>关键字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git submodule git子模块闲搞</title>
+    <url>/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</url>
+    <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
+<p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p>
+</blockquote>
+<ul>
+<li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
+<li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
+</ul>
+<h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
+<li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
+<blockquote>
+<p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
+</blockquote>
+</li>
+<li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p>
+<blockquote>
+<p><code>git submodule add “path to theme” “themes/butterfly”</code> </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
+</li>
+<li><p>再次google后，</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
+</li>
+<li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
+<p>然而，在从远程拉取后，又出现了一个问题。。。</p>
+</li>
+</ul>
+<h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote>
+<p>git pull后，子模块内是空的！</p>
+</blockquote>
+<ul>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
+<li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
+<li>再再次google后</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
+<li>需要在子模块内再次拉取才行</li>
+</ul>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
+<li>面向google编程，面向成功~</li>
+<li>不想看文档，不想看帮助，那就多google</li>
+<li>不管结果如何，先把错误复制到google搜索一顿再说</li>
+<li>总之，google是走向成功的阶梯</li>
+<li>“省力不省功”</li>
+</ul>
+<hr>
+<hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p>
+</li>
+<li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p>
+</li>
+<li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p>
+</li>
+<li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+        <tag>博客</tag>
+        <tag>Git submodule</tag>
       </tags>
   </entry>
 </search>
