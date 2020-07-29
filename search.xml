@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>backdrop-filter毛玻璃效果</title>
     <url>/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/</url>
     <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
@@ -90,6 +113,16 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>FrontEnd</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>高斯模糊</tag>
+        <tag>毛玻璃</tag>
+      </tags>
   </entry>
   <entry>
     <title>git submodule git子模块闲搞</title>
@@ -164,6 +197,8 @@
 ]]></content>
       <categories>
         <category>编程杂记</category>
+        <category>Linux</category>
+        <category>Git</category>
       </categories>
       <tags>
         <tag>GitHub</tag>
@@ -171,43 +206,6 @@
         <tag>博客</tag>
         <tag>Git submodule</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>随手记</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>ide般的vim--SpaceVim</title>
@@ -426,7 +424,8 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 ]]></content>
       <categories>
         <category>编程杂记</category>
-        <category>Linux折腾</category>
+        <category>Linux</category>
+        <category>Vim</category>
       </categories>
       <tags>
         <tag>Vim</tag>
@@ -440,12 +439,12 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
     <title>关于invoke和call的区别</title>
     <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
     <content><![CDATA[
-        <div id="aplayer-XHWulQPS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-pWWFYDns" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-XHWulQPS"),
+            element: document.getElementById("aplayer-pWWFYDns"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -478,11 +477,12 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
       <categories>
         <category>编程杂记</category>
+        <category>随手记</category>
       </categories>
       <tags>
-        <tag>随手记</tag>
         <tag>Java</tag>
         <tag>编程日常</tag>
+        <tag>关键字</tag>
       </tags>
   </entry>
 </search>
