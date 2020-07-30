@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-07-29T05:48:58.336Z</updated>
+  <updated>2020-07-29T09:11:22.268Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/"/>
     <id>http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/</id>
     <published>2020-07-28T14:05:34.000Z</published>
-    <updated>2020-07-29T05:48:58.336Z</updated>
+    <updated>2020-07-29T09:11:22.268Z</updated>
     
     <summary type="html">
     
@@ -145,7 +145,7 @@
     <link href="http://crushing.xyz/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/"/>
     <id>http://crushing.xyz/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</id>
     <published>2020-07-11T15:14:43.000Z</published>
-    <updated>2020-07-29T05:53:36.725Z</updated>
+    <updated>2020-07-30T12:18:44.655Z</updated>
     
     <summary type="html">
     
@@ -153,9 +153,7 @@
       
         
         
-          
-        &lt;div id=&quot;aplayer-CwPfQuOr&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
-            &lt;pre
+          &lt;h1 id=&quot;关于invoke和call的区别&quot;&gt;&lt;a href=&quot;#关于invoke和call的区别&quot; class=&quot;headerlink&quot;
         
       
     

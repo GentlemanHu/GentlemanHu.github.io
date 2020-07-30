@@ -125,284 +125,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ide般的vim--SpaceVim</title>
-    <url>/2020/07/28/ide-ban-de-vim-spacevim/</url>
-    <content><![CDATA[<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729111613.png" alt=""></p>
-<h2 id="Vim安装"><a href="#Vim安装" class="headerlink" title="Vim安装"></a>Vim安装</h2><blockquote>
-<p><span style="color:green">这些基本安装不多详细描述，按照流程就行了</span></p>
-</blockquote>
-<blockquote>
-<ul>
-<li><p><a href="https://www.vim.org/" target="_blank" rel="noopener">vim官网</a></p>
-</li>
-<li><p>更详细和准确指南，请参照官网</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="Linux或macOS安装-类unix系"><a href="#Linux或macOS安装-类unix系" class="headerlink" title="Linux或macOS安装(类unix系)"></a>Linux或macOS安装(类unix系)</h3><h4 id="使用git安装"><a href="#使用git安装" class="headerlink" title="使用git安装"></a>使用git安装</h4><blockquote>
-<p>此方法通用</p>
-</blockquote>
-<pre class="line-numbers language-shell"><code class="language-shell">$ git clone https://github.com/vim/vim.git
-$ cd vim/src
-$ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p> 使用此方式会获取最新版vim，包含了所有的额外补丁。</p>
-</blockquote>
-<h4 id="其他linux发行版"><a href="#其他linux发行版" class="headerlink" title="其他linux发行版"></a>其他linux发行版</h4><ul>
-<li><a href="http://packages.debian.org/vim" target="_blank" rel="noopener">Debian</a></li>
-<li><a href="http://wwws.sun.com/software/solaris/freeware/" target="_blank" rel="noopener">Sun Solaris</a></li>
-<li>更多参照<a href="https://www.vim.org/" target="_blank" rel="noopener">官网</a></li>
-</ul>
-<h4 id="mac安装"><a href="#mac安装" class="headerlink" title="mac安装"></a>mac安装</h4><ul>
-<li><code>brew install vim</code></li>
-<li>安装 <code>MacVim</code>mac定制版vim</li>
-<li>更多选择看官网</li>
-</ul>
-<h4 id="其他还有neovim等vim其他发行版本，可以选择型安装"><a href="#其他还有neovim等vim其他发行版本，可以选择型安装" class="headerlink" title="其他还有neovim等vim其他发行版本，可以选择型安装"></a>其他还有neovim等vim其他发行版本，可以选择型安装</h4><blockquote>
-<p>推荐看官方文档安装，本记录简化了步骤，可能缺失部分探索的元素</p>
-</blockquote>
-<h3 id="Windows安装"><a href="#Windows安装" class="headerlink" title="Windows安装"></a>Windows安装</h3><blockquote>
-<p>具体看<a href="https://www.vim.org" target="_blank" rel="noopener">官方教程</a></p>
-</blockquote>
-<hr>
-<h2 id="Vim入门推荐"><a href="#Vim入门推荐" class="headerlink" title="Vim入门推荐"></a>Vim入门推荐</h2><h3 id="vimtutor命令"><a href="#vimtutor命令" class="headerlink" title="vimtutor命令"></a><code>vimtutor</code>命令</h3><pre class="line-numbers language-shell"><code class="language-shell">$ vimtutor<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200728225111148.png" alt="image-20200728225111148"></p>
-<ul>
-<li>进入官方指南入门教程，比较全面详细</li>
-<li>英文版，英语不好的话有点吃力</li>
-</ul>
-<h3 id="通过游戏入门"><a href="#通过游戏入门" class="headerlink" title="通过游戏入门"></a>通过游戏入门</h3><blockquote>
-<p><a href="https://vim-adventures.com/" target="_blank" rel="noopener">Learn Vim</a></p>
-</blockquote>
-<p>这是一款网页游戏，很有意思，vim学习起来舒服多了~</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200728225543727.png" alt="image-20200728225543727"></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>菜鸟教程 &lt;菜(da)鸟(shen)必备&gt;</li>
-<li>Google搜索</li>
-<li>官方Doc</li>
-</ul>
-<h2 id="SpaceVim安装与配置"><a href="#SpaceVim安装与配置" class="headerlink" title="SpaceVim安装与配置"></a>SpaceVim安装与配置</h2><blockquote>
-<p><a href="[https://spacevim.org/cn/quick-start-guide/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE](https://spacevim.org/cn/quick-start-guide/#基本配置)">官方中文教程</a></p>
-</blockquote>
-<h3 id="官方一键安装脚本"><a href="#官方一键安装脚本" class="headerlink" title="官方一键安装脚本"></a>官方一键安装脚本</h3><pre class="line-numbers language-shell"><code class="language-shell">curl -sLf https://spacevim.org/cn/install.sh | bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>由于你懂得原因，使用此链接安装比较慢，请自备绿色上网工具优化体验~</p>
-</blockquote>
-<p>官方还有个帮助脚本，很全面，各种操作都包含了–</p>
-<pre class="line-numbers language-shell"><code class="language-shell">curl -sLf https://spacevim.org/cn/install.sh | bash -s -- -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729115058170.png" alt="image-20200729115058170"></p>
-<h3 id="Docker安装（推荐）"><a href="#Docker安装（推荐）" class="headerlink" title="Docker安装（推荐）"></a>Docker安装（推荐）</h3><pre class="line-numbers language-shell"><code class="language-shell">docker pull spacevim/spacevim
-docker run -it --rm spacevim/spacevim nvim<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<blockquote>
-<p>推荐docker，各种优势</p>
-</blockquote>
-<h3 id="入门基本配置"><a href="#入门基本配置" class="headerlink" title="入门基本配置"></a>入门基本配置</h3><p>SpaceVim默认配置文件为<code>~/.SpaceVim.d/init.toml</code>，打开此文件编辑，或者进入<code>vim</code>依次同时按<code>space f v d</code>即可快捷打开默认配置文件。</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729105949.png" alt="配置文件"></p>
-<pre class="line-numbers language-shell"><code class="language-shell"># 这是一个基础的 SpaceVim 配置示例
-
-# 所有的 SpaceVim 选项都列在 [options] 之下
-[options]
-    # 设置 SpaceVim 主题及背景，默认的主题是 gruvbox，如果你需要使用更
-    # 多的主题，你可以载入 colorscheme 模块
-    colorscheme = "gruvbox"
-    # 背景可以取值 "dark" 或 "light"
-    colorscheme_bg = "dark"
-    # 启用/禁用终端真色，在目前大多数终端下都是支持真色的，当然也有
-    # 一小部分终端不支持真色，如果你的 SpaceVim 颜色看上去比较怪异
-    # 可以禁用终端真色，将下面的值设为 false
-    enable_guicolors = true
-    # 设置状态栏上分割符号形状，如果字体安装失败，可以将值设为 "nil" 以
-    # 禁用分割符号，默认为箭头 "arrow"
-    statusline_separator = "nil"
-    statusline_inactive_separator = "bar"
-    # 设置顶部标签列表序号类型，有以下五种类型，分别是 0 - 4
-    # 0: 1 ➛ ➊
-    # 1: 1 ➛ ➀
-    # 2: 1 ➛ ⓵
-    # 3: 1 ➛ ¹
-    # 4: 1 ➛ 1
-    buffer_index_type = 4
-    # 显示/隐藏顶部标签栏上的文件类型图标，这一图标需要安装 nerd fonts，
-    # 如果未能成功安装这一字体，可以隐藏图标
-    enable_tabline_filetype_icon = true
-    # 是否在状态栏上显示当前模式，默认情况下，不显示 Normal/Insert 等
-    # 字样，只以颜色区分当前模式
-    enable_statusline_mode = false
-
-# SpaceVim 模块设置，主要包括启用/禁用模块
-
-# 启用 autocomplete 模块，启用模块时，可以列出一些模块选项，并赋值，
-# 关于模块的选项，请阅读各个模块的文档
-[[layers]]
-    name = "autocomplete"
-    auto-completion-return-key-behavior = "complete"
-    auto-completion-tab-key-behavior = "cycle"
-
-# 禁用 shell 模块，禁用模块时，需要加入 enable = false
-[[layers]]
-    name = "shell"
-    enable = false
-
-# 添加自定义插件
-[[custom_plugins]]
-    repo = "lilydjwg/colorizer"
-    merged = false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>更多配置，更多DIY，参照<a href="https://spacevim.org/cn/documentation/" target="_blank" rel="noopener">官方文档</a>进行配置</p>
-<h2 id="SpaceVim的Java环境配置"><a href="#SpaceVim的Java环境配置" class="headerlink" title="SpaceVim的Java环境配置"></a>SpaceVim的Java环境配置</h2><blockquote>
-<p>就拿Java搭建吧</p>
-<p><a href="https://spacevim.org/cn/use-vim-as-a-java-ide/" target="_blank" rel="noopener">官方教程</a></p>
-</blockquote>
-<h3 id="启动模块"><a href="#启动模块" class="headerlink" title="启动模块"></a>启动模块</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729112831999.png" alt="image-20200729112831999"></p>
-<blockquote>
-<p>启用 <code>lang#java</code> 模块后，在打开 java 文件时，就可以使用语言专属快捷键，这些快捷键都是以 <code>SPC l</code> 为前缀的。</p>
-</blockquote>
-<blockquote>
-<p><code>lang#java</code> 模块主要采用插件 vim-javacomplete2，该插件可以自动读取工程配置文件，获取当前项目的 classpath， 目前支持的项目包括 maven、gradle 以及 eclipse 下的配置文件。</p>
-</blockquote>
-<h3 id="配置语言服务"><a href="#配置语言服务" class="headerlink" title="配置语言服务"></a>配置语言服务</h3><blockquote>
-<p>若需要启动 Java 语言服务支持，可以启用 lsp 模块，以下配置示例使用 <a href="http://ftp.yz.yamagata-u.ac.jp/pub/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz" target="_blank" rel="noopener">eclipse.jdt.ls</a>，下载后并解压：</p>
-</blockquote>
-<pre class="line-numbers language-shell"><code class="language-shell">[[layers]]
-  name = "lsp"
-  filetypes = [
-    "java"
-  ]
-  [layers.override_cmd]
-    java = [
-    "java",
-    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-    "-Dosgi.bundles.defaultStartLevel=4",
-    "-Declipse.product=org.eclipse.jdt.ls.core.product",
-    "-Dlog.protocol=true",
-    "-Dlog.level=NONE",
-    "-noverify",
-    "-Xmx1G",
-    "-jar",
-    "/Users/gentlemanhu/Documents/SomeStuff/forDev&some\ tools/jdt/jdt-language-server-latest/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar",
-    "-configuration",
-    "/Users/gentlemanhu/Documents/SomeStuff/forDev&some\ tools/jdt/jdt-language-server-latest/config_mac",
-    "-data",
- "/Users/gentlemanhu/Documents/Codes/Languages&Explore/Java/.cache/javalsp"
-    ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>基本上就需要配置三个路径，</p>
-<ul>
-<li><code>-jar</code>：lanucher路径</li>
-<li><code>-configuration</code>: 平台相关的配置文件路径</li>
-<li><code>-data</code>: 语言服务器运行位置</li>
-</ul>
-<h3 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h3><blockquote>
-<p><code>vim-javacomplete2</code>为 java 项目提供了很好的代码补全功能，配合 <code>autocomplete</code>模块，可以在编辑代码时实时补全代码，并且可以模糊匹配。</p>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729114439267.png" alt="image-20200729114439267"></p>
-<h3 id="插件模块自动安装"><a href="#插件模块自动安装" class="headerlink" title="插件模块自动安装"></a>插件模块自动安装</h3><ul>
-<li>不需要过多操作，配置好文件，再打开vim就自动安装了，很舒服</li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729114722809.png" alt="image-20200729114722809"></p>
-<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
-<li>语法树</li>
-<li>交互编程</li>
-<li>语法检查</li>
-<li>等等</li>
-<li>具体配置看<a href="[https://spacevim.org/cn/use-vim-as-a-java-ide/#%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B](https://spacevim.org/cn/use-vim-as-a-java-ide/#交互式编程)">官方文档</a></li>
-</ul>
-<blockquote>
-<p>要想配置成合自己口味的，还得自己去摸索实践~</p>
-</blockquote>
-<h3 id="报错问题解决"><a href="#报错问题解决" class="headerlink" title="报错问题解决"></a>报错问题解决</h3><pre class="line-numbers language-shell"><code class="language-shell">[vimproc] vimproc's DLL: "/Users/gentl...Please read :help vimproc and make it.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>不论打开vim还是neovim，都会在下方报错</p>
-<p>那就根据指示修复吧<code>:help vimproc</code></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729115331844.png" alt="image-20200729115331844"></p>
-<blockquote>
-<p>写的就是它是很牛逼的异步库，让我们安装，那就安装吧</p>
-</blockquote>
-<blockquote>
-<p><a href="https://github.com/Shougo/vimproc.vim" target="_blank" rel="noopener">Vimproc.vim</a></p>
-</blockquote>
-<pre class="line-numbers language-shell"><code class="language-shell">git clone https://github.com/Shougo/vimproc.vim<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>克隆到~/.vim/bundle/目录下</p>
-<pre class="line-numbers language-shell"><code class="language-shell">cd vimproc.vim/
-make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后再打开vim就自动安装了，没有报错了</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><a href="https://everettjf.gitbooks.io/spacevimtutorial/content/" target="_blank" rel="noopener">SpaceVim入门</a></li>
-<li><a href="https://github.com/Gabirel/Hack-SpaceVim" target="_blank" rel="noopener">HackSpaceVim</a></li>
-<li><a href="https://spacevim.org/cn/documentation/" target="_blank" rel="noopener">官方文档</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>有了这个ide，还要什么鼠标，各种快捷键，双手不离键盘，真·键盘手~</p>
-</blockquote>
-<blockquote>
-<p>这些东西，一时兴起也可以玩玩。当然只有不断熟悉，不断使用，才能真正发挥其强大的功能和特性。</p>
-</blockquote>
-<blockquote>
-<p>适合自己的才是最好的，vscode+extensions||neovim+plugins.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-        <category>Vim</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-        <tag>Ide</tag>
-        <tag>SpaceVim</tag>
-        <tag>VScode</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于invoke和call的区别</title>
-    <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
-    <content><![CDATA[
-        <div id="aplayer-CwPfQuOr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-CwPfQuOr"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "Heros",
-              author: "Alesso",
-              url: "http://m8.music.126.net/20200714225809/4e28c9ad4993a41f04bf6c98cc4c2e7f/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3036082078/9446/0bff/358e/510606204501e2c9b5163bd00ad31b20.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul>
-<li><p>Function calling is when you call a function yourself in a program.</p>
-</li>
-<li><p>While function invoking is when it gets called automatically.</p>
-</li>
-</ul>
-<blockquote>
-<p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
-</blockquote>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
-<h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>编程日常</tag>
-        <tag>关键字</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git submodule git子模块闲搞</title>
     <url>/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</url>
     <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
@@ -483,6 +205,200 @@ make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
         <tag>Git</tag>
         <tag>博客</tag>
         <tag>Git submodule</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ide般的vim--SpaceVim</title>
+    <url>/2020/07/28/ide-ban-de-vim-spacevim/</url>
+    <content><![CDATA[<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729111613.png" alt=""></p>
+<h2 id="Vim安装"><a href="#Vim安装" class="headerlink" title="Vim安装"></a>Vim安装</h2><blockquote>
+<p><span style="color:green">这些基本安装不多详细描述，按照流程就行了</span></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><p><a href="https://www.vim.org/" target="_blank" rel="noopener">vim官网</a></p>
+</li>
+<li><p>更详细和准确指南，请参照官网</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="Linux或macOS安装-类unix系"><a href="#Linux或macOS安装-类unix系" class="headerlink" title="Linux或macOS安装(类unix系)"></a>Linux或macOS安装(类unix系)</h3><h4 id="使用git安装"><a href="#使用git安装" class="headerlink" title="使用git安装"></a>使用git安装</h4><blockquote>
+<p>此方法通用</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/vim/vim.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> vim/src</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 使用此方式会获取最新版vim，包含了所有的额外补丁。</p>
+</blockquote>
+<h4 id="其他linux发行版"><a href="#其他linux发行版" class="headerlink" title="其他linux发行版"></a>其他linux发行版</h4><ul>
+<li><a href="http://packages.debian.org/vim" target="_blank" rel="noopener">Debian</a></li>
+<li><a href="http://wwws.sun.com/software/solaris/freeware/" target="_blank" rel="noopener">Sun Solaris</a></li>
+<li>更多参照<a href="https://www.vim.org/" target="_blank" rel="noopener">官网</a></li>
+</ul>
+<h4 id="mac安装"><a href="#mac安装" class="headerlink" title="mac安装"></a>mac安装</h4><ul>
+<li><code>brew install vim</code></li>
+<li>安装 <code>MacVim</code>mac定制版vim</li>
+<li>更多选择看官网</li>
+</ul>
+<h4 id="其他还有neovim等vim其他发行版本，可以选择型安装"><a href="#其他还有neovim等vim其他发行版本，可以选择型安装" class="headerlink" title="其他还有neovim等vim其他发行版本，可以选择型安装"></a>其他还有neovim等vim其他发行版本，可以选择型安装</h4><blockquote>
+<p>推荐看官方文档安装，本记录简化了步骤，可能缺失部分探索的元素</p>
+</blockquote>
+<h3 id="Windows安装"><a href="#Windows安装" class="headerlink" title="Windows安装"></a>Windows安装</h3><blockquote>
+<p>具体看<a href="https://www.vim.org" target="_blank" rel="noopener">官方教程</a></p>
+</blockquote>
+<hr>
+<h2 id="Vim入门推荐"><a href="#Vim入门推荐" class="headerlink" title="Vim入门推荐"></a>Vim入门推荐</h2><h3 id="vimtutor命令"><a href="#vimtutor命令" class="headerlink" title="vimtutor命令"></a><code>vimtutor</code>命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vimtutor</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200728225111148.png" alt="image-20200728225111148"></p>
+<ul>
+<li>进入官方指南入门教程，比较全面详细</li>
+<li>英文版，英语不好的话有点吃力</li>
+</ul>
+<h3 id="通过游戏入门"><a href="#通过游戏入门" class="headerlink" title="通过游戏入门"></a>通过游戏入门</h3><blockquote>
+<p><a href="https://vim-adventures.com/" target="_blank" rel="noopener">Learn Vim</a></p>
+</blockquote>
+<p>这是一款网页游戏，很有意思，vim学习起来舒服多了~</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200728225543727.png" alt="image-20200728225543727"></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>菜鸟教程 &lt;菜(da)鸟(shen)必备&gt;</li>
+<li>Google搜索</li>
+<li>官方Doc</li>
+</ul>
+<h2 id="SpaceVim安装与配置"><a href="#SpaceVim安装与配置" class="headerlink" title="SpaceVim安装与配置"></a>SpaceVim安装与配置</h2><blockquote>
+<p><a href="[https://spacevim.org/cn/quick-start-guide/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE](https://spacevim.org/cn/quick-start-guide/#基本配置)">官方中文教程</a></p>
+</blockquote>
+<h3 id="官方一键安装脚本"><a href="#官方一键安装脚本" class="headerlink" title="官方一键安装脚本"></a>官方一键安装脚本</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -sLf https://spacevim.org/cn/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>由于你懂得原因，使用此链接安装比较慢，请自备绿色上网工具优化体验~</p>
+</blockquote>
+<p>官方还有个帮助脚本，很全面，各种操作都包含了–</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -sLf https://spacevim.org/cn/install.sh | bash -s -- -h</span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729115058170.png" alt="image-20200729115058170"></p>
+<h3 id="Docker安装（推荐）"><a href="#Docker安装（推荐）" class="headerlink" title="Docker安装（推荐）"></a>Docker安装（推荐）</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull spacevim/spacevim</span><br><span class="line">docker run -it --rm spacevim/spacevim nvim</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>推荐docker，各种优势</p>
+</blockquote>
+<h3 id="入门基本配置"><a href="#入门基本配置" class="headerlink" title="入门基本配置"></a>入门基本配置</h3><p>SpaceVim默认配置文件为<code>~/.SpaceVim.d/init.toml</code>，打开此文件编辑，或者进入<code>vim</code>依次同时按<code>space f v d</code>即可快捷打开默认配置文件。</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729105949.png" alt="配置文件"></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这是一个基础的 SpaceVim 配置示例</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 所有的 SpaceVim 选项都列在 [options] 之下</span></span><br><span class="line">[options]</span><br><span class="line">    # 设置 SpaceVim 主题及背景，默认的主题是 gruvbox，如果你需要使用更</span><br><span class="line">    # 多的主题，你可以载入 colorscheme 模块</span><br><span class="line">    colorscheme = "gruvbox"</span><br><span class="line">    # 背景可以取值 "dark" 或 "light"</span><br><span class="line">    colorscheme_bg = "dark"</span><br><span class="line">    # 启用/禁用终端真色，在目前大多数终端下都是支持真色的，当然也有</span><br><span class="line">    # 一小部分终端不支持真色，如果你的 SpaceVim 颜色看上去比较怪异</span><br><span class="line">    # 可以禁用终端真色，将下面的值设为 false</span><br><span class="line">    enable_guicolors = true</span><br><span class="line">    # 设置状态栏上分割符号形状，如果字体安装失败，可以将值设为 "nil" 以</span><br><span class="line">    # 禁用分割符号，默认为箭头 "arrow"</span><br><span class="line">    statusline_separator = "nil"</span><br><span class="line">    statusline_inactive_separator = "bar"</span><br><span class="line">    # 设置顶部标签列表序号类型，有以下五种类型，分别是 0 - 4</span><br><span class="line">    # 0: 1 ➛ ➊</span><br><span class="line">    # 1: 1 ➛ ➀</span><br><span class="line">    # 2: 1 ➛ ⓵</span><br><span class="line">    # 3: 1 ➛ ¹</span><br><span class="line">    # 4: 1 ➛ 1</span><br><span class="line">    buffer_index_type = 4</span><br><span class="line">    # 显示/隐藏顶部标签栏上的文件类型图标，这一图标需要安装 nerd fonts，</span><br><span class="line">    # 如果未能成功安装这一字体，可以隐藏图标</span><br><span class="line">    enable_tabline_filetype_icon = true</span><br><span class="line">    # 是否在状态栏上显示当前模式，默认情况下，不显示 Normal/Insert 等</span><br><span class="line">    # 字样，只以颜色区分当前模式</span><br><span class="line">    enable_statusline_mode = false</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> SpaceVim 模块设置，主要包括启用/禁用模块</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启用 autocomplete 模块，启用模块时，可以列出一些模块选项，并赋值，</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 关于模块的选项，请阅读各个模块的文档</span></span><br><span class="line">[[layers]]</span><br><span class="line">    name = "autocomplete"</span><br><span class="line">    auto-completion-return-key-behavior = "complete"</span><br><span class="line">    auto-completion-tab-key-behavior = "cycle"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 禁用 shell 模块，禁用模块时，需要加入 <span class="built_in">enable</span> = <span class="literal">false</span></span></span><br><span class="line">[[layers]]</span><br><span class="line">    name = "shell"</span><br><span class="line">    enable = false</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加自定义插件</span></span><br><span class="line">[[custom_plugins]]</span><br><span class="line">    repo = "lilydjwg/colorizer"</span><br><span class="line">    merged = false</span><br></pre></td></tr></table></figure>
+
+<p>更多配置，更多DIY，参照<a href="https://spacevim.org/cn/documentation/" target="_blank" rel="noopener">官方文档</a>进行配置</p>
+<h2 id="SpaceVim的Java环境配置"><a href="#SpaceVim的Java环境配置" class="headerlink" title="SpaceVim的Java环境配置"></a>SpaceVim的Java环境配置</h2><blockquote>
+<p>就拿Java搭建吧</p>
+<p><a href="https://spacevim.org/cn/use-vim-as-a-java-ide/" target="_blank" rel="noopener">官方教程</a></p>
+</blockquote>
+<h3 id="启动模块"><a href="#启动模块" class="headerlink" title="启动模块"></a>启动模块</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729112831999.png" alt="image-20200729112831999"></p>
+<blockquote>
+<p>启用 <code>lang#java</code> 模块后，在打开 java 文件时，就可以使用语言专属快捷键，这些快捷键都是以 <code>SPC l</code> 为前缀的。</p>
+</blockquote>
+<blockquote>
+<p><code>lang#java</code> 模块主要采用插件 vim-javacomplete2，该插件可以自动读取工程配置文件，获取当前项目的 classpath， 目前支持的项目包括 maven、gradle 以及 eclipse 下的配置文件。</p>
+</blockquote>
+<h3 id="配置语言服务"><a href="#配置语言服务" class="headerlink" title="配置语言服务"></a>配置语言服务</h3><blockquote>
+<p>若需要启动 Java 语言服务支持，可以启用 lsp 模块，以下配置示例使用 <a href="http://ftp.yz.yamagata-u.ac.jp/pub/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz" target="_blank" rel="noopener">eclipse.jdt.ls</a>，下载后并解压：</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[[layers]]</span><br><span class="line">  name = "lsp"</span><br><span class="line">  filetypes = [</span><br><span class="line">    "java"</span><br><span class="line">  ]</span><br><span class="line">  [layers.override_cmd]</span><br><span class="line">    java = [</span><br><span class="line">    "java",</span><br><span class="line">    "-Declipse.application=org.eclipse.jdt.ls.core.id1",</span><br><span class="line">    "-Dosgi.bundles.defaultStartLevel=4",</span><br><span class="line">    "-Declipse.product=org.eclipse.jdt.ls.core.product",</span><br><span class="line">    "-Dlog.protocol=true",</span><br><span class="line">    "-Dlog.level=NONE",</span><br><span class="line">    "-noverify",</span><br><span class="line">    "-Xmx1G",</span><br><span class="line">    "-jar",</span><br><span class="line">    "/Users/gentlemanhu/Documents/SomeStuff/forDev&amp;some\ tools/jdt/jdt-language-server-latest/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar",</span><br><span class="line">    "-configuration",</span><br><span class="line">    "/Users/gentlemanhu/Documents/SomeStuff/forDev&amp;some\ tools/jdt/jdt-language-server-latest/config_mac",</span><br><span class="line">    "-data",</span><br><span class="line"> "/Users/gentlemanhu/Documents/Codes/Languages&amp;Explore/Java/.cache/javalsp"</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<p>基本上就需要配置三个路径，</p>
+<ul>
+<li><code>-jar</code>：lanucher路径</li>
+<li><code>-configuration</code>: 平台相关的配置文件路径</li>
+<li><code>-data</code>: 语言服务器运行位置</li>
+</ul>
+<h3 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h3><blockquote>
+<p><code>vim-javacomplete2</code>为 java 项目提供了很好的代码补全功能，配合 <code>autocomplete</code>模块，可以在编辑代码时实时补全代码，并且可以模糊匹配。</p>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729114439267.png" alt="image-20200729114439267"></p>
+<h3 id="插件模块自动安装"><a href="#插件模块自动安装" class="headerlink" title="插件模块自动安装"></a>插件模块自动安装</h3><ul>
+<li>不需要过多操作，配置好文件，再打开vim就自动安装了，很舒服</li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729114722809.png" alt="image-20200729114722809"></p>
+<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
+<li>语法树</li>
+<li>交互编程</li>
+<li>语法检查</li>
+<li>等等</li>
+<li>具体配置看<a href="[https://spacevim.org/cn/use-vim-as-a-java-ide/#%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B](https://spacevim.org/cn/use-vim-as-a-java-ide/#交互式编程)">官方文档</a></li>
+</ul>
+<blockquote>
+<p>要想配置成合自己口味的，还得自己去摸索实践~</p>
+</blockquote>
+<h3 id="报错问题解决"><a href="#报错问题解决" class="headerlink" title="报错问题解决"></a>报错问题解决</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[vimproc] vimproc's DLL: "/Users/gentl...Please read :help vimproc and make it.</span><br></pre></td></tr></table></figure>
+
+<p>不论打开vim还是neovim，都会在下方报错</p>
+<p>那就根据指示修复吧<code>:help vimproc</code></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200729115331844.png" alt="image-20200729115331844"></p>
+<blockquote>
+<p>写的就是它是很牛逼的异步库，让我们安装，那就安装吧</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/Shougo/vimproc.vim" target="_blank" rel="noopener">Vimproc.vim</a></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Shougo/vimproc.vim</span><br></pre></td></tr></table></figure>
+
+<p>克隆到~/.vim/bundle/目录下</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd vimproc.vim/</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>然后再打开vim就自动安装了，没有报错了</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><a href="https://everettjf.gitbooks.io/spacevimtutorial/content/" target="_blank" rel="noopener">SpaceVim入门</a></li>
+<li><a href="https://github.com/Gabirel/Hack-SpaceVim" target="_blank" rel="noopener">HackSpaceVim</a></li>
+<li><a href="https://spacevim.org/cn/documentation/" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>有了这个ide，还要什么鼠标，各种快捷键，双手不离键盘，真·键盘侠~</p>
+</blockquote>
+<blockquote>
+<p>这些东西，一时兴起也可以玩玩。当然只有不断熟悉，不断使用，才能真正发挥其强大的功能和特性。</p>
+</blockquote>
+<blockquote>
+<p>适合自己的才是最好的，vscode+extensions||neovim+plugins.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+        <category>Vim</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>Ide</tag>
+        <tag>SpaceVim</tag>
+        <tag>VScode</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于invoke和call的区别</title>
+    <url>/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</url>
+    <content><![CDATA[<h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul>
+<li><p>Function calling is when you call a function yourself in a program.</p>
+</li>
+<li><p>While function invoking is when it gets called automatically.</p>
+</li>
+</ul>
+<blockquote>
+<p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
+</blockquote>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
+<h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>编程日常</tag>
+        <tag>关键字</tag>
       </tags>
   </entry>
 </search>
