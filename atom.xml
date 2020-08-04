@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-07-29T09:11:22.268Z</updated>
+  <updated>2020-08-04T07:34:37.890Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Calibre+rclone+google drive搭建个人书库记录</title>
+    <link href="http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/"/>
+    <id>http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/</id>
+    <published>2020-08-02T10:40:38.000Z</published>
+    <updated>2020-08-04T07:34:37.890Z</updated>
+    
+    <summary type="html">
+    
+      利用calibre和rclone搭建个人书库
+    
+    </summary>
+    
+    
+      <category term="玩玩" scheme="http://crushing.xyz/categories/%E7%8E%A9%E7%8E%A9/"/>
+    
+    
+      <category term="个人书库" scheme="http://crushing.xyz/tags/%E4%B8%AA%E4%BA%BA%E4%B9%A6%E5%BA%93/"/>
+    
+      <category term="Calibre" scheme="http://crushing.xyz/tags/Calibre/"/>
+    
+      <category term="rclone" scheme="http://crushing.xyz/tags/rclone/"/>
+    
+      <category term="google drive" scheme="http://crushing.xyz/tags/google-drive/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ide般的vim--SpaceVim</title>
     <link href="http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/"/>
     <id>http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/</id>
     <published>2020-07-28T14:05:34.000Z</published>
-    <updated>2020-07-29T09:11:22.268Z</updated>
+    <updated>2020-08-04T07:22:07.945Z</updated>
     
     <summary type="html">
     
@@ -54,7 +81,7 @@
     <link href="http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/"/>
     <id>http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</id>
     <published>2020-07-21T10:58:35.000Z</published>
-    <updated>2020-07-29T05:48:51.902Z</updated>
+    <updated>2020-08-04T07:22:01.182Z</updated>
     
     <summary type="html">
     

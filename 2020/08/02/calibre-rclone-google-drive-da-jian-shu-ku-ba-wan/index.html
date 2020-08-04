@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="default"><head><link rel="stylesheet" href="/css/feel-loading.css"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calibre+rclone+google drive搭建个人书库记录 | GodLin's Blog</title><meta name="description" content="利用calibre和rclone搭建个人书库"><meta name="keywords" content="Calibre,rclone"><meta name="author" content="GodLin,justfeelingme@gmail.com"><meta name="copyright" content="GodLin"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/favicon.png"><link rel="canonical" href="http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="preconnect" href="//zz.bdstatic.com"><meta property="og:type" content="article"><meta property="og:title" content="Calibre+rclone+google drive搭建个人书库记录"><meta property="og:url" content="http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/"><meta property="og:site_name" content="GodLin's Blog"><meta property="og:description" content="利用calibre和rclone搭建个人书库"><meta property="og:image" content="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804105005437.png"><meta property="article:published_time" content="2020-08-02T10:40:38.000Z"><meta property="article:modified_time" content="2020-08-04T07:34:37.890Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="next" title="ide般的vim--SpaceVim" href="http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: GodLin","link":"链接: ","source":"来源: GodLin's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"I,LOVE,YOU,YOU,LOVE,ME","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为透模式","bgLight":"#c1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/hideCategory.min.css"><script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ我去?崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪嘎嘎，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) }) </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="GodLin's Blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><script>//- TODO: 点击连接后加载动画,而不是跳转后再加载,优化体验
+document.body.innerHTML += ('<div id="preloader-body"><div id="animation" class="loader"><div class="text">Loading...</div><div class="horizontal"><div class="circlesup"><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div></div><div class="circlesdwn"><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div></div></div><div class="vertical"><div class="circlesup"><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div></div><div class="circlesdwn"><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div></div></div></div></div>');
+window.onload = function () {document.getElementById('animation').style.display = "none";document.getElementById('preloader-body').style.display = "none";}
+</script><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/avatar.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">20</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E5"><span class="toc-text">E5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TeamDrive"><span class="toc-text">TeamDrive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#个人演示站"><span class="toc-text">个人演示站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#折腾开始"><span class="toc-text">折腾开始</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Calibre-web搭建与配置"><span class="toc-text">一、Calibre-web搭建与配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装部署"><span class="toc-text">安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#py依赖部署版"><span class="toc-text">py依赖部署版</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker版"><span class="toc-text">docker版</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后台配置"><span class="toc-text">后台配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、rclone挂载GD"><span class="toc-text">二、rclone挂载GD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通版"><span class="toc-text">普通版</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装rclone"><span class="toc-text">安装rclone</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置GD并挂载"><span class="toc-text">配置GD并挂载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挂载磁盘点，配置自启动"><span class="toc-text">挂载磁盘点，配置自启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker版-1"><span class="toc-text">docker版</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、calibre安装与书库配置"><span class="toc-text">三、calibre安装与书库配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化配置"><span class="toc-text">初始化配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导入书库"><span class="toc-text">导入书库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建calibre数据库"><span class="toc-text">创建calibre数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kindle推送配置"><span class="toc-text">kindle推送配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#opds配置"><span class="toc-text">opds配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#愉快看书-收藏"><span class="toc-text">愉快看书(收藏)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://gitee.com/gentlemanhu/public-store/raw/master//images/ANIME-PICTURES.NETcloud(clouds)-night.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">GodLin's Blog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Calibre+rclone+google drive搭建个人书库记录</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-08-02 18:40:38"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2020-08-02</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-08-04 15:34:37"><i class="fas fa-history fa-fw"></i> 更新于 2020-08-04</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/%E7%8E%A9%E7%8E%A9/">玩玩</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta__icon"></i><span>字数总计:</span><span class="word-count">1.6k</span><span class="post-meta__separator">|</span><i class="far fa-clock fa-fw post-meta__icon"></i><span>阅读时长: 5 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>评论数:</span><a href="/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>记录了一些折腾过程</p>
+</blockquote>
+<details>
+    <summary>一些缘由</summary>
+
+<h3 id="E5"><a href="#E5" class="headerlink" title="E5"></a>E5</h3><ol>
+<li><p>前一段微软开发者E5订阅很火热，也顺手申请了一个，主要还是看上<code>OneDrive</code>的存储，E5可以拥有25个子账号，所以空间至少<code>25x5T</code>，当然也用不了这么多。</p>
+</li>
+<li><p>由于E5可能是参照开发者使用情况续订的，所以同时也部署了<a href="https://github.com/GentlemanHu/OwnE5" target="_blank" rel="noopener"><code>自动调用API续订</code></a>程序来尝试维持续订。</p>
+</li>
+</ol>
+<ol start="3">
+<li>搭建了各种索引程序作为个人网盘，总之，尝试了多款，各有优势吧。</li>
+</ol>
+<h3 id="TeamDrive"><a href="#TeamDrive" class="headerlink" title="TeamDrive"></a>TeamDrive</h3><ol>
+<li><p>GoogleDrive订阅G Suit教育版或者商业版是无限容量的（$$$)，教育邮箱之前搞过一个，翻车了。</p>
+</li>
+<li><p>偶然发现还有TeamDrive也是无限容量，就也顺手搞了一个玩玩看。</p>
+</li>
+<li><p>又发现各种玩法，转存什么的，利用SA账号转存，TG机器人转存等，顺手也搭建了。</p>
+<blockquote>
+<p><a href="https://github.com/iwestlin/gd-utils" target="_blank" rel="noopener">gd-utils</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="个人演示站"><a href="#个人演示站" class="headerlink" title="个人演示站"></a>个人演示站</h3><ul>
+<li>OD（暂不）</li>
+<li>GD<ul>
+<li><a href="https://pie.holyfuck.ml" target="_blank" rel="noopener">https://pie.holyfuck.ml</a></li>
+<li><a href="https://pie.keepfuture.live" target="_blank" rel="noopener">https://pie.keepfuture.live</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="折腾开始"><a href="#折腾开始" class="headerlink" title="折腾开始"></a>折腾开始</h3><ul>
+<li>各种离线下载，转存机器人也都玩过了，就想玩玩新鲜的。</li>
+<li>于是想到了搭建个人书库，利用这些<code>强大的</code>存储作支持。</li>
+<li>当然，OD和GD都是可以的，但是看到<code>calibre-web</code>这款管理面板原生支持GD，就选择了GD</li>
+</ul>
+</details>
+
+<h2 id="一、Calibre-web搭建与配置"><a href="#一、Calibre-web搭建与配置" class="headerlink" title="一、Calibre-web搭建与配置"></a>一、Calibre-web搭建与配置</h2><h3 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h3><h4 id="py依赖部署版"><a href="#py依赖部署版" class="headerlink" title="py依赖部署版"></a>py依赖部署版</h4><p><a href="https://github.com/janeczku/calibre-web" target="_blank" rel="noopener">calibre-web</a></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库</span><br><span class="line"><span class="built_in">cd</span> </span><br><span class="line"><span class="comment"># python3 (python3.x) </span></span><br><span class="line">pip3 install --target vendor -r requirements.txt </span><br><span class="line"><span class="comment"># (python2.7).</span></span><br><span class="line">pip install --target vendor -r requirements.txt</span><br></pre></td></tr></tbody></table></figure>
+
+<p>执行启动命令</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python cps.py</span><br><span class="line">或者 </span><br><span class="line">nohup python cps.py</span><br></pre></td></tr></tbody></table></figure>
+
+<p>至此，calibre的面板calibre-web搭建成功，接下来跟GD存储端对接。</p>
+<p>面板原生支持GD</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/20200802184446.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/20200802184359.png" alt=""></p>
+<p><a href="https://github.com/janeczku/calibre-web/wiki/Configuration#using-google-drive-integration" target="_blank" rel="noopener">doc</a></p>
+<p>由于某些原因，采用下边rclone挂载GD方式。</p>
+<h4 id="docker版"><a href="#docker版" class="headerlink" title="docker版"></a><del>docker版</del></h4><blockquote>
+<p>docker安装可谓最简单，可惜各种折腾未成功，还是一般安装吧~</p>
+<p>⚠️以下只是记录了报错等信息，尝试修复过程</p>
+</blockquote>
+<p><a href="https://hub.docker.com/r/linuxserver/calibre-web/" target="_blank" rel="noopener">calibre-docker</a></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker create \</span><br><span class="line">  --name=calibre-web \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Europe/London \</span><br><span class="line">  -e DOCKER_MODS=linuxserver/calibre-web:calibre \</span><br><span class="line">  -p 8083:8083 \</span><br><span class="line">  -v /media/config:/config \</span><br><span class="line">  -v /media/Books:/books \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  linuxserver/calibre-web</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>安装好之后，尽管已经映射，docker容器内不能读取到从host外部共享到内部的目录，所以，挂载的GD也就不能用。</p>
+</li>
+<li><p>找了一番，有个rclone-mount的docker镜像是专门为此而生。</p>
+<blockquote>
+<p><a href="https://github.com/tynor88/docker-rclone-mount" target="_blank" rel="noopener">rclone-mount-docker</a></p>
+<p><a href="https://hub.docker.com/r/mumiehub/rclone-mount/" target="_blank" rel="noopener">Docker-rclone</a></p>
+</blockquote>
+</li>
+<li><p><code>docker build -t rclone-docker:rclone .</code></p>
+</li>
+<li><p><code>docker run -t -i rclone-docker:rclone /bin/bash</code></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker start rclone-mount</span><br><span class="line">Error response from daemon: oci runtime error: container_linux.go:235: starting container process caused <span class="string">"process_linux.go:339: running prestart hook 2 caused \"error running hook: exit status 1, stdout: , stderr: \""</span></span><br><span class="line">Error: failed to start containers: rclone-mount</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>报错,google后需要在linux内核启动namespace什么的，下边是教程</p>
+</li>
+<li><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index#user_namespaces_options" target="_blank" rel="noopener">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index#user_namespaces_options</a></p>
+</li>
+</ul>
+<blockquote>
+<p>然而需要重启，由于部署了一堆闲玩的东西，很多没部署service自启动，重启后说不定就不知道到在哪启动了，所以放弃。</p>
+</blockquote>
+<h3 id="后台配置"><a href="#后台配置" class="headerlink" title="后台配置"></a>后台配置</h3><blockquote>
+<p>详见下边第三步</p>
+</blockquote>
+<h2 id="二、rclone挂载GD"><a href="#二、rclone挂载GD" class="headerlink" title="二、rclone挂载GD"></a>二、rclone挂载GD</h2><h3 id="普通版"><a href="#普通版" class="headerlink" title="普通版"></a>普通版</h3><h4 id="安装rclone"><a href="#安装rclone" class="headerlink" title="安装rclone"></a>安装<a href="https://rclone.org/install/#script-installation" target="_blank" rel="noopener">rclone</a></h4><h4 id="配置GD并挂载"><a href="#配置GD并挂载" class="headerlink" title="配置GD并挂载"></a>配置GD并挂载</h4><ul>
+<li><p><code>rclone config</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200802185121351.png" alt="image-20200802185121351"></p>
+<blockquote>
+<p> 新建remote</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200802185159925.png" alt="image-20200802185159925"></p>
+<blockquote>
+<p>选13（具体看版本），google drive</p>
+<p>client_id和secret_id可以不写，默认用的官方的。</p>
+<p>接下来都选1</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200802185330214.png" alt="image-20200802185330214"></p>
+</li>
+</ul>
+<blockquote>
+<p>根据提示，验证那里，由于是在vps没显示器，选n，点开链接验证后，复制代码到下边。</p>
+<p>配置成TeamDrive</p>
+<p>然后一路yes就行了</p>
+</blockquote>
+<h4 id="挂载磁盘点，配置自启动"><a href="#挂载磁盘点，配置自启动" class="headerlink" title="挂载磁盘点，配置自启动"></a>挂载磁盘点，配置自启动</h4><ul>
+<li>新建挂载文件夹，我建在<code>/media/Books</code></li>
+<li>配置service自启动</li>
+</ul>
+<p>将下边脚本改好后，新建service</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/books.service</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边复制到新建的service中</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Rclone</span><br><span class="line">After=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">ExecStart=/usr/bin/rclone mount Books:/ /media/Books/ --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 --vfs-cache-mode writes #针对calibre读取数据库加的</span><br><span class="line">Restart=on-abort</span><br><span class="line">User=root</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=default.target</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>需要改两个地方，<code>Books:/</code> 和 <code>/media/Books</code>，第一个为rclone配置的名称，第二个为本地挂载点。</p>
+</blockquote>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload;</span><br><span class="line">systemctl restart books;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看状态</span></span><br><span class="line">systemctl status books -l;</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 开机自启</span></span></span><br><span class="line">systemctl enable books;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>进入挂载点，ls能看到盘内容，成功~</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804122150879.png" alt="image-20200804122150879"></p>
+<h3 id="docker版-1"><a href="#docker版-1" class="headerlink" title="docker版"></a><del>docker版</del></h3><blockquote>
+<p>docker得折腾更多，就不用了</p>
+<p>下边只贴上了启动参数</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name rclone-mount \</span><br><span class="line">    --restart=unless-stopped \</span><br><span class="line">    --<span class="built_in">cap</span>-add SYS_ADMIN \</span><br><span class="line">    --device /dev/fuse \</span><br><span class="line">    --security-opt apparmor:unconfined \</span><br><span class="line">    -e RemotePath=<span class="string">"Bookgo:"</span> \</span><br><span class="line">    -e MountCommands=<span class="string">"--copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 --vfs-cache-mode writes"</span> \</span><br><span class="line">    -v /root/.config/rclone:/config \</span><br><span class="line">    -v /media/Books:/mnt/mediaefs:shared \</span><br><span class="line">    mumiehub/rclone-mount</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="三、calibre安装与书库配置"><a href="#三、calibre安装与书库配置" class="headerlink" title="三、calibre安装与书库配置"></a>三、calibre安装与书库配置</h2><p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/20200802184755.png" alt=""></p>
+<p>安装成功，并配置好书库后，进入web登录后就是这样的界面。</p>
+<blockquote>
+<p>然而，第一步中安装好的web面板，第一次登录，会让你设置书库地址，路径内必须有<code>metadata.db</code>书库的数据库文件。</p>
+<p>⚠️如果第一次用的话，没有metadata.db，必须手动搞一个，或者下载<a href="https://drive.google.com/file/d/189tv5i5SNT6rivLLLvCmC2JeLtODmSS1/view?usp=sharing" target="_blank" rel="noopener">这个</a>空白的书库放在路径内。</p>
+</blockquote>
+<h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804142346644.png" alt=""></p>
+<ul>
+<li><p>这样，输入初始admin，admin123用户登入，其他后台自行设置就行了</p>
+</li>
+<li><p>初始密码及时更改</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804142454950.png" alt="image-20200804142454950"></p>
+<p>功能还可以，有自动推送kindle功能。</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804142552774.png" alt="image-20200804142552774"></p>
+</li>
+<li><p>还有格式转换等，需要自行下载插件，路径配置好。</p>
+</li>
+</ul>
+<h3 id="导入书库"><a href="#导入书库" class="headerlink" title="导入书库"></a>导入书库</h3><ul>
+<li>上一步初始化后，书库只有一本Quick Start默认书</li>
+<li>可以通过面板上传按钮自行上传</li>
+<li>也可以通过calibre命令行导入其他一些书库</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/20200802184602.png" alt=""></p>
+<h4 id="创建calibre数据库"><a href="#创建calibre数据库" class="headerlink" title="创建calibre数据库"></a>创建calibre数据库</h4><blockquote>
+<p>这里需要用到calibre官方程序，尽管在vps不能可视化操作，但是命令行能用，导入书籍信息，自动归类等还是很好用</p>
+</blockquote>
+<ul>
+<li><ol>
+<li>下载安装calibre<br><a href="https://calibre-ebook.com/download_linux" target="_blank" rel="noopener">download</a></li>
+</ol>
+<blockquote>
+<p>仔细参照官方要求环境安装，如果环境不匹配，很折腾</p>
+<p>python：2.7.9+（&lt;3)</p>
+<p>gcc: 5.4.0+</p>
+<p>具体看安装时候提示信息，不匹配会出现各种问题</p>
+</blockquote>
+</li>
+<li><ol start="2">
+<li>使用<code>calibredb</code>命令将个人书籍导入数据库</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calibredb add "/media/Books/代码相关" --add --duplicates --ignore "*.md" --recurse --library-path=/root/tmp/bookslib</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上述表示递归添加<code>media/Books/代码相关</code>目录下所有支持图书，不含<code>md</code>，并允许重复，最后规定了<code>metadata.db</code>的路径</p>
+<blockquote>
+<p>其他指令参照官方man<a href="https://manual.calibre-ebook.com/generated/en/calibredb.html" target="_blank" rel="noopener">手册</a></p>
+</blockquote>
+<h4 id="kindle推送配置"><a href="#kindle推送配置" class="headerlink" title="kindle推送配置"></a>kindle推送配置</h4><blockquote>
+<p>详见后台配置</p>
+</blockquote>
+<h4 id="opds配置"><a href="#opds配置" class="headerlink" title="opds配置"></a>opds配置</h4><blockquote>
+<p><a href="https://site/opds" target="_blank" rel="noopener">https://site/opds</a></p>
+<p>站点后加<code>opds</code>就是opds地址，导入其他软件可用</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200804105005437.png" alt="image-20200804105005437"></p>
+<h3 id="愉快看书-收藏"><a href="#愉快看书-收藏" class="headerlink" title="愉快看书(收藏)"></a>愉快看书(收藏)</h3><ul>
+<li><p><a href="https://taotao.521521.ml" target="_blank" rel="noopener">https://taotao.521521.ml</a>  导入了GD珍藏的几个T的书库</p>
+</li>
+<li><p><a href="https://book.crushing.xyz" target="_blank" rel="noopener">https://book.crushing.xyz</a>  演示，只有一本</p>
+<blockquote>
+<p>利用OD和GD大容量，个人图书馆，爽~</p>
+<p>也许只是收藏吧~😑</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>更多配置细节还得看个人需求</p>
+<p>记录探索，探索记录</p>
+</blockquote>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><p><a href="https://rclone.org/install/#script-installation" target="_blank" rel="noopener">rclone</a></p>
+</li>
+<li><p><a href="https://calibre-ebook.com/" target="_blank" rel="noopener">Calibre</a></p>
+</li>
+<li><p><a href="https://github.com/janeczku/calibre-web" target="_blank" rel="noopener">Calibre-web</a></p>
+</li>
+<li><p><a href="https://github.com/iwestlin/gd-utils" target="_blank" rel="noopener">Gd-utils</a></p>
+</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:justfeelingme@gmail.com">GodLin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/">http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://crushing.xyz" target="_blank">GodLin's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%AA%E4%BA%BA%E4%B9%A6%E5%BA%93/">个人书库</a><a class="post-meta__tags" href="/tags/Calibre/">Calibre</a><a class="post-meta__tags" href="/tags/rclone/">rclone</a><a class="post-meta__tags" href="/tags/google-drive/">google drive</a></div><div class="post_share"><div class="addthis_inline_share_toolbox"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=5f0980e1a3b353ff" async="async"></script></div></div><div class="post-reward"><button class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/wechat.jpg" alt="wechat" onclick="window.open('https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/wechat.jpg')"><div class="post-qr-code__desc">wechat</div></li><li class="reward-item"><img class="post-qr-code__img" src="https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/alipay.jpg" alt="alipay" onclick="window.open('https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/alipay.jpg')"><div class="post-qr-code__desc">alipay</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/07/28/ide-ban-de-vim-spacevim/"><img class="next-cover" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200729111613.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ide般的vim--SpaceVim</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'JqwLjF9L4XX4kY6eIpD3TYBT-gzGzoHsz',
+  appKey: 'Jms068BvBeb29qfFQrAVnUSi',
+  placeholder: '说点啥呗~',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: true,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: true,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">©2020 By GodLin</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly </span></a><span class="footer-separator">|</span><span>Modified By </span><a href="https://github.com/genltemanhu" target="_blank" rel="noopener"><span>GodLin</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer=""></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/hideCategory.min.js"></script><script src="/bundle.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+;
+if (document.getElementsByClassName('mermaid').length) {
+  loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',function () {
+    mermaid.initialize({
+      theme: 'dark',
+  })
+})
+}</script></body></html>
