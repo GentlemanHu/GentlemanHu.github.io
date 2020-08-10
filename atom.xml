@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-08-04T07:34:37.890Z</updated>
+  <updated>2020-08-10T03:10:40.374Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google在线深度学习神器colab把玩</title>
+    <link href="http://crushing.xyz/2020/08/10/google-zai-xian-shen-du-xue-xi-shen-qi-colab-ba-wan/"/>
+    <id>http://crushing.xyz/2020/08/10/google-zai-xian-shen-du-xue-xi-shen-qi-colab-ba-wan/</id>
+    <published>2020-08-10T01:36:24.000Z</published>
+    <updated>2020-08-10T03:10:40.374Z</updated>
+    
+    <summary type="html">
+    
+      Google Colaboratory愉快玩耍
+    
+    </summary>
+    
+    
+      <category term="玩玩" scheme="http://crushing.xyz/categories/%E7%8E%A9%E7%8E%A9/"/>
+    
+    
+      <category term="Python" scheme="http://crushing.xyz/tags/Python/"/>
+    
+      <category term="Colaboratoty" scheme="http://crushing.xyz/tags/Colaboratoty/"/>
+    
+      <category term="机器学习" scheme="http://crushing.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="VScode" scheme="http://crushing.xyz/tags/VScode/"/>
+    
+  </entry>
   
   <entry>
     <title>Calibre+rclone+google drive搭建个人书库记录</title>
@@ -64,13 +91,13 @@
       <category term="Vim" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/Vim/"/>
     
     
+      <category term="VScode" scheme="http://crushing.xyz/tags/VScode/"/>
+    
       <category term="Vim" scheme="http://crushing.xyz/tags/Vim/"/>
     
       <category term="Ide" scheme="http://crushing.xyz/tags/Ide/"/>
     
       <category term="SpaceVim" scheme="http://crushing.xyz/tags/SpaceVim/"/>
-    
-      <category term="VScode" scheme="http://crushing.xyz/tags/VScode/"/>
     
       <category term="Linux" scheme="http://crushing.xyz/tags/Linux/"/>
     
