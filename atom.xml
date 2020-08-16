@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-08-15T11:16:36.809Z</updated>
+  <updated>2020-08-16T05:52:28.937Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Java并发之java.util.concurrent包Overview</title>
-    <link href="http://crushing.xyz/2020/08/14/java-bing-fa-zhi-java-util-concurrent-bao-overview/"/>
-    <id>http://crushing.xyz/2020/08/14/java-bing-fa-zhi-java-util-concurrent-bao-overview/</id>
+    <link href="http://crushing.xyz/posts/af84.html"/>
+    <id>http://crushing.xyz/posts/af84.html</id>
     <published>2020-08-14T10:52:33.000Z</published>
-    <updated>2020-08-15T11:16:36.809Z</updated>
+    <updated>2020-08-16T05:52:28.937Z</updated>
     
     <summary type="html">
     
@@ -49,10 +49,10 @@
   
   <entry>
     <title>Clover配置引导Linux内核</title>
-    <link href="http://crushing.xyz/2020/08/12/clover-pei-zhi-yin-dao-linux-nei-he/"/>
-    <id>http://crushing.xyz/2020/08/12/clover-pei-zhi-yin-dao-linux-nei-he/</id>
+    <link href="http://crushing.xyz/posts/dc6b.html"/>
+    <id>http://crushing.xyz/posts/dc6b.html</id>
     <published>2020-08-12T07:11:07.000Z</published>
-    <updated>2020-08-15T05:59:35.141Z</updated>
+    <updated>2020-08-16T05:52:28.918Z</updated>
     
     <summary type="html">
     
@@ -78,10 +78,10 @@
   
   <entry>
     <title>Google在线深度学习神器colab把玩</title>
-    <link href="http://crushing.xyz/2020/08/10/google-zai-xian-shen-du-xue-xi-shen-qi-colab-ba-wan/"/>
-    <id>http://crushing.xyz/2020/08/10/google-zai-xian-shen-du-xue-xi-shen-qi-colab-ba-wan/</id>
+    <link href="http://crushing.xyz/posts/30e6.html"/>
+    <id>http://crushing.xyz/posts/30e6.html</id>
     <published>2020-08-10T01:36:24.000Z</published>
-    <updated>2020-08-15T04:11:47.645Z</updated>
+    <updated>2020-08-16T05:52:28.928Z</updated>
     
     <summary type="html">
     
@@ -107,10 +107,10 @@
   
   <entry>
     <title>Calibre+rclone+google drive搭建个人书库记录</title>
-    <link href="http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/"/>
-    <id>http://crushing.xyz/2020/08/02/calibre-rclone-google-drive-da-jian-shu-ku-ba-wan/</id>
+    <link href="http://crushing.xyz/posts/811f.html"/>
+    <id>http://crushing.xyz/posts/811f.html</id>
     <published>2020-08-02T10:40:38.000Z</published>
-    <updated>2020-08-15T04:12:02.405Z</updated>
+    <updated>2020-08-16T05:52:28.911Z</updated>
     
     <summary type="html">
     
@@ -136,10 +136,10 @@
   
   <entry>
     <title>ide般的vim--SpaceVim</title>
-    <link href="http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/"/>
-    <id>http://crushing.xyz/2020/07/28/ide-ban-de-vim-spacevim/</id>
+    <link href="http://crushing.xyz/posts/22d7.html"/>
+    <id>http://crushing.xyz/posts/22d7.html</id>
     <published>2020-07-28T14:05:34.000Z</published>
-    <updated>2020-08-04T07:22:07.945Z</updated>
+    <updated>2020-08-16T05:52:28.939Z</updated>
     
     <summary type="html">
     
@@ -169,10 +169,10 @@
   
   <entry>
     <title>git submodule git子模块闲搞</title>
-    <link href="http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/"/>
-    <id>http://crushing.xyz/2020/07/21/git-submodule-git-zi-mo-kuai-xian-gao/</id>
+    <link href="http://crushing.xyz/posts/790e.html"/>
+    <id>http://crushing.xyz/posts/790e.html</id>
     <published>2020-07-21T10:58:35.000Z</published>
-    <updated>2020-08-04T07:22:01.182Z</updated>
+    <updated>2020-08-16T05:52:28.934Z</updated>
     
     <summary type="html">
     
@@ -200,10 +200,10 @@
   
   <entry>
     <title>GitHub Archive Program,我的祖传代码</title>
-    <link href="http://crushing.xyz/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/"/>
-    <id>http://crushing.xyz/2020/07/18/github-archive-program-wo-de-zu-chuan-dai-ma/</id>
+    <link href="http://crushing.xyz/posts/3334.html"/>
+    <id>http://crushing.xyz/posts/3334.html</id>
     <published>2020-07-18T09:22:54.000Z</published>
-    <updated>2020-07-29T05:48:01.074Z</updated>
+    <updated>2020-08-16T05:52:28.916Z</updated>
     
     <summary type="html">
     
@@ -225,10 +225,10 @@
   
   <entry>
     <title>backdrop-filter毛玻璃效果</title>
-    <link href="http://crushing.xyz/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/"/>
-    <id>http://crushing.xyz/2020/07/15/backdrop-filter-mao-bo-li-xiao-guo/</id>
+    <link href="http://crushing.xyz/posts/317c.html"/>
+    <id>http://crushing.xyz/posts/317c.html</id>
     <published>2020-07-15T03:26:55.000Z</published>
-    <updated>2020-07-29T05:49:21.073Z</updated>
+    <updated>2020-08-16T05:52:28.921Z</updated>
     
     <summary type="html">
     
@@ -260,10 +260,10 @@
   
   <entry>
     <title>关于invoke和call的区别</title>
-    <link href="http://crushing.xyz/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/"/>
-    <id>http://crushing.xyz/2020/07/11/guan-yu-invoke-he-call-de-qu-bie/</id>
+    <link href="http://crushing.xyz/posts/8507.html"/>
+    <id>http://crushing.xyz/posts/8507.html</id>
     <published>2020-07-11T15:14:43.000Z</published>
-    <updated>2020-07-30T12:18:44.655Z</updated>
+    <updated>2020-08-16T05:52:28.933Z</updated>
     
     <summary type="html">
     
