@@ -227,6 +227,29 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Clover配置引导Linux内核</title>
     <url>/posts/dc6b.html</url>
     <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
@@ -326,282 +349,6 @@
         <tag>Clover</tag>
         <tag>Manjaro</tag>
         <tag>引导</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Google在线深度学习神器colab把玩</title>
-    <url>/posts/30e6.html</url>
-    <content><![CDATA[<h2 id="Colaboratory入门玩"><a href="#Colaboratory入门玩" class="headerlink" title="Colaboratory入门玩"></a>Colaboratory入门玩</h2><div class="note success">
-            <p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">官网</a></p>
-          </div>
-
-<div class="note default">
-            <p><span style="color:green">打开官网，跟着指引来一遍</span></p>
-          </div>
-<ul>
-<li>基于Jupyter Notebook，托管于Google，使用起来大同小异，熟悉Jupyter的话，也是很方便的。</li>
-<li>代码和注释并存</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101129196.png" alt="image-20200810101129196"></li>
-<li>直接可视化显示</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101210851.png" alt="image-20200810101210851"></li>
-<li>其他很多特性，比如还能再cell处评论，很方便</li>
-<li>可以本地导入项目，也能Google Drive对接存储。</li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101415115.png" alt="image-20200810101415115"></p>
-<div class="note default">
-            <p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101513478.png" alt="image-20200810101513478"></p><span style="color:green"><p>配置不错，对于深度学习机器学习提供了很大帮助。</p><p>其他更多在<a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">官方教程</a><br></span></p>
-          </div>
-
-<h2 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h2><blockquote>
-<p>尽管来说，Jupyter很方便，但是对于某些不可描述操作，还是终端内好用。所以就想办法通过ssh连接到它后端。利用到了ngrok来内网穿透。</p>
-<p>脚本找了两个版本，用其中任意一个都可以。</p>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></p>
-<h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><p> Sign up for <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a></p>
-<blockquote>
-<ul>
-<li><p>You don’t need to buy paid plans. If you don’t want to sign up for anything, there is <a href="https://serveo.net/" target="_blank" rel="noopener">Serveo</a> version in following link. But it is slower than <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> version.</p>
-<p><a href="https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb" target="_blank" rel="noopener">https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb</a></p>
-<p>注册ngrok，转到token页面，为后边准备。</p>
-<p><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></p>
-</li>
-</ul>
-</blockquote>
-<h3 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h3><ol>
-<li><p>复制代码到Colab任意创建一个新cell中</p>
-<ul>
-<li><p>ssh only</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">import remocolab</span><br><span class="line">remocolab.setupSSHD()</span><br></pre></td></tr></table></figure></li>
-<li><p>ssh and vnc</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">   import remocolab</span><br><span class="line">   remocolab.setupVNC()</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>点左侧运行</p>
-<ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103313123.png" alt="image-20200810103313123"></li>
-</ul>
-</li>
-<li><p>把上边复制的authtoken粘到输入框</p>
-<ul>
-<li>等待上边代码部署到输入框时候，粘贴token，回车</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103458678.png" alt="image-20200810103458678"></li>
-<li>然后选区域，选最近差不多，我选新加坡<img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103619187.png" alt="image-20200810103619187"></li>
-</ul>
-</li>
-<li><p>愉快登录ssh</p>
-<ul>
-<li>等待部署完成后，会显示用户名和密码，以及ssh登录命令，有手就行。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103851755.png" alt="image-20200810103851755"></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></li>
-</ul>
-</li>
-</ol>
-<h3 id="Version-2"><a href="#Version-2" class="headerlink" title="Version 2"></a>Version 2</h3><p>步骤类似，粘贴脚本就行了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install useful stuff</span></span><br><span class="line">! apt install --yes ssh screen nano htop ranger git &gt; /dev/null</span><br><span class="line"><span class="comment"># SSH setting</span></span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"root:carbonara"</span> | chpasswd</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PasswordAuthentication yes"</span> &gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitUserEnvironment yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! service ssh restart &gt; /dev/null</span><br><span class="line"><span class="comment"># Download ngrok</span></span><br><span class="line">! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip</span><br><span class="line">! unzip -qq -n ngrok-stable-linux-amd64.zip</span><br><span class="line"><span class="comment"># Run ngrok</span></span><br><span class="line">authtoken = <span class="string">"PUT_YOUR_TOKEN_HERE"</span></span><br><span class="line">get_ipython().system_raw(<span class="string">'./ngrok authtoken $authtoken &amp;&amp; ./ngrok tcp 22 &amp;'</span>)</span><br><span class="line">! sleep 3</span><br><span class="line"><span class="comment"># Get the address for SSH</span></span><br><span class="line">import requests</span><br><span class="line">from re import sub</span><br><span class="line">r = requests.get(<span class="string">'http://localhost:4040/api/tunnels'</span>)</span><br><span class="line">str_ssh = r.json()[<span class="string">'tunnels'</span>][0][<span class="string">'public_url'</span>]</span><br><span class="line">str_ssh = sub(<span class="string">"tcp://"</span>, <span class="string">""</span>, str_ssh)</span><br><span class="line">str_ssh = sub(<span class="string">":"</span>, <span class="string">" -p "</span>, str_ssh)</span><br><span class="line">str_ssh = <span class="string">"ssh root@"</span> + str_ssh</span><br><span class="line"><span class="built_in">print</span>(str_ssh)</span><br></pre></td></tr></table></figure>
-
-<div class="note success">
-            <span style="color:green">只需要把上边`authtoken`换成自己的，运行！</span>
-          </div>
-
-<ul>
-<li>等待部署完成，ssh登录命令</li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104336106.png" alt="image-20200810104336106"></p>
-<blockquote>
-<p>默认密码为<code>carbonara</code></p>
-<p>及时更改密码</p>
-</blockquote>
-<h2 id="配置vscode"><a href="#配置vscode" class="headerlink" title="配置vscode"></a>配置vscode</h2><blockquote>
-<p>既然ssh连接了，各种服务也都能搭建了，这里搭建个vscode方便敲代码</p>
-</blockquote>
-<ol>
-<li>挂载Google Drive</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mount Google Drive and make some folders for vscode</span></span><br><span class="line">from google.colab import drive</span><br><span class="line">drive.mount(<span class="string">'/googledrive'</span>)</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive /</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server /root/.<span class="built_in">local</span>/share/</span><br></pre></td></tr></table></figure>
-
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104745488.png" alt="image-20200810104745488"></p>
-<p>点击链接验证授权</p>
-<ol start="2">
-<li>下载部署<code>code-server</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">! curl -fsSL https://code-server.dev/install.sh | sh &gt; /dev/null</span><br><span class="line">! code-server --<span class="built_in">bind</span>-addr 127.0.0.1:9999 --auth none &amp;</span><br></pre></td></tr></table></figure>
-
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104901196.png" alt="image-20200810104901196"></p>
-<ol start="3">
-<li>本地shell运行命令映射</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -L 9999:localhost:9999 root@0.tcp.ngrok.io -p 14407</span><br></pre></td></tr></table></figure>
-
-<p>其中9999端口为上边指定code-server端口，可以更换，但必须一致。</p>
-<p>后边14407端口为ssh端口</p>
-<ol start="4">
-<li>愉快敲代码</li>
-</ol>
-<ul>
-<li>打开<code>http://127.0.0.1:9999</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105129368.png" alt="image-20200810105129368"></li>
-</ul>
-<h2 id="其他玩法"><a href="#其他玩法" class="headerlink" title="其他玩法"></a>其他玩法</h2><ul>
-<li>Aria2 离线下载</li>
-<li>Youtube-dl 转存</li>
-<li>Rclone</li>
-<li>gd-utils</li>
-<li>etc…</li>
-</ul>
-<blockquote>
-<p>更多自己探索发现</p>
-</blockquote>
-<h2 id="Related"><a href="#Related" class="headerlink" title="Related"></a>Related</h2><ul>
-<li><a href="https://internet-of-tomohiro.netlify.app/google_colab/ssh.en.html" target="_blank" rel="noopener">How to access Google Colaboratory using ssh</a></li>
-<li><a href="https://towardsdatascience.com/colab-free-gpu-ssh-visual-studio-code-server-36fe1d3c5243" target="_blank" rel="noopener">Colab on steroids: free GPU instances with SSH access and Visual Studio Code Server</a></li>
-<li><a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">Colab Intro</a></li>
-<li><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></li>
-<li><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810100453017.png" alt="image-20200810100453017"></p>
-<hr>
-<hr>
-<blockquote>
-<p>Colab方便，但不要滥用。</p>
-<p>免费版本一般12h，但更多取决于GPU使用度</p>
-<p>学习，学习，学习！</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105410318.png" alt="image-20200810105410318"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>玩玩</category>
-        <category>资源</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Colaboratoty</tag>
-        <tag>机器学习</tag>
-        <tag>VScode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>backdrop-filter毛玻璃效果</title>
-    <url>/posts/317c.html</url>
-    <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
-<li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
-<blockquote>
-<p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
-</blockquote>
-</li>
-<li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
-</li>
-<li><p>通过backdrop-filter可以很好解决问题</p>
-</li>
-</ul>
-<h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
-</li>
-<li><p>chrome很好的支持了,nice~</p>
-</li>
-</ul>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
-<li><p>经过试验,的确firefox看不到,很影响阅读</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
-</li>
-<li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
-</li>
-<li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p>
-</li>
-</ul>
-<h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
-<h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
-</li>
-<li><p>效果也是不错的,不过需要绝对布局</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<ul>
-<li>根据需求可以改改</li>
-</ul>
-<h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
-<li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
-</li>
-<li><p>这样可以动态实现毛玻璃了</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<hr>
-<h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p>
-</li>
-<li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p>
-</li>
-<li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p>
-</li>
-<li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>FrontEnd</category>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>高斯模糊</tag>
-        <tag>毛玻璃</tag>
       </tags>
   </entry>
   <entry>
@@ -993,6 +740,259 @@
       </tags>
   </entry>
   <entry>
+    <title>Google在线深度学习神器colab把玩</title>
+    <url>/posts/30e6.html</url>
+    <content><![CDATA[<h2 id="Colaboratory入门玩"><a href="#Colaboratory入门玩" class="headerlink" title="Colaboratory入门玩"></a>Colaboratory入门玩</h2><div class="note success">
+            <p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">官网</a></p>
+          </div>
+
+<div class="note default">
+            <p><span style="color:green">打开官网，跟着指引来一遍</span></p>
+          </div>
+<ul>
+<li>基于Jupyter Notebook，托管于Google，使用起来大同小异，熟悉Jupyter的话，也是很方便的。</li>
+<li>代码和注释并存</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101129196.png" alt="image-20200810101129196"></li>
+<li>直接可视化显示</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101210851.png" alt="image-20200810101210851"></li>
+<li>其他很多特性，比如还能再cell处评论，很方便</li>
+<li>可以本地导入项目，也能Google Drive对接存储。</li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101415115.png" alt="image-20200810101415115"></p>
+<div class="note default">
+            <p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101513478.png" alt="image-20200810101513478"></p><span style="color:green"><p>配置不错，对于深度学习机器学习提供了很大帮助。</p><p>其他更多在<a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">官方教程</a><br></span></p>
+          </div>
+
+<h2 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h2><blockquote>
+<p>尽管来说，Jupyter很方便，但是对于某些不可描述操作，还是终端内好用。所以就想办法通过ssh连接到它后端。利用到了ngrok来内网穿透。</p>
+<p>脚本找了两个版本，用其中任意一个都可以。</p>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></p>
+<h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><p> Sign up for <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a></p>
+<blockquote>
+<ul>
+<li><p>You don’t need to buy paid plans. If you don’t want to sign up for anything, there is <a href="https://serveo.net/" target="_blank" rel="noopener">Serveo</a> version in following link. But it is slower than <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> version.</p>
+<p><a href="https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb" target="_blank" rel="noopener">https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb</a></p>
+<p>注册ngrok，转到token页面，为后边准备。</p>
+<p><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h3><ol>
+<li><p>复制代码到Colab任意创建一个新cell中</p>
+<ul>
+<li><p>ssh only</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">import remocolab</span><br><span class="line">remocolab.setupSSHD()</span><br></pre></td></tr></table></figure></li>
+<li><p>ssh and vnc</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">   import remocolab</span><br><span class="line">   remocolab.setupVNC()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>点左侧运行</p>
+<ul>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103313123.png" alt="image-20200810103313123"></li>
+</ul>
+</li>
+<li><p>把上边复制的authtoken粘到输入框</p>
+<ul>
+<li>等待上边代码部署到输入框时候，粘贴token，回车</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103458678.png" alt="image-20200810103458678"></li>
+<li>然后选区域，选最近差不多，我选新加坡<img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103619187.png" alt="image-20200810103619187"></li>
+</ul>
+</li>
+<li><p>愉快登录ssh</p>
+<ul>
+<li>等待部署完成后，会显示用户名和密码，以及ssh登录命令，有手就行。</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103851755.png" alt="image-20200810103851755"></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></li>
+</ul>
+</li>
+</ol>
+<h3 id="Version-2"><a href="#Version-2" class="headerlink" title="Version 2"></a>Version 2</h3><p>步骤类似，粘贴脚本就行了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install useful stuff</span></span><br><span class="line">! apt install --yes ssh screen nano htop ranger git &gt; /dev/null</span><br><span class="line"><span class="comment"># SSH setting</span></span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"root:carbonara"</span> | chpasswd</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PasswordAuthentication yes"</span> &gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitUserEnvironment yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! service ssh restart &gt; /dev/null</span><br><span class="line"><span class="comment"># Download ngrok</span></span><br><span class="line">! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip</span><br><span class="line">! unzip -qq -n ngrok-stable-linux-amd64.zip</span><br><span class="line"><span class="comment"># Run ngrok</span></span><br><span class="line">authtoken = <span class="string">"PUT_YOUR_TOKEN_HERE"</span></span><br><span class="line">get_ipython().system_raw(<span class="string">'./ngrok authtoken $authtoken &amp;&amp; ./ngrok tcp 22 &amp;'</span>)</span><br><span class="line">! sleep 3</span><br><span class="line"><span class="comment"># Get the address for SSH</span></span><br><span class="line">import requests</span><br><span class="line">from re import sub</span><br><span class="line">r = requests.get(<span class="string">'http://localhost:4040/api/tunnels'</span>)</span><br><span class="line">str_ssh = r.json()[<span class="string">'tunnels'</span>][0][<span class="string">'public_url'</span>]</span><br><span class="line">str_ssh = sub(<span class="string">"tcp://"</span>, <span class="string">""</span>, str_ssh)</span><br><span class="line">str_ssh = sub(<span class="string">":"</span>, <span class="string">" -p "</span>, str_ssh)</span><br><span class="line">str_ssh = <span class="string">"ssh root@"</span> + str_ssh</span><br><span class="line"><span class="built_in">print</span>(str_ssh)</span><br></pre></td></tr></table></figure>
+
+<div class="note success">
+            <span style="color:green">只需要把上边`authtoken`换成自己的，运行！</span>
+          </div>
+
+<ul>
+<li>等待部署完成，ssh登录命令</li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104336106.png" alt="image-20200810104336106"></p>
+<blockquote>
+<p>默认密码为<code>carbonara</code></p>
+<p>及时更改密码</p>
+</blockquote>
+<h2 id="配置vscode"><a href="#配置vscode" class="headerlink" title="配置vscode"></a>配置vscode</h2><blockquote>
+<p>既然ssh连接了，各种服务也都能搭建了，这里搭建个vscode方便敲代码</p>
+</blockquote>
+<ol>
+<li>挂载Google Drive</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mount Google Drive and make some folders for vscode</span></span><br><span class="line">from google.colab import drive</span><br><span class="line">drive.mount(<span class="string">'/googledrive'</span>)</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive /</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server /root/.<span class="built_in">local</span>/share/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104745488.png" alt="image-20200810104745488"></p>
+<p>点击链接验证授权</p>
+<ol start="2">
+<li>下载部署<code>code-server</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">! curl -fsSL https://code-server.dev/install.sh | sh &gt; /dev/null</span><br><span class="line">! code-server --<span class="built_in">bind</span>-addr 127.0.0.1:9999 --auth none &amp;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104901196.png" alt="image-20200810104901196"></p>
+<ol start="3">
+<li>本地shell运行命令映射</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -L 9999:localhost:9999 root@0.tcp.ngrok.io -p 14407</span><br></pre></td></tr></table></figure>
+
+<p>其中9999端口为上边指定code-server端口，可以更换，但必须一致。</p>
+<p>后边14407端口为ssh端口</p>
+<ol start="4">
+<li>愉快敲代码</li>
+</ol>
+<ul>
+<li>打开<code>http://127.0.0.1:9999</code></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105129368.png" alt="image-20200810105129368"></li>
+</ul>
+<h2 id="其他玩法"><a href="#其他玩法" class="headerlink" title="其他玩法"></a>其他玩法</h2><ul>
+<li>Aria2 离线下载</li>
+<li>Youtube-dl 转存</li>
+<li>Rclone</li>
+<li>gd-utils</li>
+<li>etc…</li>
+</ul>
+<blockquote>
+<p>更多自己探索发现</p>
+</blockquote>
+<h2 id="Related"><a href="#Related" class="headerlink" title="Related"></a>Related</h2><ul>
+<li><a href="https://internet-of-tomohiro.netlify.app/google_colab/ssh.en.html" target="_blank" rel="noopener">How to access Google Colaboratory using ssh</a></li>
+<li><a href="https://towardsdatascience.com/colab-free-gpu-ssh-visual-studio-code-server-36fe1d3c5243" target="_blank" rel="noopener">Colab on steroids: free GPU instances with SSH access and Visual Studio Code Server</a></li>
+<li><a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">Colab Intro</a></li>
+<li><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></li>
+<li><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810100453017.png" alt="image-20200810100453017"></p>
+<hr>
+<hr>
+<blockquote>
+<p>Colab方便，但不要滥用。</p>
+<p>免费版本一般12h，但更多取决于GPU使用度</p>
+<p>学习，学习，学习！</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105410318.png" alt="image-20200810105410318"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>玩玩</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Colaboratoty</tag>
+        <tag>机器学习</tag>
+        <tag>VScode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>backdrop-filter毛玻璃效果</title>
+    <url>/posts/317c.html</url>
+    <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
+<li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
+<blockquote>
+<p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
+</blockquote>
+</li>
+<li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
+</li>
+<li><p>通过backdrop-filter可以很好解决问题</p>
+</li>
+</ul>
+<h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
+</li>
+<li><p>chrome很好的支持了,nice~</p>
+</li>
+</ul>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
+<li><p>经过试验,的确firefox看不到,很影响阅读</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
+</li>
+<li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
+</li>
+<li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p>
+</li>
+</ul>
+<h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
+<h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
+</li>
+<li><p>效果也是不错的,不过需要绝对布局</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p>
+</blockquote>
+</blockquote>
+<ul>
+<li>根据需求可以改改</li>
+</ul>
+<h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
+<li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
+</li>
+<li><p>这样可以动态实现毛玻璃了</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p>
+</blockquote>
+</blockquote>
+<hr>
+<h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p>
+</li>
+<li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p>
+</li>
+<li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p>
+</li>
+<li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>FrontEnd</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>高斯模糊</tag>
+        <tag>毛玻璃</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git submodule git子模块闲搞</title>
     <url>/posts/790e.html</url>
     <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
@@ -1073,6 +1073,35 @@
         <tag>Git</tag>
         <tag>博客</tag>
         <tag>Git submodule</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于invoke和call的区别</title>
+    <url>/posts/8507.html</url>
+    <content><![CDATA[<h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul>
+<li><p>Function calling is when you call a function yourself in a program.</p>
+</li>
+<li><p>While function invoking is when it gets called automatically.</p>
+</li>
+</ul>
+<blockquote>
+<p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
+</blockquote>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
+<h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>编程日常</tag>
+        <tag>关键字</tag>
       </tags>
   </entry>
   <entry>
@@ -1238,35 +1267,6 @@
         <tag>Ide</tag>
         <tag>SpaceVim</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于invoke和call的区别</title>
-    <url>/posts/8507.html</url>
-    <content><![CDATA[<h1 id="关于invoke和call的区别"><a href="#关于invoke和call的区别" class="headerlink" title="关于invoke和call的区别"></a>关于invoke和call的区别</h1><ul>
-<li><p>Function calling is when you call a function yourself in a program.</p>
-</li>
-<li><p>While function invoking is when it gets called automatically.</p>
-</li>
-</ul>
-<blockquote>
-<p><span style="color:yellow">call是你主动call函数或方法的,invoke是程序自动触发或被触发的.</span></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><em><a href="https://www.quora.com/What-is-the-difference-between-call-and-invoke" target="_blank" rel="noopener">具体答案</a></em></p>
-</blockquote>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/original-vofan-long+hair-highres-open+mouth-blue+eyes.jpg" alt="cover"></p>
-<h1 id="干就完了"><a href="#干就完了" class="headerlink" title="干就完了"></a>干就完了</h1>]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>编程日常</tag>
-        <tag>关键字</tag>
       </tags>
   </entry>
 </search>
