@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-08-20T12:22:41.103Z</updated>
+  <updated>2020-10-06T09:28:38.768Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -17,11 +17,326 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github官方云端IDE——CodeSpaces</title>
+    <link href="http://crushing.xyz/posts/a764.html"/>
+    <id>http://crushing.xyz/posts/a764.html</id>
+    <published>2020-10-06T02:58:45.000Z</published>
+    <updated>2020-10-06T09:28:38.768Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;CodeSpaces内测&quot;&gt;&lt;a href=&quot;#CodeSpaces内测&quot; class=&quot;headerlink&quot; title=&quot;CodeSpaces内测&quot;&gt;&lt;/a&gt;CodeSpaces内测&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;官网 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="玩玩" scheme="http://crushing.xyz/categories/%E7%8E%A9%E7%8E%A9/"/>
+    
+      <category term="资源" scheme="http://crushing.xyz/categories/%E7%8E%A9%E7%8E%A9/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="Github" scheme="http://crushing.xyz/tags/Github/"/>
+    
+      <category term="Cloud IDE" scheme="http://crushing.xyz/tags/Cloud-IDE/"/>
+    
+      <category term="CodeSpace" scheme="http://crushing.xyz/tags/CodeSpace/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java探索之集合</title>
+    <link href="http://crushing.xyz/posts/703e.html"/>
+    <id>http://crushing.xyz/posts/703e.html</id>
+    <published>2020-09-20T09:18:10.000Z</published>
+    <updated>2020-10-06T03:12:34.132Z</updated>
+    
+    <summary type="html">
+    
+      对Java集合的探索
+    
+    </summary>
+    
+    
+      <category term="Godway" scheme="http://crushing.xyz/categories/Godway/"/>
+    
+      <category term="Java" scheme="http://crushing.xyz/categories/Godway/Java/"/>
+    
+      <category term="Basics" scheme="http://crushing.xyz/categories/Godway/Java/Basics/"/>
+    
+    
+      <category term="Java" scheme="http://crushing.xyz/tags/Java/"/>
+    
+      <category term="Collections" scheme="http://crushing.xyz/tags/Collections/"/>
+    
+      <category term="Map" scheme="http://crushing.xyz/tags/Map/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基操之Stream</title>
+    <link href="http://crushing.xyz/posts/1b48.html"/>
+    <id>http://crushing.xyz/posts/1b48.html</id>
+    <published>2020-09-11T15:11:59.000Z</published>
+    <updated>2020-11-05T12:28:46.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Java-Stream操作&quot;&gt;&lt;a href=&quot;#Java-Stream操作&quot; class=&quot;headerlink&quot; title=&quot;Java Stream操作&quot;&gt;&lt;/a&gt;Java Stream操作&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Godway" scheme="http://crushing.xyz/categories/Godway/"/>
+    
+      <category term="Java" scheme="http://crushing.xyz/categories/Godway/Java/"/>
+    
+      <category term="Basics" scheme="http://crushing.xyz/categories/Godway/Java/Basics/"/>
+    
+    
+      <category term="Java" scheme="http://crushing.xyz/tags/Java/"/>
+    
+      <category term="基础" scheme="http://crushing.xyz/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="Stream" scheme="http://crushing.xyz/tags/Stream/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令之cut</title>
+    <link href="http://crushing.xyz/posts/d2e2.html"/>
+    <id>http://crushing.xyz/posts/d2e2.html</id>
+    <published>2020-09-02T09:19:38.000Z</published>
+    <updated>2020-10-06T03:12:34.134Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux命令之cut&quot;&gt;&lt;a href=&quot;#Linux命令之cut&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令之xargs</title>
+    <link href="http://crushing.xyz/posts/db22.html"/>
+    <id>http://crushing.xyz/posts/db22.html</id>
+    <published>2020-08-31T11:10:18.000Z</published>
+    <updated>2020-10-06T03:12:34.131Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux命令之xargs&quot;&gt;&lt;a href=&quot;#Linux命令之xargs&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux神器之asciinema</title>
+    <link href="http://crushing.xyz/posts/d5b9.html"/>
+    <id>http://crushing.xyz/posts/d5b9.html</id>
+    <published>2020-08-31T07:19:35.000Z</published>
+    <updated>2020-10-06T03:12:34.136Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Original asciinema&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/docs/usage&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="Linux" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java工具之jenkins</title>
+    <link href="http://crushing.xyz/posts/a486.html"/>
+    <id>http://crushing.xyz/posts/a486.html</id>
+    <published>2020-08-31T07:10:45.000Z</published>
+    <updated>2020-10-06T03:12:34.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Java-CI集成&quot;&gt;&lt;a href=&quot;#Java-CI集成&quot; class=&quot;headerlink&quot; title=&quot;Java CI集成&quot;&gt;&lt;/a&gt;Java
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Godway" scheme="http://crushing.xyz/categories/Godway/"/>
+    
+      <category term="Java" scheme="http://crushing.xyz/categories/Godway/Java/"/>
+    
+      <category term="专题" scheme="http://crushing.xyz/categories/Godway/Java/%E4%B8%93%E9%A2%98/"/>
+    
+      <category term="工具" scheme="http://crushing.xyz/categories/Godway/Java/%E4%B8%93%E9%A2%98/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux神器之tldr</title>
+    <link href="http://crushing.xyz/posts/a7c8.html"/>
+    <id>http://crushing.xyz/posts/a7c8.html</id>
+    <published>2020-08-31T07:06:37.000Z</published>
+    <updated>2020-10-06T03:12:34.139Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;man命令和help命令&quot;&gt;&lt;a href=&quot;#man命令和help命令&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="Linux" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux剑客之sed</title>
+    <link href="http://crushing.xyz/posts/4dfa.html"/>
+    <id>http://crushing.xyz/posts/4dfa.html</id>
+    <published>2020-08-30T09:54:34.000Z</published>
+    <updated>2020-10-06T09:45:19.568Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;学习整理from &lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html#Command_002dLine-Options&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="Linux" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Azure中WindowsServer没GUI</title>
+    <link href="http://crushing.xyz/posts/9ff4.html"/>
+    <id>http://crushing.xyz/posts/9ff4.html</id>
+    <published>2020-08-29T08:09:36.000Z</published>
+    <updated>2020-10-06T09:27:39.738Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;为了节省磁盘空间费用，安装windowsserver
+        
+      
+    
+    </summary>
+    
+    
+      <category term="日常杂记" scheme="http://crushing.xyz/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="随手记" scheme="http://crushing.xyz/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java开发工具之Maven</title>
+    <link href="http://crushing.xyz/posts/8113.html"/>
+    <id>http://crushing.xyz/posts/8113.html</id>
+    <published>2020-08-26T12:38:02.000Z</published>
+    <updated>2020-10-06T03:12:34.127Z</updated>
+    
+    <summary type="html">
+    
+      Java开发工具之Maven，简单配置和探索
+    
+    </summary>
+    
+    
+      <category term="Godway" scheme="http://crushing.xyz/categories/Godway/"/>
+    
+      <category term="Java" scheme="http://crushing.xyz/categories/Godway/Java/"/>
+    
+      <category term="专题" scheme="http://crushing.xyz/categories/Godway/Java/%E4%B8%93%E9%A2%98/"/>
+    
+      <category term="工具" scheme="http://crushing.xyz/categories/Godway/Java/%E4%B8%93%E9%A2%98/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Java" scheme="http://crushing.xyz/tags/Java/"/>
+    
+      <category term="Maven" scheme="http://crushing.xyz/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java并发之java.util.concurrent包Overview</title>
     <link href="http://crushing.xyz/posts/af84.html"/>
     <id>http://crushing.xyz/posts/af84.html</id>
     <published>2020-08-14T10:52:33.000Z</published>
-    <updated>2020-08-20T12:22:41.103Z</updated>
+    <updated>2020-10-06T03:00:33.309Z</updated>
     
     <summary type="html">
     
@@ -139,7 +454,7 @@
     <link href="http://crushing.xyz/posts/22d7.html"/>
     <id>http://crushing.xyz/posts/22d7.html</id>
     <published>2020-07-28T14:05:34.000Z</published>
-    <updated>2020-08-20T12:22:00.327Z</updated>
+    <updated>2020-08-31T10:29:20.109Z</updated>
     
     <summary type="html">
     
@@ -151,8 +466,6 @@
       <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
     
       <category term="Linux" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/"/>
-    
-      <category term="Vim" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/Linux/Vim/"/>
     
     
       <category term="VScode" scheme="http://crushing.xyz/tags/VScode/"/>
