@@ -353,29 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github官方云端IDE——CodeSpaces</title>
     <url>/posts/a764.html</url>
     <content><![CDATA[<h2 id="CodeSpaces内测"><a href="#CodeSpaces内测" class="headerlink" title="CodeSpaces内测"></a>CodeSpaces内测</h2><blockquote>
@@ -403,6 +380,29 @@
         <tag>Github</tag>
         <tag>Cloud IDE</tag>
         <tag>CodeSpace</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
       </tags>
   </entry>
   <entry>
@@ -1050,46 +1050,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux剑客之sed</title>
-    <url>/posts/4dfa.html</url>
-    <content><![CDATA[<div class="note info">
-            <p>学习整理from <a href="https://www.gnu.org/software/sed/manual/sed.html#Command_002dLine-Options" target="_blank" rel="noopener">gun.org</a></p><p>基本直译</p>
-          </div>
-
-<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p><code>sed</code>，一个流编辑器。那么一个流编辑器就是处理转换文本的，而它的输入流，则来自管道(pipeline)。<code>sed</code>同样也支持脚本编辑，而且只让输入流(inputs)处理一次，所以更加高效。而<code>sed</code>的特性就是从管道过滤文本，这就是它的拿手好活了。</p>
-<h2 id="2-Running-sed"><a href="#2-Running-sed" class="headerlink" title="2 Running sed"></a>2 Running sed</h2><p>简单介绍运行<code>sed</code>的基操</p>
-<h3 id="2-1-Overview"><a href="#2-1-Overview" class="headerlink" title="2.1 Overview"></a>2.1 Overview</h3><p>通常<code>sed</code>像如下使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed SCRIPT INPUTFILE...</span><br></pre></td></tr></table></figure>
-
-<p>比如，把<code>input.txt</code>中所有的<code>hello</code>替换成<code>world</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
-
-<p>如果不定义输入文件，或者输入文件是<code>-</code>，<code>sed</code>就从标准输入(standard input)过滤，下边结果都是一样的</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br><span class="line">sed <span class="string">'s/hello/world/'</span> &lt; input.txt &gt; output.txt</span><br><span class="line">cat input.txt | sed <span class="string">'s/hello/world/'</span> - &gt; output.txt</span><br></pre></td></tr></table></figure>
-
-<p><code>sed</code>会把结果写到标准输出流。</p>
-<h3 id="2-2-命令行参数"><a href="#2-2-命令行参数" class="headerlink" title="2.2 命令行参数"></a>2.2 命令行参数</h3><h3 id="2-3-退出类型"><a href="#2-3-退出类型" class="headerlink" title="2.3 退出类型"></a>2.3 退出类型</h3><h2 id="3-sed脚本语言"><a href="#3-sed脚本语言" class="headerlink" title="3 sed脚本语言"></a>3 <code>sed</code>脚本语言</h2><h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><h3 id="3-2-命令汇总"><a href="#3-2-命令汇总" class="headerlink" title="3.2 命令汇总"></a>3.2 命令汇总</h3><h3 id="3-3-s-Command"><a href="#3-3-s-Command" class="headerlink" title="3.3 s Command"></a>3.3 <code>s</code> Command</h3><h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><h3 id="3-5-不常用命令"><a href="#3-5-不常用命令" class="headerlink" title="3.5 不常用命令"></a>3.5 不常用命令</h3><h3 id="3-6-sed针对大神的命令"><a href="#3-6-sed针对大神的命令" class="headerlink" title="3.6 sed针对大神的命令"></a>3.6 <code>sed</code>针对大神的命令</h3><h3 id="3-7-针对GUN版sed"><a href="#3-7-针对GUN版sed" class="headerlink" title="3.7 针对GUN版sed"></a>3.7 针对<code>GUN</code>版<code>sed</code></h3><h3 id="3-8-多命令情况与语法"><a href="#3-8-多命令情况与语法" class="headerlink" title="3.8 多命令情况与语法"></a>3.8 多命令情况与语法</h3><h4 id="3-8-1-多命令需要另起一行"><a href="#3-8-1-多命令需要另起一行" class="headerlink" title="3.8.1 多命令需要另起一行"></a>3.8.1 多命令需要另起一行</h4><h2 id="4-各种行操作"><a href="#4-各种行操作" class="headerlink" title="4 各种行操作"></a>4 各种行操作</h2><h3 id="4-1-Overview"><a href="#4-1-Overview" class="headerlink" title="4.1 Overview"></a>4.1 Overview</h3><h3 id="4-2-通过数字择取行"><a href="#4-2-通过数字择取行" class="headerlink" title="4.2 通过数字择取行"></a>4.2 通过数字择取行</h3><h3 id="4-3-通过匹配字符择取行"><a href="#4-3-通过匹配字符择取行" class="headerlink" title="4.3 通过匹配字符择取行"></a>4.3 通过匹配字符择取行</h3><h3 id="4-4-范围择取"><a href="#4-4-范围择取" class="headerlink" title="4.4 范围择取"></a>4.4 范围择取</h3><h2 id="5-sed正则操作"><a href="#5-sed正则操作" class="headerlink" title="5 sed正则操作"></a>5 <code>sed</code>正则操作</h2><h3 id="5-1-Overview"><a href="#5-1-Overview" class="headerlink" title="5.1 Overview"></a>5.1 Overview</h3><h3 id="5-2-Basic-BRE-正则和Extended-ERE-正则"><a href="#5-2-Basic-BRE-正则和Extended-ERE-正则" class="headerlink" title="5.2 Basic(BRE)正则和Extended(ERE)正则"></a>5.2 Basic(BRE)正则和Extended(ERE)正则</h3><h3 id="5-3-Basic正则语法"><a href="#5-3-Basic正则语法" class="headerlink" title="5.3 Basic正则语法"></a>5.3 Basic正则语法</h3><h3 id="5-4-Extended正则语法"><a href="#5-4-Extended正则语法" class="headerlink" title="5.4 Extended正则语法"></a>5.4 Extended正则语法</h3><h3 id="5-5-方括号用法"><a href="#5-5-方括号用法" class="headerlink" title="5.5 方括号用法"></a>5.5 方括号用法</h3><h3 id="5-6-正则扩展"><a href="#5-6-正则扩展" class="headerlink" title="5.6 正则扩展"></a>5.6 正则扩展</h3><h3 id="5-7-前引用与子表达"><a href="#5-7-前引用与子表达" class="headerlink" title="5.7 前引用与子表达"></a>5.7 前引用与子表达</h3><h3 id="5-8-针对特殊字符"><a href="#5-8-针对特殊字符" class="headerlink" title="5.8 针对特殊字符"></a>5.8 针对特殊字符</h3><h4 id="5-8-1-转义优先"><a href="#5-8-1-转义优先" class="headerlink" title="5.8.1 转义优先"></a>5.8.1 转义优先</h4><h3 id="5-9-多字节字符与Locale情况"><a href="#5-9-多字节字符与Locale情况" class="headerlink" title="5.9 多字节字符与Locale情况"></a>5.9 多字节字符与Locale情况</h3><h4 id="5-9-1-无效多字节字符"><a href="#5-9-1-无效多字节字符" class="headerlink" title="5.9.1 无效多字节字符"></a>5.9.1 无效多字节字符</h4><h4 id="5-9-2-大小写"><a href="#5-9-2-大小写" class="headerlink" title="5.9.2 大小写"></a>5.9.2 大小写</h4><h4 id="5-9-3-多字节正则类"><a href="#5-9-3-多字节正则类" class="headerlink" title="5.9.3 多字节正则类"></a>5.9.3 多字节正则类</h4><h2 id="6-sed高级用法-cycles和buffers"><a href="#6-sed高级用法-cycles和buffers" class="headerlink" title="6 sed高级用法:cycles和buffers"></a>6 <code>sed</code>高级用法:<code>cycles</code>和<code>buffers</code></h2><h2 id="7-一些脚本例子"><a href="#7-一些脚本例子" class="headerlink" title="7 一些脚本例子"></a>7 一些脚本例子</h2><h2 id="8-GUN版本sed的局限和优势"><a href="#8-GUN版本sed的局限和优势" class="headerlink" title="8 GUN版本sed的局限和优势"></a>8 <code>GUN</code>版本<code>sed</code>的局限和优势</h2><h2 id="9-其他学习资源"><a href="#9-其他学习资源" class="headerlink" title="9 其他学习资源"></a>9 其他学习资源</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://www.grymoire.com/Unix/Sed.html" target="_blank" rel="noopener">Tutorial</a></p>
-<p><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/" target="_blank" rel="noopener">WithExamples</a></p>
-<p><a href="https://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">Manual</a></p>
-<p><a href="https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083" target="_blank" rel="noopener">精通正则表达式 提取码：grep </a></p>
-<h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><blockquote>
-<p>本文为个人翻译学习，鉴于认知水平和能力有限，不当之处在所难免。希望确证准确。</p>
-</blockquote>
-<blockquote>
-<p>Contact: <a href="mailto:work@crushing.xyz">work@crushing.xyz</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux命令之xargs</title>
-    <url>/posts/db22.html</url>
-    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
-  </entry>
-  <entry>
     <title>Java探索之集合</title>
     <url>/posts/703e.html</url>
     <content><![CDATA[<h2 id="Java集合相关问题"><a href="#Java集合相关问题" class="headerlink" title="Java集合相关问题"></a>Java集合相关问题</h2><h3 id="List，Set，Map区别"><a href="#List，Set，Map区别" class="headerlink" title="List，Set，Map区别"></a>List，Set，Map区别</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/java.png" alt=""></p>
@@ -1125,6 +1085,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux剑客之sed</title>
+    <url>/posts/4dfa.html</url>
+    <content><![CDATA[<div class="note info">
+            <p>学习整理from <a href="https://www.gnu.org/software/sed/manual/sed.html#Command_002dLine-Options" target="_blank" rel="noopener">gun.org</a></p><p>基本直译</p>
+          </div>
+
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p><code>sed</code>，一个流编辑器。那么一个流编辑器就是处理转换文本的，而它的输入流，则来自管道(pipeline)。<code>sed</code>同样也支持脚本编辑，而且只让输入流(inputs)处理一次，所以更加高效。而<code>sed</code>的特性就是从管道过滤文本，这就是它的拿手好活了。</p>
+<h2 id="2-Running-sed"><a href="#2-Running-sed" class="headerlink" title="2 Running sed"></a>2 Running sed</h2><p>简单介绍运行<code>sed</code>的基操</p>
+<h3 id="2-1-Overview"><a href="#2-1-Overview" class="headerlink" title="2.1 Overview"></a>2.1 Overview</h3><p>通常<code>sed</code>像如下使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed SCRIPT INPUTFILE...</span><br></pre></td></tr></table></figure>
+
+<p>比如，把<code>input.txt</code>中所有的<code>hello</code>替换成<code>world</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
+
+<p>如果不定义输入文件，或者输入文件是<code>-</code>，<code>sed</code>就从标准输入(standard input)过滤，下边结果都是一样的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br><span class="line">sed <span class="string">'s/hello/world/'</span> &lt; input.txt &gt; output.txt</span><br><span class="line">cat input.txt | sed <span class="string">'s/hello/world/'</span> - &gt; output.txt</span><br></pre></td></tr></table></figure>
+
+<p><code>sed</code>会把结果写到标准输出流。</p>
+<h3 id="2-2-命令行参数"><a href="#2-2-命令行参数" class="headerlink" title="2.2 命令行参数"></a>2.2 命令行参数</h3><h3 id="2-3-退出类型"><a href="#2-3-退出类型" class="headerlink" title="2.3 退出类型"></a>2.3 退出类型</h3><h2 id="3-sed脚本语言"><a href="#3-sed脚本语言" class="headerlink" title="3 sed脚本语言"></a>3 <code>sed</code>脚本语言</h2><h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><h3 id="3-2-命令汇总"><a href="#3-2-命令汇总" class="headerlink" title="3.2 命令汇总"></a>3.2 命令汇总</h3><h3 id="3-3-s-Command"><a href="#3-3-s-Command" class="headerlink" title="3.3 s Command"></a>3.3 <code>s</code> Command</h3><h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><h3 id="3-5-不常用命令"><a href="#3-5-不常用命令" class="headerlink" title="3.5 不常用命令"></a>3.5 不常用命令</h3><h3 id="3-6-sed针对大神的命令"><a href="#3-6-sed针对大神的命令" class="headerlink" title="3.6 sed针对大神的命令"></a>3.6 <code>sed</code>针对大神的命令</h3><h3 id="3-7-针对GUN版sed"><a href="#3-7-针对GUN版sed" class="headerlink" title="3.7 针对GUN版sed"></a>3.7 针对<code>GUN</code>版<code>sed</code></h3><h3 id="3-8-多命令情况与语法"><a href="#3-8-多命令情况与语法" class="headerlink" title="3.8 多命令情况与语法"></a>3.8 多命令情况与语法</h3><h4 id="3-8-1-多命令需要另起一行"><a href="#3-8-1-多命令需要另起一行" class="headerlink" title="3.8.1 多命令需要另起一行"></a>3.8.1 多命令需要另起一行</h4><h2 id="4-各种行操作"><a href="#4-各种行操作" class="headerlink" title="4 各种行操作"></a>4 各种行操作</h2><h3 id="4-1-Overview"><a href="#4-1-Overview" class="headerlink" title="4.1 Overview"></a>4.1 Overview</h3><h3 id="4-2-通过数字择取行"><a href="#4-2-通过数字择取行" class="headerlink" title="4.2 通过数字择取行"></a>4.2 通过数字择取行</h3><h3 id="4-3-通过匹配字符择取行"><a href="#4-3-通过匹配字符择取行" class="headerlink" title="4.3 通过匹配字符择取行"></a>4.3 通过匹配字符择取行</h3><h3 id="4-4-范围择取"><a href="#4-4-范围择取" class="headerlink" title="4.4 范围择取"></a>4.4 范围择取</h3><h2 id="5-sed正则操作"><a href="#5-sed正则操作" class="headerlink" title="5 sed正则操作"></a>5 <code>sed</code>正则操作</h2><h3 id="5-1-Overview"><a href="#5-1-Overview" class="headerlink" title="5.1 Overview"></a>5.1 Overview</h3><h3 id="5-2-Basic-BRE-正则和Extended-ERE-正则"><a href="#5-2-Basic-BRE-正则和Extended-ERE-正则" class="headerlink" title="5.2 Basic(BRE)正则和Extended(ERE)正则"></a>5.2 Basic(BRE)正则和Extended(ERE)正则</h3><h3 id="5-3-Basic正则语法"><a href="#5-3-Basic正则语法" class="headerlink" title="5.3 Basic正则语法"></a>5.3 Basic正则语法</h3><h3 id="5-4-Extended正则语法"><a href="#5-4-Extended正则语法" class="headerlink" title="5.4 Extended正则语法"></a>5.4 Extended正则语法</h3><h3 id="5-5-方括号用法"><a href="#5-5-方括号用法" class="headerlink" title="5.5 方括号用法"></a>5.5 方括号用法</h3><h3 id="5-6-正则扩展"><a href="#5-6-正则扩展" class="headerlink" title="5.6 正则扩展"></a>5.6 正则扩展</h3><h3 id="5-7-前引用与子表达"><a href="#5-7-前引用与子表达" class="headerlink" title="5.7 前引用与子表达"></a>5.7 前引用与子表达</h3><h3 id="5-8-针对特殊字符"><a href="#5-8-针对特殊字符" class="headerlink" title="5.8 针对特殊字符"></a>5.8 针对特殊字符</h3><h4 id="5-8-1-转义优先"><a href="#5-8-1-转义优先" class="headerlink" title="5.8.1 转义优先"></a>5.8.1 转义优先</h4><h3 id="5-9-多字节字符与Locale情况"><a href="#5-9-多字节字符与Locale情况" class="headerlink" title="5.9 多字节字符与Locale情况"></a>5.9 多字节字符与Locale情况</h3><h4 id="5-9-1-无效多字节字符"><a href="#5-9-1-无效多字节字符" class="headerlink" title="5.9.1 无效多字节字符"></a>5.9.1 无效多字节字符</h4><h4 id="5-9-2-大小写"><a href="#5-9-2-大小写" class="headerlink" title="5.9.2 大小写"></a>5.9.2 大小写</h4><h4 id="5-9-3-多字节正则类"><a href="#5-9-3-多字节正则类" class="headerlink" title="5.9.3 多字节正则类"></a>5.9.3 多字节正则类</h4><h2 id="6-sed高级用法-cycles和buffers"><a href="#6-sed高级用法-cycles和buffers" class="headerlink" title="6 sed高级用法:cycles和buffers"></a>6 <code>sed</code>高级用法:<code>cycles</code>和<code>buffers</code></h2><h2 id="7-一些脚本例子"><a href="#7-一些脚本例子" class="headerlink" title="7 一些脚本例子"></a>7 一些脚本例子</h2><h2 id="8-GUN版本sed的局限和优势"><a href="#8-GUN版本sed的局限和优势" class="headerlink" title="8 GUN版本sed的局限和优势"></a>8 <code>GUN</code>版本<code>sed</code>的局限和优势</h2><h2 id="9-其他学习资源"><a href="#9-其他学习资源" class="headerlink" title="9 其他学习资源"></a>9 其他学习资源</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://www.grymoire.com/Unix/Sed.html" target="_blank" rel="noopener">Tutorial</a></p>
+<p><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/" target="_blank" rel="noopener">WithExamples</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">Manual</a></p>
+<p><a href="https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083" target="_blank" rel="noopener">精通正则表达式 提取码：grep </a></p>
+<h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><blockquote>
+<p>本文为个人翻译学习，鉴于认知水平和能力有限，不当之处在所难免。希望确证准确。</p>
+</blockquote>
+<blockquote>
+<p>Contact: <a href="mailto:work@crushing.xyz">work@crushing.xyz</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Linux命令之xargs</title>
+    <url>/posts/db22.html</url>
+    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
+  </entry>
+  <entry>
     <title>Linux神器之asciinema</title>
     <url>/posts/d5b9.html</url>
     <content><![CDATA[<p>Original asciinema</p>
@@ -1138,11 +1143,6 @@
         <category>编程杂记</category>
         <category>Linux</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
   </entry>
   <entry>
     <title>Linux神器之tldr</title>
@@ -1177,6 +1177,107 @@
         <category>编程杂记</category>
         <category>Linux</category>
       </categories>
+  </entry>
+  <entry>
+    <title>backdrop-filter毛玻璃效果</title>
+    <url>/posts/317c.html</url>
+    <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
+<li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
+<blockquote>
+<p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
+</blockquote>
+</li>
+<li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
+</li>
+<li><p>通过backdrop-filter可以很好解决问题</p>
+</li>
+</ul>
+<h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
+</li>
+<li><p>chrome很好的支持了,nice~</p>
+</li>
+</ul>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
+<li><p>经过试验,的确firefox看不到,很影响阅读</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
+</li>
+<li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
+</li>
+<li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p>
+</li>
+</ul>
+<h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
+<h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
+</li>
+<li><p>效果也是不错的,不过需要绝对布局</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p>
+</blockquote>
+</blockquote>
+<ul>
+<li>根据需求可以改改</li>
+</ul>
+<h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
+<li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
+</li>
+<li><p>这样可以动态实现毛玻璃了</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p>
+</blockquote>
+</blockquote>
+<hr>
+<h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p>
+</li>
+<li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p>
+</li>
+<li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p>
+</li>
+<li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>FrontEnd</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>高斯模糊</tag>
+        <tag>毛玻璃</tag>
+      </tags>
   </entry>
   <entry>
     <title>git submodule git子模块闲搞</title>
@@ -1423,107 +1524,6 @@
         <tag>Ide</tag>
         <tag>SpaceVim</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>backdrop-filter毛玻璃效果</title>
-    <url>/posts/317c.html</url>
-    <content><![CDATA[<h2 id="backdrop-filter是什么"><a href="#backdrop-filter是什么" class="headerlink" title="backdrop-filter是什么"></a>backdrop-filter是什么</h2><ul>
-<li><p><span style="color:yellow">跟filter类似,属性设置一样,不过它适用元素背后元素</span></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715113252.png" alt="1"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715111850.png" alt="2"></p>
-<blockquote>
-<p>这种效果在苹果中很常见,最早也只有在<code>safari</code>浏览器兼容<br>通过这个属性,可以很简单地创建毛玻璃效果</p>
-</blockquote>
-</li>
-<li><p>然而普通的filter一旦应用,所有元素都会受影响,比如字体也看不清</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114933.png" alt="3"></p>
-</li>
-<li><p>通过backdrop-filter可以很好解决问题</p>
-</li>
-</ul>
-<h2 id="本站应用此效果"><a href="#本站应用此效果" class="headerlink" title="本站应用此效果"></a>本站应用此效果</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114251.png" alt="4"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715114632.png" alt="5"></p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><strong>但是你可能看不到此效果,因为此特性兼容性不太好</strong></p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>通过查询<code>can i use</code>,可以看到基本国产浏览器都不支持,firefox也必须手动开启特性才能看到</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715115222.png" alt="6"></p>
-</li>
-<li><p>chrome很好的支持了,nice~</p>
-</li>
-</ul>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
-<li><p>经过试验,的确firefox看不到,很影响阅读</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715120111.png" alt="7"></p>
-</li>
-<li><p><span style="color:red">所以不兼容的请手动点网站右下角设置开启<code>夜间模式</code>,以免影响阅读</span></p>
-</li>
-<li><p>其他手机浏览器,chrome内核的基本都支持,qq浏览器等不支持.</p>
-</li>
-</ul>
-<h2 id="毛玻璃其他解决方案"><a href="#毛玻璃其他解决方案" class="headerlink" title="毛玻璃其他解决方案"></a>毛玻璃其他解决方案</h2><p>其他方法可能兼容性更高,就查找了几篇</p>
-<h3 id="纯css实现"><a href="#纯css实现" class="headerlink" title="纯css实现"></a>纯css实现</h3><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121000.png" alt=""></p>
-</li>
-<li><p>效果也是不错的,不过需要绝对布局</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://codepen.io/AmJustSam/full/ModORY/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<ul>
-<li>根据需求可以改改</li>
-</ul>
-<h3 id="用js库实现"><a href="#用js库实现" class="headerlink" title="用js库实现"></a>用js库实现</h3><ul>
-<li><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">html2canvas</a></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200715121540.png" alt=""></p>
-</li>
-<li><p>这样可以动态实现毛玻璃了</p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><a href="https://jsfiddle.net/nallenscott/WtQjY/41/" target="_blank" rel="noopener">在线源码演示</a></p>
-</blockquote>
-</blockquote>
-<hr>
-<h4 id="总之-一个道理-”省力不省功”"><a href="#总之-一个道理-”省力不省功”" class="headerlink" title="总之,一个道理,”省力不省功”"></a><span style="color:yellow">总之,一个道理,”省力不省功”</span></h4><hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://medium.com/hackernoon/how-to-do-css-only-frosted-glass-effect-e2666bafab91" target="_blank" rel="noopener">How to do CSS only frosted glass effect?</a></p>
-</li>
-<li><p><a href="https://codeburst.io/ios-backdrop-effect-on-chrome-and-non-webkit-browsers-summary-of-currently-available-techniques-34b0f624ae6a" target="_blank" rel="noopener">How to create iOS Backdrop effect</a></p>
-</li>
-<li><p><a href="https://css-tricks.com/frosting-glass-css-filters/" target="_blank" rel="noopener">Frosting Glass with CSS Filters</a></p>
-</li>
-<li><p><a href="http://abduzeedo.com/ios7-frosted-glass-effect-html-5-and-javascript" target="_blank" rel="noopener">iOS7 Frosted Glass Effect with HTML 5 and Javascript</a> </p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>FrontEnd</category>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>高斯模糊</tag>
-        <tag>毛玻璃</tag>
       </tags>
   </entry>
   <entry>
