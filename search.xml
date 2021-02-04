@@ -1,28 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Azure中WindowsServer没GUI</title>
-    <url>/posts/9ff4.html</url>
-    <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
-<li>为了节省磁盘空间费用，安装windowsserver minimal版本</li>
-<li>默认版本必须128g以上，而小的支持64g</li>
-<li>然而，安装后桌面通过remote连接，全是黑的，终端都没有，快捷键失效，无法调出cmd或者powershell，等于说是废的</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20201006172316.png" alt="windows2012R2screenshot"></li>
-<li>手抖关掉刚开机的cmd后，再也无法调出来了。。。</li>
-</ul>
-<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>经过一番谷歌，找了一个对于此问题可行的办法。</p>
-<p><a href="https://ravingroo.com/1720/windows-server-2012-r2-boots-to-black-screen-command-prompt-gui-core/" target="_blank" rel="noopener">link</a></p>
+    <title>Clover配置引导Linux内核</title>
+    <url>/posts/dc6b.html</url>
+    <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
+<p>整体过程：</p>
+<ol>
+<li>通过可以引导Linux的引导工具进入需要引导的系统</li>
+<li>拷贝该系统<code>/boot</code>下引导文件到Clover所在分区</li>
+<li>Linux<code>/boot</code>绑定到Clover分区</li>
+<li>Clover配置引导路径</li>
+</ol>
+</blockquote>
+<ol>
+<li><h3 id="从U盘安装盘进入Live系统"><a href="#从U盘安装盘进入Live系统" class="headerlink" title="从U盘安装盘进入Live系统"></a>从U盘安装盘进入Live系统</h3></li>
+</ol>
 <ul>
-<li>在azure面板中，先把虚拟机重启。</li>
-<li>然后重启后，remote连接，cmd输入</li>
-<li><code>Dism /online /enable-feature /featurename:Server-Gui-Mgmt /featurename:Server-Gui-Shell /featurename:ServerCore-FullServer /all</code></li>
-<li>等待一段时间，安装完servergui，就可以看到桌面了。</li>
+<li>在live系统内同时编辑两个Manjaro系统</li>
+<li>本机本身安装了两个Manjaro版本，一个gnome桌面系统，一个KDE。</li>
+<li>由于操作不当，失去了相应的引导文件，只能通过Kali的引导进入，或者通过rEfind。</li>
+<li>为两个Manjaro配置Clover引导，步骤类似。</li>
 </ul>
+<ol start="2">
+<li><h3 id="复制boot文件并绑定"><a href="#复制boot文件并绑定" class="headerlink" title="复制boot文件并绑定"></a>复制boot文件并绑定</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200348.png" alt="image-20200815122725202"></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /esp</span><br><span class="line">sudo lsblk</span><br><span class="line">sudo umount /boot/efi</span><br><span class="line">sudo mount /dev/sdb1 /esp</span><br><span class="line">sudo mkdir /esp/EFI/Manjaro</span><br><span class="line">mkdir ~/Documents/Boot</span><br><span class="line">sudo sudo cp -r /boot ~/Documents/Boot</span><br><span class="line">sudo rm -rf /boot/*</span><br><span class="line">mount --bind /esp/EFI/Manjaro/ /boot</span><br><span class="line">sudo cp -r ~/Documents/Boot/* /boot/</span><br><span class="line">sudo nano /etc/fstab</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>命令含义</p>
+</blockquote>
+<ul>
+<li><p>创建esp挂载点</p>
+</li>
+<li><p>卸载本系统/boot/efi挂载点</p>
+</li>
+<li><p>查看本机所有设备，并把Clover分区的efi挂载到esp</p>
+</li>
+<li><p>在Clover分区创建Manjaro引导文件夹</p>
+</li>
+<li><p>备份</p>
+</li>
+<li><p>删除本系统/boot/efi下引导文件</p>
+</li>
+<li><p>把Clover分区efi挂载绑定到本系统/boot</p>
+</li>
+<li><p>重新拷贝刚才备份的引导到/boot/efi</p>
+</li>
+<li><p>编辑fstab，把挂载绑定的分区目录写入文件内</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815124027873.png" alt="image-20200815124027873"></p>
+<blockquote>
+<p>其中绑定的挂载点看实际情况</p>
+</blockquote>
+<p>注意保存相应UUID信息，为Clover引导中使用。</p>
+</li>
+</ul>
+<p>保存disk UUID和其他引导信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># &#x2F;etc&#x2F;fstab: static file system information. </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># Use &#39;blkid&#39; to print the universally unique identifier for a device; this may </span><br><span class="line"></span><br><span class="line"># be used with UUID&#x3D; as a more robust way to name devices that works even if </span><br><span class="line"></span><br><span class="line"># disks are added and removed. See fstab(5). </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt; </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">UUID&#x3D;17CC-0C7B                            &#x2F;esp      vfat    defaults,noatime 0 2 </span><br><span class="line"></span><br><span class="line">&#x2F;esp&#x2F;EFI&#x2F;Manjaro&#x2F;                         &#x2F;boot     none    defaults,bind 0 0 </span><br><span class="line"></span><br><span class="line">UUID&#x3D;2fefa979-02ca-49bc-a9f2-79ac16838e4a &#x2F;              ext4    defaults,noatime 0 1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fstab: static file system information.  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Use <span class="string">'blkid'</span> to <span class="built_in">print</span> the universally unique identifier <span class="keyword">for</span> a device; this may  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> be used with UUID= as a more robust way to name devices that works even <span class="keyword">if</span>  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> disks are added and removed. See fstab(5).  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &lt;file system&gt;             &lt;mount point&gt;  &lt;<span class="built_in">type</span>&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;  </span></span><br><span class="line"> </span><br><span class="line">UUID=44b45fb0-eaf8-4f32-8bfc-f58c18d041ff /              ext4    defaults,noatime 0 1  </span><br><span class="line">UUID=17CC-0C7B                            /esp     vfat    defaults,noatime 0 2  </span><br><span class="line">/esp/EFI/KDEManjaro/ /boot                         none   defaults,bind 0 0</span><br></pre></td></tr></table></figure>
+
+<p>两个系统都保存记录下来。</p>
+</li>
+<li><h3 id="进入mac用Clover编辑引导路径"><a href="#进入mac用Clover编辑引导路径" class="headerlink" title="进入mac用Clover编辑引导路径"></a>进入mac用Clover编辑引导路径</h3><p>可以手工编辑plist文件，也可以用Clover Configurator可视化编辑</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134017898.png" alt="image-20200815134017898"></p>
+</li>
+<li><h3 id="重启解决"><a href="#重启解决" class="headerlink" title="重启解决"></a>重启解决</h3></li>
+</ol>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815133543811.png" alt="image-20200815133543811"></p>
+<p>最终完成EFI目录，一个为KDE，一个为Gnome。</p>
+<p>编辑好Clover后，重启可顺利选择相应系统引导进入。</p>
+<p>进入到GUi栏，在Custom Entries里添加Entry</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134110441.png" alt="image-20200815134110441"></p>
+<p>卷目录写Clover所在盘UUID</p>
+<p>引导内核路径填前面复制好的内核路径</p>
+<p>引导参数填前边保存的root uuid</p>
+<p>其他的类型Linux，默认即可</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134326899.png" alt="image-20200815134326899"></p>
+<h3 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200817.png" alt="image-20200815133724833"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134356505.png" alt="image-20200815134356505"></p>
+<ul>
+<li><p>为了更方便，又添加了rEfind引导</p>
+</li>
+<li><p>Clover +rEfind 同时运作</p>
+<p>Clover引导黑果和Win，在Clover内配置rEfind引导，当需要启动Linux时，通过rEfind来引导相应内核。</p>
+<p>同时也保留了kali自带的UEFI引导，也能方便引导其他Linux。</p>
+</li>
+</ul>
+<hr>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><a href="https://sourceforge.net/p/cloverefiboot/wiki/GUI/#scan-kernel" target="_blank" rel="noopener">Clover Wiki</a></p>
+<p><a href="https://www.youtube.com/watch?v=NhyE1EXnr_s" target="_blank" rel="noopener">Hide Unwanted Volumes</a></p>
+<p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi02bv9kpXrAhVUE4gKHTI5DwQQFjADegQIAxAB&url=https%3A%2F%2Fwww.tonymacx86.com%2Fattachments%2Fmanjaro-clover-pdf.239748%2F&usg=AOvVaw03stFWySo_f_j25o-CIyqE" target="_blank" rel="noopener">How to boot Manjaro from Clover on a Hackintosh</a></p>
+<p><a href="https://www.cnblogs.com/xingmuxin/p/8446115.html" target="_blank" rel="noopener">mount –bind</a></p>
 ]]></content>
       <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
+        <category>玩玩</category>
+        <category>黑苹果</category>
       </categories>
+      <tags>
+        <tag>黑苹果</tag>
+        <tag>Clover</tag>
+        <tag>Manjaro</tag>
+        <tag>引导</tag>
+      </tags>
   </entry>
   <entry>
     <title>Calibre+rclone+google drive搭建个人书库记录</title>
@@ -251,105 +329,50 @@
       </tags>
   </entry>
   <entry>
-    <title>Clover配置引导Linux内核</title>
-    <url>/posts/dc6b.html</url>
-    <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
-<p>整体过程：</p>
-<ol>
-<li>通过可以引导Linux的引导工具进入需要引导的系统</li>
-<li>拷贝该系统<code>/boot</code>下引导文件到Clover所在分区</li>
-<li>Linux<code>/boot</code>绑定到Clover分区</li>
-<li>Clover配置引导路径</li>
-</ol>
-</blockquote>
-<ol>
-<li><h3 id="从U盘安装盘进入Live系统"><a href="#从U盘安装盘进入Live系统" class="headerlink" title="从U盘安装盘进入Live系统"></a>从U盘安装盘进入Live系统</h3></li>
-</ol>
-<ul>
-<li>在live系统内同时编辑两个Manjaro系统</li>
-<li>本机本身安装了两个Manjaro版本，一个gnome桌面系统，一个KDE。</li>
-<li>由于操作不当，失去了相应的引导文件，只能通过Kali的引导进入，或者通过rEfind。</li>
-<li>为两个Manjaro配置Clover引导，步骤类似。</li>
+    <title>Azure中WindowsServer没GUI</title>
+    <url>/posts/9ff4.html</url>
+    <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>为了节省磁盘空间费用，安装windowsserver minimal版本</li>
+<li>默认版本必须128g以上，而小的支持64g</li>
+<li>然而，安装后桌面通过remote连接，全是黑的，终端都没有，快捷键失效，无法调出cmd或者powershell，等于说是废的</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20201006172316.png" alt="windows2012R2screenshot"></li>
+<li>手抖关掉刚开机的cmd后，再也无法调出来了。。。</li>
 </ul>
-<ol start="2">
-<li><h3 id="复制boot文件并绑定"><a href="#复制boot文件并绑定" class="headerlink" title="复制boot文件并绑定"></a>复制boot文件并绑定</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200348.png" alt="image-20200815122725202"></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /esp</span><br><span class="line">sudo lsblk</span><br><span class="line">sudo umount /boot/efi</span><br><span class="line">sudo mount /dev/sdb1 /esp</span><br><span class="line">sudo mkdir /esp/EFI/Manjaro</span><br><span class="line">mkdir ~/Documents/Boot</span><br><span class="line">sudo sudo cp -r /boot ~/Documents/Boot</span><br><span class="line">sudo rm -rf /boot/*</span><br><span class="line">mount --bind /esp/EFI/Manjaro/ /boot</span><br><span class="line">sudo cp -r ~/Documents/Boot/* /boot/</span><br><span class="line">sudo nano /etc/fstab</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>命令含义</p>
-</blockquote>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>经过一番谷歌，找了一个对于此问题可行的办法。</p>
+<p><a href="https://ravingroo.com/1720/windows-server-2012-r2-boots-to-black-screen-command-prompt-gui-core/" target="_blank" rel="noopener">link</a></p>
 <ul>
-<li><p>创建esp挂载点</p>
-</li>
-<li><p>卸载本系统/boot/efi挂载点</p>
-</li>
-<li><p>查看本机所有设备，并把Clover分区的efi挂载到esp</p>
-</li>
-<li><p>在Clover分区创建Manjaro引导文件夹</p>
-</li>
-<li><p>备份</p>
-</li>
-<li><p>删除本系统/boot/efi下引导文件</p>
-</li>
-<li><p>把Clover分区efi挂载绑定到本系统/boot</p>
-</li>
-<li><p>重新拷贝刚才备份的引导到/boot/efi</p>
-</li>
-<li><p>编辑fstab，把挂载绑定的分区目录写入文件内</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815124027873.png" alt="image-20200815124027873"></p>
-<blockquote>
-<p>其中绑定的挂载点看实际情况</p>
-</blockquote>
-<p>注意保存相应UUID信息，为Clover引导中使用。</p>
-</li>
+<li>在azure面板中，先把虚拟机重启。</li>
+<li>然后重启后，remote连接，cmd输入</li>
+<li><code>Dism /online /enable-feature /featurename:Server-Gui-Mgmt /featurename:Server-Gui-Shell /featurename:ServerCore-FullServer /all</code></li>
+<li>等待一段时间，安装完servergui，就可以看到桌面了。</li>
 </ul>
-<p>保存disk UUID和其他引导信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># &#x2F;etc&#x2F;fstab: static file system information. </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># Use &#39;blkid&#39; to print the universally unique identifier for a device; this may </span><br><span class="line"></span><br><span class="line"># be used with UUID&#x3D; as a more robust way to name devices that works even if </span><br><span class="line"></span><br><span class="line"># disks are added and removed. See fstab(5). </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt; </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">UUID&#x3D;17CC-0C7B                            &#x2F;esp      vfat    defaults,noatime 0 2 </span><br><span class="line"></span><br><span class="line">&#x2F;esp&#x2F;EFI&#x2F;Manjaro&#x2F;                         &#x2F;boot     none    defaults,bind 0 0 </span><br><span class="line"></span><br><span class="line">UUID&#x3D;2fefa979-02ca-49bc-a9f2-79ac16838e4a &#x2F;              ext4    defaults,noatime 0 1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fstab: static file system information.  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Use <span class="string">'blkid'</span> to <span class="built_in">print</span> the universally unique identifier <span class="keyword">for</span> a device; this may  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> be used with UUID= as a more robust way to name devices that works even <span class="keyword">if</span>  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> disks are added and removed. See fstab(5).  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &lt;file system&gt;             &lt;mount point&gt;  &lt;<span class="built_in">type</span>&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;  </span></span><br><span class="line"> </span><br><span class="line">UUID=44b45fb0-eaf8-4f32-8bfc-f58c18d041ff /              ext4    defaults,noatime 0 1  </span><br><span class="line">UUID=17CC-0C7B                            /esp     vfat    defaults,noatime 0 2  </span><br><span class="line">/esp/EFI/KDEManjaro/ /boot                         none   defaults,bind 0 0</span><br></pre></td></tr></table></figure>
-
-<p>两个系统都保存记录下来。</p>
-</li>
-<li><h3 id="进入mac用Clover编辑引导路径"><a href="#进入mac用Clover编辑引导路径" class="headerlink" title="进入mac用Clover编辑引导路径"></a>进入mac用Clover编辑引导路径</h3><p>可以手工编辑plist文件，也可以用Clover Configurator可视化编辑</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134017898.png" alt="image-20200815134017898"></p>
-</li>
-<li><h3 id="重启解决"><a href="#重启解决" class="headerlink" title="重启解决"></a>重启解决</h3></li>
-</ol>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815133543811.png" alt="image-20200815133543811"></p>
-<p>最终完成EFI目录，一个为KDE，一个为Gnome。</p>
-<p>编辑好Clover后，重启可顺利选择相应系统引导进入。</p>
-<p>进入到GUi栏，在Custom Entries里添加Entry</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134110441.png" alt="image-20200815134110441"></p>
-<p>卷目录写Clover所在盘UUID</p>
-<p>引导内核路径填前面复制好的内核路径</p>
-<p>引导参数填前边保存的root uuid</p>
-<p>其他的类型Linux，默认即可</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134326899.png" alt="image-20200815134326899"></p>
-<h3 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200817.png" alt="image-20200815133724833"></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134356505.png" alt="image-20200815134356505"></p>
-<ul>
-<li><p>为了更方便，又添加了rEfind引导</p>
-</li>
-<li><p>Clover +rEfind 同时运作</p>
-<p>Clover引导黑果和Win，在Clover内配置rEfind引导，当需要启动Linux时，通过rEfind来引导相应内核。</p>
-<p>同时也保留了kali自带的UEFI引导，也能方便引导其他Linux。</p>
-</li>
-</ul>
-<hr>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><a href="https://sourceforge.net/p/cloverefiboot/wiki/GUI/#scan-kernel" target="_blank" rel="noopener">Clover Wiki</a></p>
-<p><a href="https://www.youtube.com/watch?v=NhyE1EXnr_s" target="_blank" rel="noopener">Hide Unwanted Volumes</a></p>
-<p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi02bv9kpXrAhVUE4gKHTI5DwQQFjADegQIAxAB&url=https%3A%2F%2Fwww.tonymacx86.com%2Fattachments%2Fmanjaro-clover-pdf.239748%2F&usg=AOvVaw03stFWySo_f_j25o-CIyqE" target="_blank" rel="noopener">How to boot Manjaro from Clover on a Hackintosh</a></p>
-<p><a href="https://www.cnblogs.com/xingmuxin/p/8446115.html" target="_blank" rel="noopener">mount –bind</a></p>
 ]]></content>
       <categories>
-        <category>玩玩</category>
-        <category>黑苹果</category>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
       </categories>
       <tags>
-        <tag>黑苹果</tag>
-        <tag>Clover</tag>
-        <tag>Manjaro</tag>
-        <tag>引导</tag>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
       </tags>
   </entry>
   <entry>
@@ -380,29 +403,6 @@
         <tag>Github</tag>
         <tag>Cloud IDE</tag>
         <tag>CodeSpace</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
       </tags>
   </entry>
   <entry>
@@ -558,6 +558,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Java工具之jenkins</title>
+    <url>/posts/a486.html</url>
+    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java基操之Stream</title>
     <url>/posts/1b48.html</url>
     <content><![CDATA[<h2 id="Java-Stream操作"><a href="#Java-Stream操作" class="headerlink" title="Java Stream操作"></a>Java Stream操作</h2><p><a href="https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st" target="_blank" rel="noopener">Dzone</a></p>
@@ -631,34 +642,6 @@
         <tag>Java</tag>
         <tag>基础</tag>
         <tag>Stream</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java工具之jenkins</title>
-    <url>/posts/a486.html</url>
-    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java开发工具之Maven</title>
-    <url>/posts/8113.html</url>
-    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
-<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
-]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -1050,6 +1033,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Java开发工具之Maven</title>
+    <url>/posts/8113.html</url>
+    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
+<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
+]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java探索之集合</title>
     <url>/posts/703e.html</url>
     <content><![CDATA[<h2 id="Java集合相关问题"><a href="#Java集合相关问题" class="headerlink" title="Java集合相关问题"></a>Java集合相关问题</h2><h3 id="List，Set，Map区别"><a href="#List，Set，Map区别" class="headerlink" title="List，Set，Map区别"></a>List，Set，Map区别</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/java.png" alt=""></p>
@@ -1083,6 +1083,11 @@
         <tag>Collections</tag>
         <tag>Map</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
   </entry>
   <entry>
     <title>Linux剑客之sed</title>
@@ -1120,29 +1125,9 @@
       </categories>
   </entry>
   <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
-  </entry>
-  <entry>
     <title>Linux命令之xargs</title>
     <url>/posts/db22.html</url>
     <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
-  </entry>
-  <entry>
-    <title>Linux神器之asciinema</title>
-    <url>/posts/d5b9.html</url>
-    <content><![CDATA[<p>Original asciinema</p>
-<p><a href="https://asciinema.org/docs/usage" target="_blank" rel="noopener">https://asciinema.org/docs/usage</a></p>
-<ul>
-<li>to gif</li>
-</ul>
-<p><a href="https://github.com/asciinema/asciicast2gif" target="_blank" rel="noopener">https://github.com/asciinema/asciicast2gif</a></p>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>Linux神器之tldr</title>
@@ -1177,6 +1162,26 @@
         <category>编程杂记</category>
         <category>Linux</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Linux神器之asciinema</title>
+    <url>/posts/d5b9.html</url>
+    <content><![CDATA[<p>Original asciinema</p>
+<p><a href="https://asciinema.org/docs/usage" target="_blank" rel="noopener">https://asciinema.org/docs/usage</a></p>
+<ul>
+<li>to gif</li>
+</ul>
+<p><a href="https://github.com/asciinema/asciicast2gif" target="_blank" rel="noopener">https://github.com/asciinema/asciicast2gif</a></p>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
+    <url>/posts/fcaa.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>backdrop-filter毛玻璃效果</title>

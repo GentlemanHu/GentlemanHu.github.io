@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crushing.xyz/"/>
-  <updated>2020-10-06T09:28:38.768Z</updated>
+  <updated>2021-01-04T09:25:58.409Z</updated>
   <id>http://crushing.xyz/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
+    <link href="http://crushing.xyz/posts/fcaa.html"/>
+    <id>http://crushing.xyz/posts/fcaa.html</id>
+    <published>2021-01-04T09:25:58.000Z</published>
+    <updated>2021-01-04T09:25:58.409Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Github官方云端IDE——CodeSpaces</title>
@@ -568,39 +583,6 @@
       <category term="高斯模糊" scheme="http://crushing.xyz/tags/%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A/"/>
     
       <category term="毛玻璃" scheme="http://crushing.xyz/tags/%E6%AF%9B%E7%8E%BB%E7%92%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于invoke和call的区别</title>
-    <link href="http://crushing.xyz/posts/8507.html"/>
-    <id>http://crushing.xyz/posts/8507.html</id>
-    <published>2020-07-11T15:14:43.000Z</published>
-    <updated>2020-08-16T05:52:28.933Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;关于invoke和call的区别&quot;&gt;&lt;a href=&quot;#关于invoke和call的区别&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="编程杂记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/"/>
-    
-      <category term="随手记" scheme="http://crushing.xyz/categories/%E7%BC%96%E7%A8%8B%E6%9D%82%E8%AE%B0/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="Java" scheme="http://crushing.xyz/tags/Java/"/>
-    
-      <category term="编程日常" scheme="http://crushing.xyz/tags/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="关键字" scheme="http://crushing.xyz/tags/%E5%85%B3%E9%94%AE%E5%AD%97/"/>
     
   </entry>
   
