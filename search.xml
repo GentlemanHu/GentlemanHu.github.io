@@ -251,29 +251,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Clover配置引导Linux内核</title>
     <url>/posts/dc6b.html</url>
     <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
@@ -376,6 +353,29 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github官方云端IDE——CodeSpaces</title>
     <url>/posts/a764.html</url>
     <content><![CDATA[<h2 id="CodeSpaces内测"><a href="#CodeSpaces内测" class="headerlink" title="CodeSpaces内测"></a>CodeSpaces内测</h2><blockquote>
@@ -403,93 +403,6 @@
         <tag>Github</tag>
         <tag>Cloud IDE</tag>
         <tag>CodeSpace</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java工具之jenkins</title>
-    <url>/posts/a486.html</url>
-    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java基操之Stream</title>
-    <url>/posts/1b48.html</url>
-    <content><![CDATA[<h2 id="Java-Stream操作"><a href="#Java-Stream操作" class="headerlink" title="Java Stream操作"></a>Java Stream操作</h2><p><a href="https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st" target="_blank" rel="noopener">Dzone</a></p>
-<p><a href="https://www.jrebel.com/blog/java-streams-cheat-sheet" target="_blank" rel="noopener">cheatsheet</a></p>
-<p><a href="https://www.baeldung.com/java-8-collectors" target="_blank" rel="noopener">Collectors</a></p>
-<p><a href="https://gitee.com/SnailClimb/JavaGuide/blob/master/docs/java/basic/Arrays,CollectionsCommonMethods.md" target="_blank" rel="noopener">Collections</a></p>
-<blockquote>
-<p>流水线式的处理数据</p>
-</blockquote>
-<ul>
-<li>生产流的方式<ul>
-<li>Collection集合</li>
-<li>Map集合</li>
-<li>数组</li>
-</ul>
-</li>
-<li>中间操作<ul>
-<li>Stream<T> filter(Predicate predicate)利用谓词接口进行过滤筛选.</li>
-<li>Stream<T> limit(long n)截断流中数据,n为返回个数</li>
-<li>Stream<T> skip(long n)指定跳过n个数据,返回剩下的流</li>
-<li>static <T> Stream<T> concat(Stream a,Stream b)组合两个流成一个流</li>
-<li>Stream<T> distinct()返回流中独特的元素组成的流</li>
-<li>Stream<T> sorted()返回自然排序后的流</li>
-<li>Stream<T> sorted(Comparator comparator)返回经过自定义比较器的排序流</li>
-<li><R> Stream<R> map(Function mapper)返回经过指定函数处理的结果的流</li>
-<li>IntStream mapToInt(ToIntFunction mapper)返回IntStream,源流映射成Int流</li>
-</ul>
-</li>
-<li>终结操作<ul>
-<li>一般操作<ul>
-<li>void forEach(Consumer action)指定消费器,对每个流中元素进行消费</li>
-<li>long count()返回流中元素个数</li>
-</ul>
-</li>
-<li>收集操作<ul>
-<li>R collect(Collector collector)把结果收集到集合中</li>
-<li>Collectors<ul>
-<li>public static <T> Collector toList() 收集流到List集合中</li>
-<li>public static <T> Collector toSet() 收集流得到Set集合中</li>
-<li>public static Collector toMap(Function keyMapper,Function valueMapper) 收集元素到Map集合中</li>
-<li>此工具类返回的都是包含所有元素的Collector</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="实例操作Stream"><a href="#实例操作Stream" class="headerlink" title="实例操作Stream"></a>实例操作Stream</h4><ul>
-<li>Collection生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; listStream = list.stream();</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; setStream = set.stream();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Map系列生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;String,Integer&gt;();</span><br><span class="line">Stream&lt;String&gt; keyStream = map.keySet().stream();</span><br><span class="line">Stream&lt;Integer&gt; valueStream = map.values().stream();</span><br><span class="line">Stream&lt;Map.Entry&lt;String,Integer&gt;&gt; entryStream = map.entrySet().stream();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数组生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] strArray = &#123;<span class="string">"hell"</span>,<span class="string">"world"</span>,<span class="string">"niubi"</span>&#125;;</span><br><span class="line">Stream&lt;String&gt; strStream = Stream.of(strArray);</span><br><span class="line">Stream&lt;String&gt; okStream = Stream.of(<span class="string">"jjj"</span>,<span class="string">"hahha"</span>,<span class="string">"iii"</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.holyfuck.ml/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>Basics</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>基础</tag>
-        <tag>Stream</tag>
       </tags>
   </entry>
   <entry>
@@ -643,6 +556,93 @@
         <tag>机器学习</tag>
         <tag>VScode</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Java基操之Stream</title>
+    <url>/posts/1b48.html</url>
+    <content><![CDATA[<h2 id="Java-Stream操作"><a href="#Java-Stream操作" class="headerlink" title="Java Stream操作"></a>Java Stream操作</h2><p><a href="https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st" target="_blank" rel="noopener">Dzone</a></p>
+<p><a href="https://www.jrebel.com/blog/java-streams-cheat-sheet" target="_blank" rel="noopener">cheatsheet</a></p>
+<p><a href="https://www.baeldung.com/java-8-collectors" target="_blank" rel="noopener">Collectors</a></p>
+<p><a href="https://gitee.com/SnailClimb/JavaGuide/blob/master/docs/java/basic/Arrays,CollectionsCommonMethods.md" target="_blank" rel="noopener">Collections</a></p>
+<blockquote>
+<p>流水线式的处理数据</p>
+</blockquote>
+<ul>
+<li>生产流的方式<ul>
+<li>Collection集合</li>
+<li>Map集合</li>
+<li>数组</li>
+</ul>
+</li>
+<li>中间操作<ul>
+<li>Stream<T> filter(Predicate predicate)利用谓词接口进行过滤筛选.</li>
+<li>Stream<T> limit(long n)截断流中数据,n为返回个数</li>
+<li>Stream<T> skip(long n)指定跳过n个数据,返回剩下的流</li>
+<li>static <T> Stream<T> concat(Stream a,Stream b)组合两个流成一个流</li>
+<li>Stream<T> distinct()返回流中独特的元素组成的流</li>
+<li>Stream<T> sorted()返回自然排序后的流</li>
+<li>Stream<T> sorted(Comparator comparator)返回经过自定义比较器的排序流</li>
+<li><R> Stream<R> map(Function mapper)返回经过指定函数处理的结果的流</li>
+<li>IntStream mapToInt(ToIntFunction mapper)返回IntStream,源流映射成Int流</li>
+</ul>
+</li>
+<li>终结操作<ul>
+<li>一般操作<ul>
+<li>void forEach(Consumer action)指定消费器,对每个流中元素进行消费</li>
+<li>long count()返回流中元素个数</li>
+</ul>
+</li>
+<li>收集操作<ul>
+<li>R collect(Collector collector)把结果收集到集合中</li>
+<li>Collectors<ul>
+<li>public static <T> Collector toList() 收集流到List集合中</li>
+<li>public static <T> Collector toSet() 收集流得到Set集合中</li>
+<li>public static Collector toMap(Function keyMapper,Function valueMapper) 收集元素到Map集合中</li>
+<li>此工具类返回的都是包含所有元素的Collector</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="实例操作Stream"><a href="#实例操作Stream" class="headerlink" title="实例操作Stream"></a>实例操作Stream</h4><ul>
+<li>Collection生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; listStream = list.stream();</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; setStream = set.stream();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Map系列生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;String,Integer&gt;();</span><br><span class="line">Stream&lt;String&gt; keyStream = map.keySet().stream();</span><br><span class="line">Stream&lt;Integer&gt; valueStream = map.values().stream();</span><br><span class="line">Stream&lt;Map.Entry&lt;String,Integer&gt;&gt; entryStream = map.entrySet().stream();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数组生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] strArray = &#123;<span class="string">"hell"</span>,<span class="string">"world"</span>,<span class="string">"niubi"</span>&#125;;</span><br><span class="line">Stream&lt;String&gt; strStream = Stream.of(strArray);</span><br><span class="line">Stream&lt;String&gt; okStream = Stream.of(<span class="string">"jjj"</span>,<span class="string">"hahha"</span>,<span class="string">"iii"</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.holyfuck.ml/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>Basics</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>基础</tag>
+        <tag>Stream</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java工具之jenkins</title>
+    <url>/posts/a486.html</url>
+    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
   </entry>
   <entry>
     <title>Java并发之java.util.concurrent包Overview</title>
@@ -1085,11 +1085,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
-  </entry>
-  <entry>
     <title>Linux剑客之sed</title>
     <url>/posts/4dfa.html</url>
     <content><![CDATA[<div class="note info">
@@ -1125,6 +1120,11 @@
       </categories>
   </entry>
   <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
+  </entry>
+  <entry>
     <title>Linux命令之xargs</title>
     <url>/posts/db22.html</url>
     <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
@@ -1143,11 +1143,6 @@
         <category>编程杂记</category>
         <category>Linux</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
-    <url>/posts/fcaa.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Linux神器之tldr</title>
@@ -1182,6 +1177,11 @@
         <category>编程杂记</category>
         <category>Linux</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
+    <url>/posts/fcaa.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>backdrop-filter毛玻璃效果</title>
