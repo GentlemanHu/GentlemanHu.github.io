@@ -25,15 +25,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Docker运行macOS?Docker-OSX</title>
-    <url>/posts/a2b6.html</url>
-    <content><![CDATA[<h2 id="Docker的mac镜像"><a href="#Docker的mac镜像" class="headerlink" title="Docker的mac镜像"></a>Docker的mac镜像</h2><ol>
-<li><a href="https://github.com/sickcodes/Docker-OSX" target="_blank" rel="noopener">https://github.com/sickcodes/Docker-OSX</a></li>
-<li><a href="https://github.com/kholia/OSX-KVM" target="_blank" rel="noopener">https://github.com/kholia/OSX-KVM</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>Calibre+rclone+google drive搭建个人书库记录</title>
     <url>/posts/811f.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -258,6 +249,15 @@
         <tag>rclone</tag>
         <tag>google drive</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Docker运行macOS?Docker-OSX</title>
+    <url>/posts/a2b6.html</url>
+    <content><![CDATA[<h2 id="Docker的mac镜像"><a href="#Docker的mac镜像" class="headerlink" title="Docker的mac镜像"></a>Docker的mac镜像</h2><ol>
+<li><a href="https://github.com/sickcodes/Docker-OSX" target="_blank" rel="noopener">https://github.com/sickcodes/Docker-OSX</a></li>
+<li><a href="https://github.com/kholia/OSX-KVM" target="_blank" rel="noopener">https://github.com/kholia/OSX-KVM</a></li>
+</ol>
+]]></content>
   </entry>
   <entry>
     <title>Clover配置引导Linux内核</title>
@@ -1042,6 +1042,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Java开发工具之Maven</title>
+    <url>/posts/8113.html</url>
+    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
+<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
+]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java探索之集合</title>
     <url>/posts/703e.html</url>
     <content><![CDATA[<h2 id="Java集合相关问题"><a href="#Java集合相关问题" class="headerlink" title="Java集合相关问题"></a>Java集合相关问题</h2><h3 id="List，Set，Map区别"><a href="#List，Set，Map区别" class="headerlink" title="List，Set，Map区别"></a>List，Set，Map区别</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/java.png" alt=""></p>
@@ -1074,33 +1091,6 @@
         <tag>Java</tag>
         <tag>Collections</tag>
         <tag>Map</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
-  </entry>
-  <entry>
-    <title>Linux命令之xargs</title>
-    <url>/posts/db22.html</url>
-    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
-  </entry>
-  <entry>
-    <title>Java开发工具之Maven</title>
-    <url>/posts/8113.html</url>
-    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
-<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
-]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -1139,6 +1129,16 @@
       </categories>
   </entry>
   <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Linux命令之xargs</title>
+    <url>/posts/db22.html</url>
+    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
+  </entry>
+  <entry>
     <title>Linux神器之asciinema</title>
     <url>/posts/d5b9.html</url>
     <content><![CDATA[<p>Original asciinema</p>
@@ -1157,6 +1157,40 @@
     <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
     <url>/posts/fcaa.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Linux神器之tldr</title>
+    <url>/posts/a7c8.html</url>
+    <content><![CDATA[<h2 id="man命令和help命令"><a href="#man命令和help命令" class="headerlink" title="man命令和help命令"></a>man命令和help命令</h2><p>在使用linux过程中，帮助命令必不可少，是对于不熟练之手的神器。</p>
+<p>比如，tar命令，解压压缩都得加一堆参数，而用的少就记忆不深刻，那么<code>man tar</code>就哗哗出来一堆manual文档，虽然实时查找也不会费多少时间，但还是想更简洁明了些。</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/manual_tar.gif" alt=""></p>
+<p>尽管也能通过help命令获得帮助。或者加上<code>grep</code>过滤筛选也能快速查看，不过，得费点手，多敲几个命令。</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tarhelp.gif" alt=""></p>
+<p>然而，生命如此短暂，效率还得提升~</p>
+<p>有句话叫：TL;DR   Too Long；Don’t Read . 哎，生命短暂，不要浪费</p>
+<p>应运而生，<code>tldr</code>出来了</p>
+<h2 id="更好用的cheatsheet——tldr"><a href="#更好用的cheatsheet——tldr" class="headerlink" title="更好用的cheatsheet——tldr"></a>更好用的cheatsheet——tldr</h2><blockquote>
+<p> <a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a></p>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831172534.gif" alt=""></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tldr_tar.gif" alt=""></p>
+<p>太舒服了，常用命令参数信息，很清晰列出来了。</p>
+<p>相比manual，简直TLDR.</p>
+<h2 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h2><ul>
+<li><a href="https://github.com/tldr-pages/tldr#how-do-i-use-it" target="_blank" rel="noopener">文档写的非常清晰</a></li>
+</ul>
+<hr>
+<p>mac也有一款<a href="https://mediaatelier.com/CheatSheet/" target="_blank" rel="noopener">cheatsheet</a>，记忆好帮手，功能是显示各种快捷键的，也非常方便</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831173454.png" alt=""></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/cheat.gif" alt=""></p>
+<p>忘记快捷键？没关系，长按<code>⌘</code>，软件各种快捷键都出来了。多个快捷键不好记，一个<code>⌘</code>不是有手就行么~</p>
+<hr>
+<p>熟能生巧，万物之理.</p>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>backdrop-filter毛玻璃效果</title>
@@ -1257,6 +1291,89 @@
         <tag>css</tag>
         <tag>高斯模糊</tag>
         <tag>毛玻璃</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git submodule git子模块闲搞</title>
+    <url>/posts/790e.html</url>
+    <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
+<p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p>
+</blockquote>
+<ul>
+<li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
+<li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
+</ul>
+<h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
+<li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
+<blockquote>
+<p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
+</blockquote>
+</li>
+<li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p>
+<blockquote>
+<p><code>git submodule add “path to theme” “themes/butterfly”</code> </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
+</li>
+<li><p>再次google后，</p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
+</li>
+<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
+</li>
+<li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
+<p>然而，在从远程拉取后，又出现了一个问题。。。</p>
+</li>
+</ul>
+<h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote>
+<p>git pull后，子模块内是空的！</p>
+</blockquote>
+<ul>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
+<li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
+<li>再再次google后</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
+<li>需要在子模块内再次拉取才行</li>
+</ul>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
+<li>面向google编程，面向成功~</li>
+<li>不想看文档，不想看帮助，那就多google</li>
+<li>不管结果如何，先把错误复制到google搜索一顿再说</li>
+<li>总之，google是走向成功的阶梯</li>
+<li>“省力不省功”</li>
+</ul>
+<hr>
+<hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p>
+</li>
+<li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p>
+</li>
+<li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p>
+</li>
+<li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+        <tag>博客</tag>
+        <tag>Git submodule</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,123 +1538,6 @@
         <tag>Ide</tag>
         <tag>SpaceVim</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux神器之tldr</title>
-    <url>/posts/a7c8.html</url>
-    <content><![CDATA[<h2 id="man命令和help命令"><a href="#man命令和help命令" class="headerlink" title="man命令和help命令"></a>man命令和help命令</h2><p>在使用linux过程中，帮助命令必不可少，是对于不熟练之手的神器。</p>
-<p>比如，tar命令，解压压缩都得加一堆参数，而用的少就记忆不深刻，那么<code>man tar</code>就哗哗出来一堆manual文档，虽然实时查找也不会费多少时间，但还是想更简洁明了些。</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/manual_tar.gif" alt=""></p>
-<p>尽管也能通过help命令获得帮助。或者加上<code>grep</code>过滤筛选也能快速查看，不过，得费点手，多敲几个命令。</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tarhelp.gif" alt=""></p>
-<p>然而，生命如此短暂，效率还得提升~</p>
-<p>有句话叫：TL;DR   Too Long；Don’t Read . 哎，生命短暂，不要浪费</p>
-<p>应运而生，<code>tldr</code>出来了</p>
-<h2 id="更好用的cheatsheet——tldr"><a href="#更好用的cheatsheet——tldr" class="headerlink" title="更好用的cheatsheet——tldr"></a>更好用的cheatsheet——tldr</h2><blockquote>
-<p> <a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a></p>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831172534.gif" alt=""></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tldr_tar.gif" alt=""></p>
-<p>太舒服了，常用命令参数信息，很清晰列出来了。</p>
-<p>相比manual，简直TLDR.</p>
-<h2 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h2><ul>
-<li><a href="https://github.com/tldr-pages/tldr#how-do-i-use-it" target="_blank" rel="noopener">文档写的非常清晰</a></li>
-</ul>
-<hr>
-<p>mac也有一款<a href="https://mediaatelier.com/CheatSheet/" target="_blank" rel="noopener">cheatsheet</a>，记忆好帮手，功能是显示各种快捷键的，也非常方便</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831173454.png" alt=""></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/cheat.gif" alt=""></p>
-<p>忘记快捷键？没关系，长按<code>⌘</code>，软件各种快捷键都出来了。多个快捷键不好记，一个<code>⌘</code>不是有手就行么~</p>
-<hr>
-<p>熟能生巧，万物之理.</p>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>git submodule git子模块闲搞</title>
-    <url>/posts/790e.html</url>
-    <content><![CDATA[<h1 id="git-submodule-折腾记"><a href="#git-submodule-折腾记" class="headerlink" title="git submodule 折腾记"></a>git submodule 折腾记</h1><h2 id="git-submodule折腾缘由"><a href="#git-submodule折腾缘由" class="headerlink" title="git submodule折腾缘由"></a>git submodule折腾缘由</h2><h3 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h3><blockquote>
-<p>给博客整体做个备份，包含主题配置，自定义的一些内容等</p>
-</blockquote>
-<ul>
-<li>由于主题themes文件夹内主题是从github直接clone下来的，所以下来后还是有.git，识别成了本地仓库。</li>
-<li>然而在hexo博客外部根目录创建git仓库后，执行到git add -A时，会提醒子仓库问题，不会跟踪记录子仓库。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200721204842.png" alt=""></li>
-</ul>
-<h2 id="具体折腾过程"><a href="#具体折腾过程" class="headerlink" title="具体折腾过程"></a>具体折腾过程</h2><h3 id="直接git-submodule-add-“path-to-theme”"><a href="#直接git-submodule-add-“path-to-theme”" class="headerlink" title="直接git submodule  add “path to theme”"></a>直接<code>git submodule  add “path to theme”</code></h3><ul>
-<li><p>直接在根目录执行添加子模块，然而却不是想象的结果。</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721212247431.png" alt="image-20200721212247431"></p>
-<blockquote>
-<p>原本想象的是保留在原来的themes下，但是它直接clone到了根</p>
-</blockquote>
-</li>
-<li><p>google后，发现后边还跟一个路径（还是没好好看help文档），这个路径指向themes下的话，就还保留了原本位置。</p>
-<blockquote>
-<p><code>git submodule add “path to theme” “themes/butterfly”</code> </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="添加后还是不track"><a href="#添加后还是不track" class="headerlink" title="添加后还是不track"></a>添加后还是不track</h2><ul>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721213854942.png" alt="image-20200721213854942"></p>
-</li>
-<li><p>再次google后，</p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214002640.png" alt="image-20200721214002640"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214028218.png" alt="image-20200721214028218"></p>
-</li>
-<li><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214055658.png" alt="image-20200721214055658"></p>
-</li>
-<li><p>递归执行子模块git add后并commit后，终于实现理想状态。</p>
-<p>然而，在从远程拉取后，又出现了一个问题。。。</p>
-</li>
-</ul>
-<h2 id="git-pull后，themes文件夹是空的？"><a href="#git-pull后，themes文件夹是空的？" class="headerlink" title="git pull后，themes文件夹是空的？"></a>git pull后，themes文件夹是空的？</h2><blockquote>
-<p>git pull后，子模块内是空的！</p>
-</blockquote>
-<ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214439304.png" alt="image-20200721214439304"></li>
-<li>而且github仓库文件夹出现了<code>文件夹@字母</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214838006.png" alt="image-20200721214838006"></li>
-<li>再再次google后</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/image-20200721214555139.png" alt="image-20200721214555139"></li>
-<li>需要在子模块内再次拉取才行</li>
-</ul>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
-<li>面向google编程，面向成功~</li>
-<li>不想看文档，不想看帮助，那就多google</li>
-<li>不管结果如何，先把错误复制到google搜索一顿再说</li>
-<li>总之，google是走向成功的阶梯</li>
-<li>“省力不省功”</li>
-</ul>
-<hr>
-<hr>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><p><a href="https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228" target="_blank" rel="noopener">How to remove a submodule in Git</a></p>
-</li>
-<li><p><a href="http://www.huati365.com/answer/Vx2jzwLGqGvYAbM" target="_blank" rel="noopener"><strong>git add -A不在目录中添加所有修改的文件</strong></a></p>
-</li>
-<li><p><a href="https://stackoverflow.com/questions/50167969/how-to-fix-modified-content-untracked-content-in-git" target="_blank" rel="noopener">How to fix “modified content, untracked content” in git?</a></p>
-</li>
-<li><p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git doc</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-        <tag>博客</tag>
-        <tag>Git submodule</tag>
       </tags>
   </entry>
   <entry>
