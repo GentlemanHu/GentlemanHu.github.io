@@ -25,15 +25,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Docker运行macOS?Docker-OSX</title>
-    <url>/posts/a2b6.html</url>
-    <content><![CDATA[<h2 id="Docker的mac镜像"><a href="#Docker的mac镜像" class="headerlink" title="Docker的mac镜像"></a>Docker的mac镜像</h2><ol>
-<li><a href="https://github.com/sickcodes/Docker-OSX" target="_blank" rel="noopener">https://github.com/sickcodes/Docker-OSX</a></li>
-<li><a href="https://github.com/kholia/OSX-KVM" target="_blank" rel="noopener">https://github.com/kholia/OSX-KVM</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>Clover配置引导Linux内核</title>
     <url>/posts/dc6b.html</url>
     <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
@@ -362,6 +353,38 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker运行macOS?Docker-OSX</title>
+    <url>/posts/a2b6.html</url>
+    <content><![CDATA[<h2 id="Docker的mac镜像"><a href="#Docker的mac镜像" class="headerlink" title="Docker的mac镜像"></a>Docker的mac镜像</h2><ol>
+<li><a href="https://github.com/sickcodes/Docker-OSX" target="_blank" rel="noopener">https://github.com/sickcodes/Docker-OSX</a></li>
+<li><a href="https://github.com/kholia/OSX-KVM" target="_blank" rel="noopener">https://github.com/kholia/OSX-KVM</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
+<blockquote>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+</blockquote>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<hr>
+]]></content>
+      <categories>
+        <category>日常杂记</category>
+        <category>随手记</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github官方云端IDE——CodeSpaces</title>
     <url>/posts/a764.html</url>
     <content><![CDATA[<h2 id="CodeSpaces内测"><a href="#CodeSpaces内测" class="headerlink" title="CodeSpaces内测"></a>CodeSpaces内测</h2><blockquote>
@@ -389,116 +412,6 @@
         <tag>Github</tag>
         <tag>Cloud IDE</tag>
         <tag>CodeSpace</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
-</blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
-<hr>
-]]></content>
-      <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java工具之jenkins</title>
-    <url>/posts/a486.html</url>
-    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java基操之Stream</title>
-    <url>/posts/1b48.html</url>
-    <content><![CDATA[<h2 id="Java-Stream操作"><a href="#Java-Stream操作" class="headerlink" title="Java Stream操作"></a>Java Stream操作</h2><p><a href="https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st" target="_blank" rel="noopener">Dzone</a></p>
-<p><a href="https://www.jrebel.com/blog/java-streams-cheat-sheet" target="_blank" rel="noopener">cheatsheet</a></p>
-<p><a href="https://www.baeldung.com/java-8-collectors" target="_blank" rel="noopener">Collectors</a></p>
-<p><a href="https://gitee.com/SnailClimb/JavaGuide/blob/master/docs/java/basic/Arrays,CollectionsCommonMethods.md" target="_blank" rel="noopener">Collections</a></p>
-<blockquote>
-<p>流水线式的处理数据</p>
-</blockquote>
-<ul>
-<li>生产流的方式<ul>
-<li>Collection集合</li>
-<li>Map集合</li>
-<li>数组</li>
-</ul>
-</li>
-<li>中间操作<ul>
-<li>Stream<T> filter(Predicate predicate)利用谓词接口进行过滤筛选.</li>
-<li>Stream<T> limit(long n)截断流中数据,n为返回个数</li>
-<li>Stream<T> skip(long n)指定跳过n个数据,返回剩下的流</li>
-<li>static <T> Stream<T> concat(Stream a,Stream b)组合两个流成一个流</li>
-<li>Stream<T> distinct()返回流中独特的元素组成的流</li>
-<li>Stream<T> sorted()返回自然排序后的流</li>
-<li>Stream<T> sorted(Comparator comparator)返回经过自定义比较器的排序流</li>
-<li><R> Stream<R> map(Function mapper)返回经过指定函数处理的结果的流</li>
-<li>IntStream mapToInt(ToIntFunction mapper)返回IntStream,源流映射成Int流</li>
-</ul>
-</li>
-<li>终结操作<ul>
-<li>一般操作<ul>
-<li>void forEach(Consumer action)指定消费器,对每个流中元素进行消费</li>
-<li>long count()返回流中元素个数</li>
-</ul>
-</li>
-<li>收集操作<ul>
-<li>R collect(Collector collector)把结果收集到集合中</li>
-<li>Collectors<ul>
-<li>public static <T> Collector toList() 收集流到List集合中</li>
-<li>public static <T> Collector toSet() 收集流得到Set集合中</li>
-<li>public static Collector toMap(Function keyMapper,Function valueMapper) 收集元素到Map集合中</li>
-<li>此工具类返回的都是包含所有元素的Collector</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="实例操作Stream"><a href="#实例操作Stream" class="headerlink" title="实例操作Stream"></a>实例操作Stream</h4><ul>
-<li>Collection生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; listStream = list.stream();</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; setStream = set.stream();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Map系列生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;String,Integer&gt;();</span><br><span class="line">Stream&lt;String&gt; keyStream = map.keySet().stream();</span><br><span class="line">Stream&lt;Integer&gt; valueStream = map.values().stream();</span><br><span class="line">Stream&lt;Map.Entry&lt;String,Integer&gt;&gt; entryStream = map.entrySet().stream();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数组生成Stream</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] strArray = &#123;<span class="string">"hell"</span>,<span class="string">"world"</span>,<span class="string">"niubi"</span>&#125;;</span><br><span class="line">Stream&lt;String&gt; strStream = Stream.of(strArray);</span><br><span class="line">Stream&lt;String&gt; okStream = Stream.of(<span class="string">"jjj"</span>,<span class="string">"hahha"</span>,<span class="string">"iii"</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.holyfuck.ml/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>Basics</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>基础</tag>
-        <tag>Stream</tag>
       </tags>
   </entry>
   <entry>
@@ -652,6 +565,93 @@
         <tag>机器学习</tag>
         <tag>VScode</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Java基操之Stream</title>
+    <url>/posts/1b48.html</url>
+    <content><![CDATA[<h2 id="Java-Stream操作"><a href="#Java-Stream操作" class="headerlink" title="Java Stream操作"></a>Java Stream操作</h2><p><a href="https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st" target="_blank" rel="noopener">Dzone</a></p>
+<p><a href="https://www.jrebel.com/blog/java-streams-cheat-sheet" target="_blank" rel="noopener">cheatsheet</a></p>
+<p><a href="https://www.baeldung.com/java-8-collectors" target="_blank" rel="noopener">Collectors</a></p>
+<p><a href="https://gitee.com/SnailClimb/JavaGuide/blob/master/docs/java/basic/Arrays,CollectionsCommonMethods.md" target="_blank" rel="noopener">Collections</a></p>
+<blockquote>
+<p>流水线式的处理数据</p>
+</blockquote>
+<ul>
+<li>生产流的方式<ul>
+<li>Collection集合</li>
+<li>Map集合</li>
+<li>数组</li>
+</ul>
+</li>
+<li>中间操作<ul>
+<li>Stream<T> filter(Predicate predicate)利用谓词接口进行过滤筛选.</li>
+<li>Stream<T> limit(long n)截断流中数据,n为返回个数</li>
+<li>Stream<T> skip(long n)指定跳过n个数据,返回剩下的流</li>
+<li>static <T> Stream<T> concat(Stream a,Stream b)组合两个流成一个流</li>
+<li>Stream<T> distinct()返回流中独特的元素组成的流</li>
+<li>Stream<T> sorted()返回自然排序后的流</li>
+<li>Stream<T> sorted(Comparator comparator)返回经过自定义比较器的排序流</li>
+<li><R> Stream<R> map(Function mapper)返回经过指定函数处理的结果的流</li>
+<li>IntStream mapToInt(ToIntFunction mapper)返回IntStream,源流映射成Int流</li>
+</ul>
+</li>
+<li>终结操作<ul>
+<li>一般操作<ul>
+<li>void forEach(Consumer action)指定消费器,对每个流中元素进行消费</li>
+<li>long count()返回流中元素个数</li>
+</ul>
+</li>
+<li>收集操作<ul>
+<li>R collect(Collector collector)把结果收集到集合中</li>
+<li>Collectors<ul>
+<li>public static <T> Collector toList() 收集流到List集合中</li>
+<li>public static <T> Collector toSet() 收集流得到Set集合中</li>
+<li>public static Collector toMap(Function keyMapper,Function valueMapper) 收集元素到Map集合中</li>
+<li>此工具类返回的都是包含所有元素的Collector</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="实例操作Stream"><a href="#实例操作Stream" class="headerlink" title="实例操作Stream"></a>实例操作Stream</h4><ul>
+<li>Collection生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; listStream = list.stream();</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;String&gt;();</span><br><span class="line">Stream&lt;String&gt; setStream = set.stream();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Map系列生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;String,Integer&gt;();</span><br><span class="line">Stream&lt;String&gt; keyStream = map.keySet().stream();</span><br><span class="line">Stream&lt;Integer&gt; valueStream = map.values().stream();</span><br><span class="line">Stream&lt;Map.Entry&lt;String,Integer&gt;&gt; entryStream = map.entrySet().stream();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数组生成Stream</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] strArray = &#123;<span class="string">"hell"</span>,<span class="string">"world"</span>,<span class="string">"niubi"</span>&#125;;</span><br><span class="line">Stream&lt;String&gt; strStream = Stream.of(strArray);</span><br><span class="line">Stream&lt;String&gt; okStream = Stream.of(<span class="string">"jjj"</span>,<span class="string">"hahha"</span>,<span class="string">"iii"</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.holyfuck.ml/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>Basics</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>基础</tag>
+        <tag>Stream</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java工具之jenkins</title>
+    <url>/posts/a486.html</url>
+    <content><![CDATA[<h2 id="Java-CI集成"><a href="#Java-CI集成" class="headerlink" title="Java CI集成"></a>Java CI集成</h2>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
   </entry>
   <entry>
     <title>Java并发之java.util.concurrent包Overview</title>
@@ -1094,51 +1094,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
-  </entry>
-  <entry>
-    <title>Linux剑客之sed</title>
-    <url>/posts/4dfa.html</url>
-    <content><![CDATA[<div class="note info">
-            <p>学习整理from <a href="https://www.gnu.org/software/sed/manual/sed.html#Command_002dLine-Options" target="_blank" rel="noopener">gun.org</a></p><p>基本直译</p>
-          </div>
-
-<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p><code>sed</code>，一个流编辑器。那么一个流编辑器就是处理转换文本的，而它的输入流，则来自管道(pipeline)。<code>sed</code>同样也支持脚本编辑，而且只让输入流(inputs)处理一次，所以更加高效。而<code>sed</code>的特性就是从管道过滤文本，这就是它的拿手好活了。</p>
-<h2 id="2-Running-sed"><a href="#2-Running-sed" class="headerlink" title="2 Running sed"></a>2 Running sed</h2><p>简单介绍运行<code>sed</code>的基操</p>
-<h3 id="2-1-Overview"><a href="#2-1-Overview" class="headerlink" title="2.1 Overview"></a>2.1 Overview</h3><p>通常<code>sed</code>像如下使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed SCRIPT INPUTFILE...</span><br></pre></td></tr></table></figure>
-
-<p>比如，把<code>input.txt</code>中所有的<code>hello</code>替换成<code>world</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
-
-<p>如果不定义输入文件，或者输入文件是<code>-</code>，<code>sed</code>就从标准输入(standard input)过滤，下边结果都是一样的</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br><span class="line">sed <span class="string">'s/hello/world/'</span> &lt; input.txt &gt; output.txt</span><br><span class="line">cat input.txt | sed <span class="string">'s/hello/world/'</span> - &gt; output.txt</span><br></pre></td></tr></table></figure>
-
-<p><code>sed</code>会把结果写到标准输出流。</p>
-<h3 id="2-2-命令行参数"><a href="#2-2-命令行参数" class="headerlink" title="2.2 命令行参数"></a>2.2 命令行参数</h3><h3 id="2-3-退出类型"><a href="#2-3-退出类型" class="headerlink" title="2.3 退出类型"></a>2.3 退出类型</h3><h2 id="3-sed脚本语言"><a href="#3-sed脚本语言" class="headerlink" title="3 sed脚本语言"></a>3 <code>sed</code>脚本语言</h2><h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><h3 id="3-2-命令汇总"><a href="#3-2-命令汇总" class="headerlink" title="3.2 命令汇总"></a>3.2 命令汇总</h3><h3 id="3-3-s-Command"><a href="#3-3-s-Command" class="headerlink" title="3.3 s Command"></a>3.3 <code>s</code> Command</h3><h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><h3 id="3-5-不常用命令"><a href="#3-5-不常用命令" class="headerlink" title="3.5 不常用命令"></a>3.5 不常用命令</h3><h3 id="3-6-sed针对大神的命令"><a href="#3-6-sed针对大神的命令" class="headerlink" title="3.6 sed针对大神的命令"></a>3.6 <code>sed</code>针对大神的命令</h3><h3 id="3-7-针对GUN版sed"><a href="#3-7-针对GUN版sed" class="headerlink" title="3.7 针对GUN版sed"></a>3.7 针对<code>GUN</code>版<code>sed</code></h3><h3 id="3-8-多命令情况与语法"><a href="#3-8-多命令情况与语法" class="headerlink" title="3.8 多命令情况与语法"></a>3.8 多命令情况与语法</h3><h4 id="3-8-1-多命令需要另起一行"><a href="#3-8-1-多命令需要另起一行" class="headerlink" title="3.8.1 多命令需要另起一行"></a>3.8.1 多命令需要另起一行</h4><h2 id="4-各种行操作"><a href="#4-各种行操作" class="headerlink" title="4 各种行操作"></a>4 各种行操作</h2><h3 id="4-1-Overview"><a href="#4-1-Overview" class="headerlink" title="4.1 Overview"></a>4.1 Overview</h3><h3 id="4-2-通过数字择取行"><a href="#4-2-通过数字择取行" class="headerlink" title="4.2 通过数字择取行"></a>4.2 通过数字择取行</h3><h3 id="4-3-通过匹配字符择取行"><a href="#4-3-通过匹配字符择取行" class="headerlink" title="4.3 通过匹配字符择取行"></a>4.3 通过匹配字符择取行</h3><h3 id="4-4-范围择取"><a href="#4-4-范围择取" class="headerlink" title="4.4 范围择取"></a>4.4 范围择取</h3><h2 id="5-sed正则操作"><a href="#5-sed正则操作" class="headerlink" title="5 sed正则操作"></a>5 <code>sed</code>正则操作</h2><h3 id="5-1-Overview"><a href="#5-1-Overview" class="headerlink" title="5.1 Overview"></a>5.1 Overview</h3><h3 id="5-2-Basic-BRE-正则和Extended-ERE-正则"><a href="#5-2-Basic-BRE-正则和Extended-ERE-正则" class="headerlink" title="5.2 Basic(BRE)正则和Extended(ERE)正则"></a>5.2 Basic(BRE)正则和Extended(ERE)正则</h3><h3 id="5-3-Basic正则语法"><a href="#5-3-Basic正则语法" class="headerlink" title="5.3 Basic正则语法"></a>5.3 Basic正则语法</h3><h3 id="5-4-Extended正则语法"><a href="#5-4-Extended正则语法" class="headerlink" title="5.4 Extended正则语法"></a>5.4 Extended正则语法</h3><h3 id="5-5-方括号用法"><a href="#5-5-方括号用法" class="headerlink" title="5.5 方括号用法"></a>5.5 方括号用法</h3><h3 id="5-6-正则扩展"><a href="#5-6-正则扩展" class="headerlink" title="5.6 正则扩展"></a>5.6 正则扩展</h3><h3 id="5-7-前引用与子表达"><a href="#5-7-前引用与子表达" class="headerlink" title="5.7 前引用与子表达"></a>5.7 前引用与子表达</h3><h3 id="5-8-针对特殊字符"><a href="#5-8-针对特殊字符" class="headerlink" title="5.8 针对特殊字符"></a>5.8 针对特殊字符</h3><h4 id="5-8-1-转义优先"><a href="#5-8-1-转义优先" class="headerlink" title="5.8.1 转义优先"></a>5.8.1 转义优先</h4><h3 id="5-9-多字节字符与Locale情况"><a href="#5-9-多字节字符与Locale情况" class="headerlink" title="5.9 多字节字符与Locale情况"></a>5.9 多字节字符与Locale情况</h3><h4 id="5-9-1-无效多字节字符"><a href="#5-9-1-无效多字节字符" class="headerlink" title="5.9.1 无效多字节字符"></a>5.9.1 无效多字节字符</h4><h4 id="5-9-2-大小写"><a href="#5-9-2-大小写" class="headerlink" title="5.9.2 大小写"></a>5.9.2 大小写</h4><h4 id="5-9-3-多字节正则类"><a href="#5-9-3-多字节正则类" class="headerlink" title="5.9.3 多字节正则类"></a>5.9.3 多字节正则类</h4><h2 id="6-sed高级用法-cycles和buffers"><a href="#6-sed高级用法-cycles和buffers" class="headerlink" title="6 sed高级用法:cycles和buffers"></a>6 <code>sed</code>高级用法:<code>cycles</code>和<code>buffers</code></h2><h2 id="7-一些脚本例子"><a href="#7-一些脚本例子" class="headerlink" title="7 一些脚本例子"></a>7 一些脚本例子</h2><h2 id="8-GUN版本sed的局限和优势"><a href="#8-GUN版本sed的局限和优势" class="headerlink" title="8 GUN版本sed的局限和优势"></a>8 <code>GUN</code>版本<code>sed</code>的局限和优势</h2><h2 id="9-其他学习资源"><a href="#9-其他学习资源" class="headerlink" title="9 其他学习资源"></a>9 其他学习资源</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://www.grymoire.com/Unix/Sed.html" target="_blank" rel="noopener">Tutorial</a></p>
-<p><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/" target="_blank" rel="noopener">WithExamples</a></p>
-<p><a href="https://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">Manual</a></p>
-<p><a href="https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083" target="_blank" rel="noopener">精通正则表达式 提取码：grep </a></p>
-<h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><blockquote>
-<p>本文为个人翻译学习，鉴于认知水平和能力有限，不当之处在所难免。希望确证准确。</p>
-</blockquote>
-<blockquote>
-<p>Contact: <a href="mailto:work@crushing.xyz">work@crushing.xyz</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux命令之xargs</title>
-    <url>/posts/db22.html</url>
-    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
-  </entry>
-  <entry>
     <title>Kotlin开发总结</title>
     <url>/posts/31a0.html</url>
     <content><![CDATA[<h2 id="Kotlin基础"><a href="#Kotlin基础" class="headerlink" title="Kotlin基础"></a>Kotlin基础</h2><blockquote>
@@ -1186,6 +1141,66 @@
         <tag>技巧</tag>
         <tag>Tips</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Linux剑客之sed</title>
+    <url>/posts/4dfa.html</url>
+    <content><![CDATA[<div class="note info">
+            <p>学习整理from <a href="https://www.gnu.org/software/sed/manual/sed.html#Command_002dLine-Options" target="_blank" rel="noopener">gun.org</a></p><p>基本直译</p>
+          </div>
+
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p><code>sed</code>，一个流编辑器。那么一个流编辑器就是处理转换文本的，而它的输入流，则来自管道(pipeline)。<code>sed</code>同样也支持脚本编辑，而且只让输入流(inputs)处理一次，所以更加高效。而<code>sed</code>的特性就是从管道过滤文本，这就是它的拿手好活了。</p>
+<h2 id="2-Running-sed"><a href="#2-Running-sed" class="headerlink" title="2 Running sed"></a>2 Running sed</h2><p>简单介绍运行<code>sed</code>的基操</p>
+<h3 id="2-1-Overview"><a href="#2-1-Overview" class="headerlink" title="2.1 Overview"></a>2.1 Overview</h3><p>通常<code>sed</code>像如下使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed SCRIPT INPUTFILE...</span><br></pre></td></tr></table></figure>
+
+<p>比如，把<code>input.txt</code>中所有的<code>hello</code>替换成<code>world</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
+
+<p>如果不定义输入文件，或者输入文件是<code>-</code>，<code>sed</code>就从标准输入(standard input)过滤，下边结果都是一样的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed <span class="string">'s/hello/world/'</span> input.txt &gt; output.txt</span><br><span class="line">sed <span class="string">'s/hello/world/'</span> &lt; input.txt &gt; output.txt</span><br><span class="line">cat input.txt | sed <span class="string">'s/hello/world/'</span> - &gt; output.txt</span><br></pre></td></tr></table></figure>
+
+<p><code>sed</code>会把结果写到标准输出流。</p>
+<h3 id="2-2-命令行参数"><a href="#2-2-命令行参数" class="headerlink" title="2.2 命令行参数"></a>2.2 命令行参数</h3><h3 id="2-3-退出类型"><a href="#2-3-退出类型" class="headerlink" title="2.3 退出类型"></a>2.3 退出类型</h3><h2 id="3-sed脚本语言"><a href="#3-sed脚本语言" class="headerlink" title="3 sed脚本语言"></a>3 <code>sed</code>脚本语言</h2><h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><h3 id="3-2-命令汇总"><a href="#3-2-命令汇总" class="headerlink" title="3.2 命令汇总"></a>3.2 命令汇总</h3><h3 id="3-3-s-Command"><a href="#3-3-s-Command" class="headerlink" title="3.3 s Command"></a>3.3 <code>s</code> Command</h3><h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><h3 id="3-5-不常用命令"><a href="#3-5-不常用命令" class="headerlink" title="3.5 不常用命令"></a>3.5 不常用命令</h3><h3 id="3-6-sed针对大神的命令"><a href="#3-6-sed针对大神的命令" class="headerlink" title="3.6 sed针对大神的命令"></a>3.6 <code>sed</code>针对大神的命令</h3><h3 id="3-7-针对GUN版sed"><a href="#3-7-针对GUN版sed" class="headerlink" title="3.7 针对GUN版sed"></a>3.7 针对<code>GUN</code>版<code>sed</code></h3><h3 id="3-8-多命令情况与语法"><a href="#3-8-多命令情况与语法" class="headerlink" title="3.8 多命令情况与语法"></a>3.8 多命令情况与语法</h3><h4 id="3-8-1-多命令需要另起一行"><a href="#3-8-1-多命令需要另起一行" class="headerlink" title="3.8.1 多命令需要另起一行"></a>3.8.1 多命令需要另起一行</h4><h2 id="4-各种行操作"><a href="#4-各种行操作" class="headerlink" title="4 各种行操作"></a>4 各种行操作</h2><h3 id="4-1-Overview"><a href="#4-1-Overview" class="headerlink" title="4.1 Overview"></a>4.1 Overview</h3><h3 id="4-2-通过数字择取行"><a href="#4-2-通过数字择取行" class="headerlink" title="4.2 通过数字择取行"></a>4.2 通过数字择取行</h3><h3 id="4-3-通过匹配字符择取行"><a href="#4-3-通过匹配字符择取行" class="headerlink" title="4.3 通过匹配字符择取行"></a>4.3 通过匹配字符择取行</h3><h3 id="4-4-范围择取"><a href="#4-4-范围择取" class="headerlink" title="4.4 范围择取"></a>4.4 范围择取</h3><h2 id="5-sed正则操作"><a href="#5-sed正则操作" class="headerlink" title="5 sed正则操作"></a>5 <code>sed</code>正则操作</h2><h3 id="5-1-Overview"><a href="#5-1-Overview" class="headerlink" title="5.1 Overview"></a>5.1 Overview</h3><h3 id="5-2-Basic-BRE-正则和Extended-ERE-正则"><a href="#5-2-Basic-BRE-正则和Extended-ERE-正则" class="headerlink" title="5.2 Basic(BRE)正则和Extended(ERE)正则"></a>5.2 Basic(BRE)正则和Extended(ERE)正则</h3><h3 id="5-3-Basic正则语法"><a href="#5-3-Basic正则语法" class="headerlink" title="5.3 Basic正则语法"></a>5.3 Basic正则语法</h3><h3 id="5-4-Extended正则语法"><a href="#5-4-Extended正则语法" class="headerlink" title="5.4 Extended正则语法"></a>5.4 Extended正则语法</h3><h3 id="5-5-方括号用法"><a href="#5-5-方括号用法" class="headerlink" title="5.5 方括号用法"></a>5.5 方括号用法</h3><h3 id="5-6-正则扩展"><a href="#5-6-正则扩展" class="headerlink" title="5.6 正则扩展"></a>5.6 正则扩展</h3><h3 id="5-7-前引用与子表达"><a href="#5-7-前引用与子表达" class="headerlink" title="5.7 前引用与子表达"></a>5.7 前引用与子表达</h3><h3 id="5-8-针对特殊字符"><a href="#5-8-针对特殊字符" class="headerlink" title="5.8 针对特殊字符"></a>5.8 针对特殊字符</h3><h4 id="5-8-1-转义优先"><a href="#5-8-1-转义优先" class="headerlink" title="5.8.1 转义优先"></a>5.8.1 转义优先</h4><h3 id="5-9-多字节字符与Locale情况"><a href="#5-9-多字节字符与Locale情况" class="headerlink" title="5.9 多字节字符与Locale情况"></a>5.9 多字节字符与Locale情况</h3><h4 id="5-9-1-无效多字节字符"><a href="#5-9-1-无效多字节字符" class="headerlink" title="5.9.1 无效多字节字符"></a>5.9.1 无效多字节字符</h4><h4 id="5-9-2-大小写"><a href="#5-9-2-大小写" class="headerlink" title="5.9.2 大小写"></a>5.9.2 大小写</h4><h4 id="5-9-3-多字节正则类"><a href="#5-9-3-多字节正则类" class="headerlink" title="5.9.3 多字节正则类"></a>5.9.3 多字节正则类</h4><h2 id="6-sed高级用法-cycles和buffers"><a href="#6-sed高级用法-cycles和buffers" class="headerlink" title="6 sed高级用法:cycles和buffers"></a>6 <code>sed</code>高级用法:<code>cycles</code>和<code>buffers</code></h2><h2 id="7-一些脚本例子"><a href="#7-一些脚本例子" class="headerlink" title="7 一些脚本例子"></a>7 一些脚本例子</h2><h2 id="8-GUN版本sed的局限和优势"><a href="#8-GUN版本sed的局限和优势" class="headerlink" title="8 GUN版本sed的局限和优势"></a>8 <code>GUN</code>版本<code>sed</code>的局限和优势</h2><h2 id="9-其他学习资源"><a href="#9-其他学习资源" class="headerlink" title="9 其他学习资源"></a>9 其他学习资源</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://www.grymoire.com/Unix/Sed.html" target="_blank" rel="noopener">Tutorial</a></p>
+<p><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/" target="_blank" rel="noopener">WithExamples</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">Manual</a></p>
+<p><a href="https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083" target="_blank" rel="noopener">精通正则表达式 提取码：grep </a></p>
+<h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><blockquote>
+<p>本文为个人翻译学习，鉴于认知水平和能力有限，不当之处在所难免。希望确证准确。</p>
+</blockquote>
+<blockquote>
+<p>Contact: <a href="mailto:work@crushing.xyz">work@crushing.xyz</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux命令之xargs</title>
+    <url>/posts/db22.html</url>
+    <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Linux神器之asciinema</title>
+    <url>/posts/d5b9.html</url>
+    <content><![CDATA[<p>Original asciinema</p>
+<p><a href="https://asciinema.org/docs/usage" target="_blank" rel="noopener">https://asciinema.org/docs/usage</a></p>
+<ul>
+<li>to gif</li>
+</ul>
+<p><a href="https://github.com/asciinema/asciicast2gif" target="_blank" rel="noopener">https://github.com/asciinema/asciicast2gif</a></p>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>Tabby--这款终端用起来真不错</title>
@@ -1284,21 +1299,6 @@
         <tag>SSH</tag>
         <tag>Termius</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Linux神器之asciinema</title>
-    <url>/posts/d5b9.html</url>
-    <content><![CDATA[<p>Original asciinema</p>
-<p><a href="https://asciinema.org/docs/usage" target="_blank" rel="noopener">https://asciinema.org/docs/usage</a></p>
-<ul>
-<li>to gif</li>
-</ul>
-<p><a href="https://github.com/asciinema/asciicast2gif" target="_blank" rel="noopener">https://github.com/asciinema/asciicast2gif</a></p>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>Linux神器之tldr</title>
