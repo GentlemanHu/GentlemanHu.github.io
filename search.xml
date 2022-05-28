@@ -25,108 +25,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Clover配置引导Linux内核</title>
-    <url>/posts/dc6b.html</url>
-    <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
-<p>整体过程：</p>
-<ol>
-<li>通过可以引导Linux的引导工具进入需要引导的系统</li>
-<li>拷贝该系统<code>/boot</code>下引导文件到Clover所在分区</li>
-<li>Linux<code>/boot</code>绑定到Clover分区</li>
-<li>Clover配置引导路径</li>
-</ol>
-</blockquote>
-<ol>
-<li><h3 id="从U盘安装盘进入Live系统"><a href="#从U盘安装盘进入Live系统" class="headerlink" title="从U盘安装盘进入Live系统"></a>从U盘安装盘进入Live系统</h3></li>
-</ol>
-<ul>
-<li>在live系统内同时编辑两个Manjaro系统</li>
-<li>本机本身安装了两个Manjaro版本，一个gnome桌面系统，一个KDE。</li>
-<li>由于操作不当，失去了相应的引导文件，只能通过Kali的引导进入，或者通过rEfind。</li>
-<li>为两个Manjaro配置Clover引导，步骤类似。</li>
-</ul>
-<ol start="2">
-<li><h3 id="复制boot文件并绑定"><a href="#复制boot文件并绑定" class="headerlink" title="复制boot文件并绑定"></a>复制boot文件并绑定</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200348.png" alt="image-20200815122725202"></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /esp</span><br><span class="line">sudo lsblk</span><br><span class="line">sudo umount /boot/efi</span><br><span class="line">sudo mount /dev/sdb1 /esp</span><br><span class="line">sudo mkdir /esp/EFI/Manjaro</span><br><span class="line">mkdir ~/Documents/Boot</span><br><span class="line">sudo sudo cp -r /boot ~/Documents/Boot</span><br><span class="line">sudo rm -rf /boot/*</span><br><span class="line">mount --bind /esp/EFI/Manjaro/ /boot</span><br><span class="line">sudo cp -r ~/Documents/Boot/* /boot/</span><br><span class="line">sudo nano /etc/fstab</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>命令含义</p>
-</blockquote>
-<ul>
-<li><p>创建esp挂载点</p>
-</li>
-<li><p>卸载本系统/boot/efi挂载点</p>
-</li>
-<li><p>查看本机所有设备，并把Clover分区的efi挂载到esp</p>
-</li>
-<li><p>在Clover分区创建Manjaro引导文件夹</p>
-</li>
-<li><p>备份</p>
-</li>
-<li><p>删除本系统/boot/efi下引导文件</p>
-</li>
-<li><p>把Clover分区efi挂载绑定到本系统/boot</p>
-</li>
-<li><p>重新拷贝刚才备份的引导到/boot/efi</p>
-</li>
-<li><p>编辑fstab，把挂载绑定的分区目录写入文件内</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815124027873.png" alt="image-20200815124027873"></p>
-<blockquote>
-<p>其中绑定的挂载点看实际情况</p>
-</blockquote>
-<p>注意保存相应UUID信息，为Clover引导中使用。</p>
-</li>
-</ul>
-<p>保存disk UUID和其他引导信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># &#x2F;etc&#x2F;fstab: static file system information. </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># Use &#39;blkid&#39; to print the universally unique identifier for a device; this may </span><br><span class="line"></span><br><span class="line"># be used with UUID&#x3D; as a more robust way to name devices that works even if </span><br><span class="line"></span><br><span class="line"># disks are added and removed. See fstab(5). </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt; </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">UUID&#x3D;17CC-0C7B                            &#x2F;esp      vfat    defaults,noatime 0 2 </span><br><span class="line"></span><br><span class="line">&#x2F;esp&#x2F;EFI&#x2F;Manjaro&#x2F;                         &#x2F;boot     none    defaults,bind 0 0 </span><br><span class="line"></span><br><span class="line">UUID&#x3D;2fefa979-02ca-49bc-a9f2-79ac16838e4a &#x2F;              ext4    defaults,noatime 0 1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fstab: static file system information.  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Use <span class="string">'blkid'</span> to <span class="built_in">print</span> the universally unique identifier <span class="keyword">for</span> a device; this may  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> be used with UUID= as a more robust way to name devices that works even <span class="keyword">if</span>  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> disks are added and removed. See fstab(5).  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &lt;file system&gt;             &lt;mount point&gt;  &lt;<span class="built_in">type</span>&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;  </span></span><br><span class="line"> </span><br><span class="line">UUID=44b45fb0-eaf8-4f32-8bfc-f58c18d041ff /              ext4    defaults,noatime 0 1  </span><br><span class="line">UUID=17CC-0C7B                            /esp     vfat    defaults,noatime 0 2  </span><br><span class="line">/esp/EFI/KDEManjaro/ /boot                         none   defaults,bind 0 0</span><br></pre></td></tr></table></figure>
-
-<p>两个系统都保存记录下来。</p>
-</li>
-<li><h3 id="进入mac用Clover编辑引导路径"><a href="#进入mac用Clover编辑引导路径" class="headerlink" title="进入mac用Clover编辑引导路径"></a>进入mac用Clover编辑引导路径</h3><p>可以手工编辑plist文件，也可以用Clover Configurator可视化编辑</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134017898.png" alt="image-20200815134017898"></p>
-</li>
-<li><h3 id="重启解决"><a href="#重启解决" class="headerlink" title="重启解决"></a>重启解决</h3></li>
-</ol>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815133543811.png" alt="image-20200815133543811"></p>
-<p>最终完成EFI目录，一个为KDE，一个为Gnome。</p>
-<p>编辑好Clover后，重启可顺利选择相应系统引导进入。</p>
-<p>进入到GUi栏，在Custom Entries里添加Entry</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134110441.png" alt="image-20200815134110441"></p>
-<p>卷目录写Clover所在盘UUID</p>
-<p>引导内核路径填前面复制好的内核路径</p>
-<p>引导参数填前边保存的root uuid</p>
-<p>其他的类型Linux，默认即可</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134326899.png" alt="image-20200815134326899"></p>
-<h3 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200817.png" alt="image-20200815133724833"></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134356505.png" alt="image-20200815134356505"></p>
-<ul>
-<li><p>为了更方便，又添加了rEfind引导</p>
-</li>
-<li><p>Clover +rEfind 同时运作</p>
-<p>Clover引导黑果和Win，在Clover内配置rEfind引导，当需要启动Linux时，通过rEfind来引导相应内核。</p>
-<p>同时也保留了kali自带的UEFI引导，也能方便引导其他Linux。</p>
-</li>
-</ul>
-<hr>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><a href="https://sourceforge.net/p/cloverefiboot/wiki/GUI/#scan-kernel" target="_blank" rel="noopener">Clover Wiki</a></p>
-<p><a href="https://www.youtube.com/watch?v=NhyE1EXnr_s" target="_blank" rel="noopener">Hide Unwanted Volumes</a></p>
-<p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi02bv9kpXrAhVUE4gKHTI5DwQQFjADegQIAxAB&url=https%3A%2F%2Fwww.tonymacx86.com%2Fattachments%2Fmanjaro-clover-pdf.239748%2F&usg=AOvVaw03stFWySo_f_j25o-CIyqE" target="_blank" rel="noopener">How to boot Manjaro from Clover on a Hackintosh</a></p>
-<p><a href="https://www.cnblogs.com/xingmuxin/p/8446115.html" target="_blank" rel="noopener">mount –bind</a></p>
-]]></content>
-      <categories>
-        <category>玩玩</category>
-        <category>黑苹果</category>
-      </categories>
-      <tags>
-        <tag>黑苹果</tag>
-        <tag>Clover</tag>
-        <tag>Manjaro</tag>
-        <tag>引导</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Calibre+rclone+google drive搭建个人书库记录</title>
     <url>/posts/811f.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -155,14 +53,13 @@
 </blockquote>
 </li>
 </ol>
-<h3 id="个人演示站"><a href="#个人演示站" class="headerlink" title="个人演示站"></a>个人演示站</h3><ul>
-<li>OD（暂不）</li>
-<li>GD<ul>
-<li><a href="https://pie.holyfuck.ml" target="_blank" rel="noopener">https://pie.holyfuck.ml</a></li>
-<li><a href="https://pie.keepfuture.live" target="_blank" rel="noopener">https://pie.keepfuture.live</a></li>
-</ul>
-</li>
-</ul>
+<!-- ### 个人演示站
+
+- OD（暂不）
+- GD
+  - https://pie.holyfuck.ml
+  - https://pie.keepfuture.live -->
+
 <h3 id="折腾开始"><a href="#折腾开始" class="headerlink" title="折腾开始"></a>折腾开始</h3><ul>
 <li>各种离线下载，转存机器人也都玩过了，就想玩玩新鲜的。</li>
 <li>于是想到了搭建个人书库，利用这些<code>强大的</code>存储作支持。</li>
@@ -362,26 +259,105 @@
 ]]></content>
   </entry>
   <entry>
-    <title>GitHub Archive Program,我的祖传代码</title>
-    <url>/posts/3334.html</url>
-    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
-<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
-<blockquote>
-<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
+    <title>Clover配置引导Linux内核</title>
+    <url>/posts/dc6b.html</url>
+    <content><![CDATA[<h2 id="Clover配置引导Linux内核"><a href="#Clover配置引导Linux内核" class="headerlink" title="Clover配置引导Linux内核"></a>Clover配置引导Linux内核</h2><blockquote>
+<p>整体过程：</p>
+<ol>
+<li>通过可以引导Linux的引导工具进入需要引导的系统</li>
+<li>拷贝该系统<code>/boot</code>下引导文件到Clover所在分区</li>
+<li>Linux<code>/boot</code>绑定到Clover分区</li>
+<li>Clover配置引导路径</li>
+</ol>
 </blockquote>
-<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
-<p>nice~</p>
-<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
+<ol>
+<li><h3 id="从U盘安装盘进入Live系统"><a href="#从U盘安装盘进入Live系统" class="headerlink" title="从U盘安装盘进入Live系统"></a>从U盘安装盘进入Live系统</h3></li>
+</ol>
+<ul>
+<li>在live系统内同时编辑两个Manjaro系统</li>
+<li>本机本身安装了两个Manjaro版本，一个gnome桌面系统，一个KDE。</li>
+<li>由于操作不当，失去了相应的引导文件，只能通过Kali的引导进入，或者通过rEfind。</li>
+<li>为两个Manjaro配置Clover引导，步骤类似。</li>
+</ul>
+<ol start="2">
+<li><h3 id="复制boot文件并绑定"><a href="#复制boot文件并绑定" class="headerlink" title="复制boot文件并绑定"></a>复制boot文件并绑定</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200348.png" alt="image-20200815122725202"></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir /esp</span><br><span class="line">sudo lsblk</span><br><span class="line">sudo umount /boot/efi</span><br><span class="line">sudo mount /dev/sdb1 /esp</span><br><span class="line">sudo mkdir /esp/EFI/Manjaro</span><br><span class="line">mkdir ~/Documents/Boot</span><br><span class="line">sudo sudo cp -r /boot ~/Documents/Boot</span><br><span class="line">sudo rm -rf /boot/*</span><br><span class="line">mount --bind /esp/EFI/Manjaro/ /boot</span><br><span class="line">sudo cp -r ~/Documents/Boot/* /boot/</span><br><span class="line">sudo nano /etc/fstab</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>命令含义</p>
+</blockquote>
+<ul>
+<li><p>创建esp挂载点</p>
+</li>
+<li><p>卸载本系统/boot/efi挂载点</p>
+</li>
+<li><p>查看本机所有设备，并把Clover分区的efi挂载到esp</p>
+</li>
+<li><p>在Clover分区创建Manjaro引导文件夹</p>
+</li>
+<li><p>备份</p>
+</li>
+<li><p>删除本系统/boot/efi下引导文件</p>
+</li>
+<li><p>把Clover分区efi挂载绑定到本系统/boot</p>
+</li>
+<li><p>重新拷贝刚才备份的引导到/boot/efi</p>
+</li>
+<li><p>编辑fstab，把挂载绑定的分区目录写入文件内</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815124027873.png" alt="image-20200815124027873"></p>
+<blockquote>
+<p>其中绑定的挂载点看实际情况</p>
+</blockquote>
+<p>注意保存相应UUID信息，为Clover引导中使用。</p>
+</li>
+</ul>
+<p>保存disk UUID和其他引导信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># &#x2F;etc&#x2F;fstab: static file system information. </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># Use &#39;blkid&#39; to print the universally unique identifier for a device; this may </span><br><span class="line"></span><br><span class="line"># be used with UUID&#x3D; as a more robust way to name devices that works even if </span><br><span class="line"></span><br><span class="line"># disks are added and removed. See fstab(5). </span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line"># &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt; </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">UUID&#x3D;17CC-0C7B                            &#x2F;esp      vfat    defaults,noatime 0 2 </span><br><span class="line"></span><br><span class="line">&#x2F;esp&#x2F;EFI&#x2F;Manjaro&#x2F;                         &#x2F;boot     none    defaults,bind 0 0 </span><br><span class="line"></span><br><span class="line">UUID&#x3D;2fefa979-02ca-49bc-a9f2-79ac16838e4a &#x2F;              ext4    defaults,noatime 0 1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fstab: static file system information.  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Use <span class="string">'blkid'</span> to <span class="built_in">print</span> the universally unique identifier <span class="keyword">for</span> a device; this may  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> be used with UUID= as a more robust way to name devices that works even <span class="keyword">if</span>  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> disks are added and removed. See fstab(5).  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &lt;file system&gt;             &lt;mount point&gt;  &lt;<span class="built_in">type</span>&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;  </span></span><br><span class="line"> </span><br><span class="line">UUID=44b45fb0-eaf8-4f32-8bfc-f58c18d041ff /              ext4    defaults,noatime 0 1  </span><br><span class="line">UUID=17CC-0C7B                            /esp     vfat    defaults,noatime 0 2  </span><br><span class="line">/esp/EFI/KDEManjaro/ /boot                         none   defaults,bind 0 0</span><br></pre></td></tr></table></figure>
+
+<p>两个系统都保存记录下来。</p>
+</li>
+<li><h3 id="进入mac用Clover编辑引导路径"><a href="#进入mac用Clover编辑引导路径" class="headerlink" title="进入mac用Clover编辑引导路径"></a>进入mac用Clover编辑引导路径</h3><p>可以手工编辑plist文件，也可以用Clover Configurator可视化编辑</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134017898.png" alt="image-20200815134017898"></p>
+</li>
+<li><h3 id="重启解决"><a href="#重启解决" class="headerlink" title="重启解决"></a>重启解决</h3></li>
+</ol>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815133543811.png" alt="image-20200815133543811"></p>
+<p>最终完成EFI目录，一个为KDE，一个为Gnome。</p>
+<p>编辑好Clover后，重启可顺利选择相应系统引导进入。</p>
+<p>进入到GUi栏，在Custom Entries里添加Entry</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134110441.png" alt="image-20200815134110441"></p>
+<p>卷目录写Clover所在盘UUID</p>
+<p>引导内核路径填前面复制好的内核路径</p>
+<p>引导参数填前边保存的root uuid</p>
+<p>其他的类型Linux，默认即可</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134326899.png" alt="image-20200815134326899"></p>
+<h3 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200820200817.png" alt="image-20200815133724833"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200815134356505.png" alt="image-20200815134356505"></p>
+<ul>
+<li><p>为了更方便，又添加了rEfind引导</p>
+</li>
+<li><p>Clover +rEfind 同时运作</p>
+<p>Clover引导黑果和Win，在Clover内配置rEfind引导，当需要启动Linux时，通过rEfind来引导相应内核。</p>
+<p>同时也保留了kali自带的UEFI引导，也能方便引导其他Linux。</p>
+</li>
+</ul>
 <hr>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><a href="https://sourceforge.net/p/cloverefiboot/wiki/GUI/#scan-kernel" target="_blank" rel="noopener">Clover Wiki</a></p>
+<p><a href="https://www.youtube.com/watch?v=NhyE1EXnr_s" target="_blank" rel="noopener">Hide Unwanted Volumes</a></p>
+<p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi02bv9kpXrAhVUE4gKHTI5DwQQFjADegQIAxAB&url=https%3A%2F%2Fwww.tonymacx86.com%2Fattachments%2Fmanjaro-clover-pdf.239748%2F&usg=AOvVaw03stFWySo_f_j25o-CIyqE" target="_blank" rel="noopener">How to boot Manjaro from Clover on a Hackintosh</a></p>
+<p><a href="https://www.cnblogs.com/xingmuxin/p/8446115.html" target="_blank" rel="noopener">mount –bind</a></p>
 ]]></content>
       <categories>
-        <category>日常杂记</category>
-        <category>随手记</category>
+        <category>玩玩</category>
+        <category>黑苹果</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
-        <tag>祖传代码</tag>
+        <tag>黑苹果</tag>
+        <tag>Clover</tag>
+        <tag>Manjaro</tag>
+        <tag>引导</tag>
       </tags>
   </entry>
   <entry>
@@ -415,155 +391,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Google在线深度学习神器colab把玩</title>
-    <url>/posts/30e6.html</url>
-    <content><![CDATA[<h2 id="Colaboratory入门玩"><a href="#Colaboratory入门玩" class="headerlink" title="Colaboratory入门玩"></a>Colaboratory入门玩</h2><div class="note success">
-            <p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">官网</a></p>
-          </div>
-
-<div class="note default">
-            <p><span style="color:green">打开官网，跟着指引来一遍</span></p>
-          </div>
-<ul>
-<li>基于Jupyter Notebook，托管于Google，使用起来大同小异，熟悉Jupyter的话，也是很方便的。</li>
-<li>代码和注释并存</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101129196.png" alt="image-20200810101129196"></li>
-<li>直接可视化显示</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101210851.png" alt="image-20200810101210851"></li>
-<li>其他很多特性，比如还能再cell处评论，很方便</li>
-<li>可以本地导入项目，也能Google Drive对接存储。</li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101415115.png" alt="image-20200810101415115"></p>
-<div class="note default">
-            <p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101513478.png" alt="image-20200810101513478"></p><span style="color:green"><p>配置不错，对于深度学习机器学习提供了很大帮助。</p><p>其他更多在<a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">官方教程</a><br></span></p>
-          </div>
-
-<h2 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h2><blockquote>
-<p>尽管来说，Jupyter很方便，但是对于某些不可描述操作，还是终端内好用。所以就想办法通过ssh连接到它后端。利用到了ngrok来内网穿透。</p>
-<p>脚本找了两个版本，用其中任意一个都可以。</p>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></p>
-<h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><p> Sign up for <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a></p>
+    <title>GitHub Archive Program,我的祖传代码</title>
+    <url>/posts/3334.html</url>
+    <content><![CDATA[<h2 id="GitHub-Archive-Program"><a href="#GitHub-Archive-Program" class="headerlink" title="GitHub Archive Program"></a>GitHub Archive Program</h2><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173124.png" alt="GitHub Archive Program"></p>
+<p>只要2020年2月2日以前贡献过的开源代码，现在都已经被埋在北极的冰雪之下，保存一千年。</p>
 <blockquote>
-<ul>
-<li><p>You don’t need to buy paid plans. If you don’t want to sign up for anything, there is <a href="https://serveo.net/" target="_blank" rel="noopener">Serveo</a> version in following link. But it is slower than <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> version.</p>
-<p><a href="https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb" target="_blank" rel="noopener">https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb</a></p>
-<p>注册ngrok，转到token页面，为后边准备。</p>
-<p><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></p>
-</li>
-</ul>
+<p><a href="https://archiveprogram.github.com/" target="_blank" rel="noopener">GitHub Archive Program</a></p>
 </blockquote>
-<h3 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h3><ol>
-<li><p>复制代码到Colab任意创建一个新cell中</p>
-<ul>
-<li><p>ssh only</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">import remocolab</span><br><span class="line">remocolab.setupSSHD()</span><br></pre></td></tr></table></figure></li>
-<li><p>ssh and vnc</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">   import remocolab</span><br><span class="line">   remocolab.setupVNC()</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>点左侧运行</p>
-<ul>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103313123.png" alt="image-20200810103313123"></li>
-</ul>
-</li>
-<li><p>把上边复制的authtoken粘到输入框</p>
-<ul>
-<li>等待上边代码部署到输入框时候，粘贴token，回车</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103458678.png" alt="image-20200810103458678"></li>
-<li>然后选区域，选最近差不多，我选新加坡<img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103619187.png" alt="image-20200810103619187"></li>
-</ul>
-</li>
-<li><p>愉快登录ssh</p>
-<ul>
-<li>等待部署完成后，会显示用户名和密码，以及ssh登录命令，有手就行。</li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103851755.png" alt="image-20200810103851755"></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></li>
-</ul>
-</li>
-</ol>
-<h3 id="Version-2"><a href="#Version-2" class="headerlink" title="Version 2"></a>Version 2</h3><p>步骤类似，粘贴脚本就行了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install useful stuff</span></span><br><span class="line">! apt install --yes ssh screen nano htop ranger git &gt; /dev/null</span><br><span class="line"><span class="comment"># SSH setting</span></span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"root:carbonara"</span> | chpasswd</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PasswordAuthentication yes"</span> &gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitUserEnvironment yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! service ssh restart &gt; /dev/null</span><br><span class="line"><span class="comment"># Download ngrok</span></span><br><span class="line">! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip</span><br><span class="line">! unzip -qq -n ngrok-stable-linux-amd64.zip</span><br><span class="line"><span class="comment"># Run ngrok</span></span><br><span class="line">authtoken = <span class="string">"PUT_YOUR_TOKEN_HERE"</span></span><br><span class="line">get_ipython().system_raw(<span class="string">'./ngrok authtoken $authtoken &amp;&amp; ./ngrok tcp 22 &amp;'</span>)</span><br><span class="line">! sleep 3</span><br><span class="line"><span class="comment"># Get the address for SSH</span></span><br><span class="line">import requests</span><br><span class="line">from re import sub</span><br><span class="line">r = requests.get(<span class="string">'http://localhost:4040/api/tunnels'</span>)</span><br><span class="line">str_ssh = r.json()[<span class="string">'tunnels'</span>][0][<span class="string">'public_url'</span>]</span><br><span class="line">str_ssh = sub(<span class="string">"tcp://"</span>, <span class="string">""</span>, str_ssh)</span><br><span class="line">str_ssh = sub(<span class="string">":"</span>, <span class="string">" -p "</span>, str_ssh)</span><br><span class="line">str_ssh = <span class="string">"ssh root@"</span> + str_ssh</span><br><span class="line"><span class="built_in">print</span>(str_ssh)</span><br></pre></td></tr></table></figure>
-
-<div class="note success">
-            <span style="color:green">只需要把上边`authtoken`换成自己的，运行！</span>
-          </div>
-
-<ul>
-<li>等待部署完成，ssh登录命令</li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104336106.png" alt="image-20200810104336106"></p>
-<blockquote>
-<p>默认密码为<code>carbonara</code></p>
-<p>及时更改密码</p>
-</blockquote>
-<h2 id="配置vscode"><a href="#配置vscode" class="headerlink" title="配置vscode"></a>配置vscode</h2><blockquote>
-<p>既然ssh连接了，各种服务也都能搭建了，这里搭建个vscode方便敲代码</p>
-</blockquote>
-<ol>
-<li>挂载Google Drive</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mount Google Drive and make some folders for vscode</span></span><br><span class="line">from google.colab import drive</span><br><span class="line">drive.mount(<span class="string">'/googledrive'</span>)</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive /</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server /root/.<span class="built_in">local</span>/share/</span><br></pre></td></tr></table></figure>
-
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104745488.png" alt="image-20200810104745488"></p>
-<p>点击链接验证授权</p>
-<ol start="2">
-<li>下载部署<code>code-server</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">! curl -fsSL https://code-server.dev/install.sh | sh &gt; /dev/null</span><br><span class="line">! code-server --<span class="built_in">bind</span>-addr 127.0.0.1:9999 --auth none &amp;</span><br></pre></td></tr></table></figure>
-
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104901196.png" alt="image-20200810104901196"></p>
-<ol start="3">
-<li>本地shell运行命令映射</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -L 9999:localhost:9999 root@0.tcp.ngrok.io -p 14407</span><br></pre></td></tr></table></figure>
-
-<p>其中9999端口为上边指定code-server端口，可以更换，但必须一致。</p>
-<p>后边14407端口为ssh端口</p>
-<ol start="4">
-<li>愉快敲代码</li>
-</ol>
-<ul>
-<li>打开<code>http://127.0.0.1:9999</code></li>
-<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105129368.png" alt="image-20200810105129368"></li>
-</ul>
-<h2 id="其他玩法"><a href="#其他玩法" class="headerlink" title="其他玩法"></a>其他玩法</h2><ul>
-<li>Aria2 离线下载</li>
-<li>Youtube-dl 转存</li>
-<li>Rclone</li>
-<li>gd-utils</li>
-<li>etc…</li>
-</ul>
-<blockquote>
-<p>更多自己探索发现</p>
-</blockquote>
-<h2 id="Related"><a href="#Related" class="headerlink" title="Related"></a>Related</h2><ul>
-<li><a href="https://internet-of-tomohiro.netlify.app/google_colab/ssh.en.html" target="_blank" rel="noopener">How to access Google Colaboratory using ssh</a></li>
-<li><a href="https://towardsdatascience.com/colab-free-gpu-ssh-visual-studio-code-server-36fe1d3c5243" target="_blank" rel="noopener">Colab on steroids: free GPU instances with SSH access and Visual Studio Code Server</a></li>
-<li><a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">Colab Intro</a></li>
-<li><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></li>
-<li><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></li>
-</ul>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810100453017.png" alt="image-20200810100453017"></p>
+<h2 id="个人勋章"><a href="#个人勋章" class="headerlink" title="个人勋章"></a>个人勋章</h2><p>GitHub还颁发了勋章</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200718173702.png" alt="勋章"></p>
+<p>nice~</p>
+<p>不论代码写的怎样,余下的BUG啥的留给1000年后的去探索吧~</p>
 <hr>
-<hr>
-<blockquote>
-<p>Colab方便，但不要滥用。</p>
-<p>免费版本一般12h，但更多取决于GPU使用度</p>
-<p>学习，学习，学习！</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105410318.png" alt="image-20200810105410318"></p>
-</blockquote>
 ]]></content>
       <categories>
-        <category>玩玩</category>
-        <category>资源</category>
+        <category>日常杂记</category>
+        <category>随手记</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Colaboratoty</tag>
-        <tag>机器学习</tag>
-        <tag>VScode</tag>
+        <tag>GitHub</tag>
+        <tag>祖传代码</tag>
       </tags>
   </entry>
   <entry>
@@ -630,7 +477,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] strArray = &#123;<span class="string">"hell"</span>,<span class="string">"world"</span>,<span class="string">"niubi"</span>&#125;;</span><br><span class="line">Stream&lt;String&gt; strStream = Stream.of(strArray);</span><br><span class="line">Stream&lt;String&gt; okStream = Stream.of(<span class="string">"jjj"</span>,<span class="string">"hahha"</span>,<span class="string">"iii"</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.holyfuck.ml/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
+<h3 id="笔记扩充"><a href="#笔记扩充" class="headerlink" title="笔记扩充"></a><a href="https://docs.crushing.xyz/java/sugar-and-skill/java-han-shu-shi-bian-cheng" target="_blank" rel="noopener">笔记扩充</a></h3>]]></content>
       <categories>
         <category>Godway</category>
         <category>Java</category>
@@ -1042,55 +889,155 @@
       </tags>
   </entry>
   <entry>
-    <title>Java开发工具之Maven</title>
-    <url>/posts/8113.html</url>
-    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
-<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
+    <title>Google在线深度学习神器colab把玩</title>
+    <url>/posts/30e6.html</url>
+    <content><![CDATA[<h2 id="Colaboratory入门玩"><a href="#Colaboratory入门玩" class="headerlink" title="Colaboratory入门玩"></a>Colaboratory入门玩</h2><div class="note success">
+            <p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">官网</a></p>
+          </div>
+
+<div class="note default">
+            <p><span style="color:green">打开官网，跟着指引来一遍</span></p>
+          </div>
+<ul>
+<li>基于Jupyter Notebook，托管于Google，使用起来大同小异，熟悉Jupyter的话，也是很方便的。</li>
+<li>代码和注释并存</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101129196.png" alt="image-20200810101129196"></li>
+<li>直接可视化显示</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101210851.png" alt="image-20200810101210851"></li>
+<li>其他很多特性，比如还能再cell处评论，很方便</li>
+<li>可以本地导入项目，也能Google Drive对接存储。</li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101415115.png" alt="image-20200810101415115"></p>
+<div class="note default">
+            <p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810101513478.png" alt="image-20200810101513478"></p><span style="color:green"><p>配置不错，对于深度学习机器学习提供了很大帮助。</p><p>其他更多在<a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">官方教程</a><br></span></p>
+          </div>
+
+<h2 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h2><blockquote>
+<p>尽管来说，Jupyter很方便，但是对于某些不可描述操作，还是终端内好用。所以就想办法通过ssh连接到它后端。利用到了ngrok来内网穿透。</p>
+<p>脚本找了两个版本，用其中任意一个都可以。</p>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></p>
+<h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><p> Sign up for <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a></p>
+<blockquote>
+<ul>
+<li><p>You don’t need to buy paid plans. If you don’t want to sign up for anything, there is <a href="https://serveo.net/" target="_blank" rel="noopener">Serveo</a> version in following link. But it is slower than <a href="https://ngrok.com/" target="_blank" rel="noopener">ngrok</a> version.</p>
+<p><a href="https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb" target="_blank" rel="noopener">https://github.com/demotomohiro/Google-Colaboratory-SSH-samples/blob/master/src/ssh_serveo.ipynb</a></p>
+<p>注册ngrok，转到token页面，为后边准备。</p>
+<p><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="Version-1"><a href="#Version-1" class="headerlink" title="Version 1"></a>Version 1</h3><ol>
+<li><p>复制代码到Colab任意创建一个新cell中</p>
+<ul>
+<li><p>ssh only</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">import remocolab</span><br><span class="line">remocolab.setupSSHD()</span><br></pre></td></tr></table></figure></li>
+<li><p>ssh and vnc</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">!pip install git+https://github.com/demotomohiro/remocolab.git</span><br><span class="line">   import remocolab</span><br><span class="line">   remocolab.setupVNC()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>点左侧运行</p>
+<ul>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103313123.png" alt="image-20200810103313123"></li>
+</ul>
+</li>
+<li><p>把上边复制的authtoken粘到输入框</p>
+<ul>
+<li>等待上边代码部署到输入框时候，粘贴token，回车</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103458678.png" alt="image-20200810103458678"></li>
+<li>然后选区域，选最近差不多，我选新加坡<img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103619187.png" alt="image-20200810103619187"></li>
+</ul>
+</li>
+<li><p>愉快登录ssh</p>
+<ul>
+<li>等待部署完成后，会显示用户名和密码，以及ssh登录命令，有手就行。</li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810103851755.png" alt="image-20200810103851755"></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810102213746.png" alt="image-20200810102213746"></li>
+</ul>
+</li>
+</ol>
+<h3 id="Version-2"><a href="#Version-2" class="headerlink" title="Version 2"></a>Version 2</h3><p>步骤类似，粘贴脚本就行了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install useful stuff</span></span><br><span class="line">! apt install --yes ssh screen nano htop ranger git &gt; /dev/null</span><br><span class="line"><span class="comment"># SSH setting</span></span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"root:carbonara"</span> | chpasswd</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PasswordAuthentication yes"</span> &gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitUserEnvironment yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! <span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line">! service ssh restart &gt; /dev/null</span><br><span class="line"><span class="comment"># Download ngrok</span></span><br><span class="line">! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip</span><br><span class="line">! unzip -qq -n ngrok-stable-linux-amd64.zip</span><br><span class="line"><span class="comment"># Run ngrok</span></span><br><span class="line">authtoken = <span class="string">"PUT_YOUR_TOKEN_HERE"</span></span><br><span class="line">get_ipython().system_raw(<span class="string">'./ngrok authtoken $authtoken &amp;&amp; ./ngrok tcp 22 &amp;'</span>)</span><br><span class="line">! sleep 3</span><br><span class="line"><span class="comment"># Get the address for SSH</span></span><br><span class="line">import requests</span><br><span class="line">from re import sub</span><br><span class="line">r = requests.get(<span class="string">'http://localhost:4040/api/tunnels'</span>)</span><br><span class="line">str_ssh = r.json()[<span class="string">'tunnels'</span>][0][<span class="string">'public_url'</span>]</span><br><span class="line">str_ssh = sub(<span class="string">"tcp://"</span>, <span class="string">""</span>, str_ssh)</span><br><span class="line">str_ssh = sub(<span class="string">":"</span>, <span class="string">" -p "</span>, str_ssh)</span><br><span class="line">str_ssh = <span class="string">"ssh root@"</span> + str_ssh</span><br><span class="line"><span class="built_in">print</span>(str_ssh)</span><br></pre></td></tr></table></figure>
+
+<div class="note success">
+            <span style="color:green">只需要把上边`authtoken`换成自己的，运行！</span>
+          </div>
+
+<ul>
+<li>等待部署完成，ssh登录命令</li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104336106.png" alt="image-20200810104336106"></p>
+<blockquote>
+<p>默认密码为<code>carbonara</code></p>
+<p>及时更改密码</p>
+</blockquote>
+<h2 id="配置vscode"><a href="#配置vscode" class="headerlink" title="配置vscode"></a>配置vscode</h2><blockquote>
+<p>既然ssh连接了，各种服务也都能搭建了，这里搭建个vscode方便敲代码</p>
+</blockquote>
+<ol>
+<li>挂载Google Drive</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mount Google Drive and make some folders for vscode</span></span><br><span class="line">from google.colab import drive</span><br><span class="line">drive.mount(<span class="string">'/googledrive'</span>)</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive</span><br><span class="line">! mkdir -p /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive /</span><br><span class="line">! ln -s /googledrive/My\ Drive/colabdrive/root/.<span class="built_in">local</span>/share/code-server /root/.<span class="built_in">local</span>/share/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104745488.png" alt="image-20200810104745488"></p>
+<p>点击链接验证授权</p>
+<ol start="2">
+<li>下载部署<code>code-server</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">! curl -fsSL https://code-server.dev/install.sh | sh &gt; /dev/null</span><br><span class="line">! code-server --<span class="built_in">bind</span>-addr 127.0.0.1:9999 --auth none &amp;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810104901196.png" alt="image-20200810104901196"></p>
+<ol start="3">
+<li>本地shell运行命令映射</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -L 9999:localhost:9999 root@0.tcp.ngrok.io -p 14407</span><br></pre></td></tr></table></figure>
+
+<p>其中9999端口为上边指定code-server端口，可以更换，但必须一致。</p>
+<p>后边14407端口为ssh端口</p>
+<ol start="4">
+<li>愉快敲代码</li>
+</ol>
+<ul>
+<li>打开<code>http://127.0.0.1:9999</code></li>
+<li><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105129368.png" alt="image-20200810105129368"></li>
+</ul>
+<h2 id="其他玩法"><a href="#其他玩法" class="headerlink" title="其他玩法"></a>其他玩法</h2><ul>
+<li>Aria2 离线下载</li>
+<li>Youtube-dl 转存</li>
+<li>Rclone</li>
+<li>gd-utils</li>
+<li>etc…</li>
+</ul>
+<blockquote>
+<p>更多自己探索发现</p>
+</blockquote>
+<h2 id="Related"><a href="#Related" class="headerlink" title="Related"></a>Related</h2><ul>
+<li><a href="https://internet-of-tomohiro.netlify.app/google_colab/ssh.en.html" target="_blank" rel="noopener">How to access Google Colaboratory using ssh</a></li>
+<li><a href="https://towardsdatascience.com/colab-free-gpu-ssh-visual-studio-code-server-36fe1d3c5243" target="_blank" rel="noopener">Colab on steroids: free GPU instances with SSH access and Visual Studio Code Server</a></li>
+<li><a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener">Colab Intro</a></li>
+<li><a href="https://dashboard.ngrok.com/auth/your-authtoken" target="_blank" rel="noopener">Get Your Auth Ngrok Token</a></li>
+<li><a href="https://www.google.com/" target="_blank" rel="noopener">Google</a></li>
+</ul>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810100453017.png" alt="image-20200810100453017"></p>
+<hr>
+<hr>
+<blockquote>
+<p>Colab方便，但不要滥用。</p>
+<p>免费版本一般12h，但更多取决于GPU使用度</p>
+<p>学习，学习，学习！</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://gitee.com/gentlemanhu/public-store/raw/master//images/image-20200810105410318.png" alt="image-20200810105410318"></p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>专题</category>
-        <category>工具</category>
+        <category>玩玩</category>
+        <category>资源</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java探索之集合</title>
-    <url>/posts/703e.html</url>
-    <content><![CDATA[<h2 id="Java集合相关问题"><a href="#Java集合相关问题" class="headerlink" title="Java集合相关问题"></a>Java集合相关问题</h2><h3 id="List，Set，Map区别"><a href="#List，Set，Map区别" class="headerlink" title="List，Set，Map区别"></a>List，Set，Map区别</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/java.png" alt=""></p>
-<p><a href="https://www.javatpoint.com/collections-in-java" target="_blank" rel="noopener">Collections框架延伸</a></p>
-<p><a href="https://www.javatpoint.com/java-map" target="_blank" rel="noopener">Map延伸</a></p>
-<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul>
-<li>List（顺序）：List接口存储一组不唯一（可以多个元素引用相同对象），有序的对象。</li>
-<li>Set（注重独一无二）：元素不可重复，不会多个元素引用相同对象。</li>
-<li>Map（Key来搜索）：键值对存储。Map会维护与Key有关联的值，两个Key可以引用相同的对象，Key不可重复。</li>
-</ul>
-<h3 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h3><ol>
-<li>是否保证线程安全：ArrayList 和LinkedList都是不同步的，线程不安全。</li>
-<li>底层数据结构：ArrayList底层用的Object数组；LinkedList底层使用双向链表数据结构（JDK1.6之前为循环链表，JDK1.7取消循环）<ol start="3">
-<li>插入和删除是否受元素位置影响：<ol>
-<li>ArrayList采用数组存储，所以插入和删除元素时间复杂度收到元素位置影响。add(E e)，会把元素追加到列表末尾，O(1);若在指定<code>i</code>处插入或删除，(add(int index,E element))，O(n-i)，因为在进行操作时候，集合中第i和第i个元素之后的（n-i）个元素都要执行向后/向前移一位的操作。</li>
-<li>LinkedList采用链表存储，碎玉add(E e)方法插入删除，时间复杂度都近似O(1)，如果要在指定位置i插入和删除元素，O(n)。</li>
-</ol>
-</li>
-<li></li>
-</ol>
-</li>
-</ol>
-<h3 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h3><h3 id="HashMap和Hashtable区别"><a href="#HashMap和Hashtable区别" class="headerlink" title="HashMap和Hashtable区别"></a>HashMap和Hashtable区别</h3><h3 id="HashMap和HashSet区别"><a href="#HashMap和HashSet区别" class="headerlink" title="HashMap和HashSet区别"></a>HashMap和HashSet区别</h3><h3 id="HashSet如何检查重复"><a href="#HashSet如何检查重复" class="headerlink" title="HashSet如何检查重复"></a>HashSet如何检查重复</h3><h3 id="HashMap底层实现原理"><a href="#HashMap底层实现原理" class="headerlink" title="HashMap底层实现原理"></a>HashMap底层实现原理</h3><h3 id="为何HashMap长度是2的幂次方"><a href="#为何HashMap长度是2的幂次方" class="headerlink" title="为何HashMap长度是2的幂次方"></a>为何HashMap长度是2的幂次方</h3><h3 id="HashMap多线程死循环问题"><a href="#HashMap多线程死循环问题" class="headerlink" title="HashMap多线程死循环问题"></a>HashMap多线程死循环问题</h3><h3 id="ConcurrentHashMap和HashTable的区别"><a href="#ConcurrentHashMap和HashTable的区别" class="headerlink" title="ConcurrentHashMap和HashTable的区别"></a>ConcurrentHashMap和HashTable的区别</h3><h3 id="ConcurrentHashMap线程安全的原理"><a href="#ConcurrentHashMap线程安全的原理" class="headerlink" title="ConcurrentHashMap线程安全的原理"></a>ConcurrentHashMap线程安全的原理</h3><h3 id="comparable和Compatator的区别"><a href="#comparable和Compatator的区别" class="headerlink" title="comparable和Compatator的区别"></a>comparable和Compatator的区别</h3><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4>]]></content>
-      <categories>
-        <category>Godway</category>
-        <category>Java</category>
-        <category>Basics</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Collections</tag>
-        <tag>Map</tag>
+        <tag>Python</tag>
+        <tag>Colaboratoty</tag>
+        <tag>机器学习</tag>
+        <tag>VScode</tag>
       </tags>
   </entry>
   <entry>
@@ -1143,9 +1090,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux命令之cut</title>
-    <url>/posts/d2e2.html</url>
-    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
+    <title>Java开发工具之Maven</title>
+    <url>/posts/8113.html</url>
+    <content><![CDATA[<h2 id="Java开发工具之Maven"><a href="#Java开发工具之Maven" class="headerlink" title="Java开发工具之Maven"></a>Java开发工具之Maven</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">www</a></p>
+<p><a href="https://gist.github.com/sparsick/aec73d514b1ef248d92d" target="_blank" rel="noopener">POMTemplate</a></p>
+]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>专题</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Maven</tag>
+      </tags>
   </entry>
   <entry>
     <title>Linux剑客之sed</title>
@@ -1169,7 +1128,8 @@
 <h3 id="2-2-命令行参数"><a href="#2-2-命令行参数" class="headerlink" title="2.2 命令行参数"></a>2.2 命令行参数</h3><h3 id="2-3-退出类型"><a href="#2-3-退出类型" class="headerlink" title="2.3 退出类型"></a>2.3 退出类型</h3><h2 id="3-sed脚本语言"><a href="#3-sed脚本语言" class="headerlink" title="3 sed脚本语言"></a>3 <code>sed</code>脚本语言</h2><h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><h3 id="3-2-命令汇总"><a href="#3-2-命令汇总" class="headerlink" title="3.2 命令汇总"></a>3.2 命令汇总</h3><h3 id="3-3-s-Command"><a href="#3-3-s-Command" class="headerlink" title="3.3 s Command"></a>3.3 <code>s</code> Command</h3><h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><h3 id="3-5-不常用命令"><a href="#3-5-不常用命令" class="headerlink" title="3.5 不常用命令"></a>3.5 不常用命令</h3><h3 id="3-6-sed针对大神的命令"><a href="#3-6-sed针对大神的命令" class="headerlink" title="3.6 sed针对大神的命令"></a>3.6 <code>sed</code>针对大神的命令</h3><h3 id="3-7-针对GUN版sed"><a href="#3-7-针对GUN版sed" class="headerlink" title="3.7 针对GUN版sed"></a>3.7 针对<code>GUN</code>版<code>sed</code></h3><h3 id="3-8-多命令情况与语法"><a href="#3-8-多命令情况与语法" class="headerlink" title="3.8 多命令情况与语法"></a>3.8 多命令情况与语法</h3><h4 id="3-8-1-多命令需要另起一行"><a href="#3-8-1-多命令需要另起一行" class="headerlink" title="3.8.1 多命令需要另起一行"></a>3.8.1 多命令需要另起一行</h4><h2 id="4-各种行操作"><a href="#4-各种行操作" class="headerlink" title="4 各种行操作"></a>4 各种行操作</h2><h3 id="4-1-Overview"><a href="#4-1-Overview" class="headerlink" title="4.1 Overview"></a>4.1 Overview</h3><h3 id="4-2-通过数字择取行"><a href="#4-2-通过数字择取行" class="headerlink" title="4.2 通过数字择取行"></a>4.2 通过数字择取行</h3><h3 id="4-3-通过匹配字符择取行"><a href="#4-3-通过匹配字符择取行" class="headerlink" title="4.3 通过匹配字符择取行"></a>4.3 通过匹配字符择取行</h3><h3 id="4-4-范围择取"><a href="#4-4-范围择取" class="headerlink" title="4.4 范围择取"></a>4.4 范围择取</h3><h2 id="5-sed正则操作"><a href="#5-sed正则操作" class="headerlink" title="5 sed正则操作"></a>5 <code>sed</code>正则操作</h2><h3 id="5-1-Overview"><a href="#5-1-Overview" class="headerlink" title="5.1 Overview"></a>5.1 Overview</h3><h3 id="5-2-Basic-BRE-正则和Extended-ERE-正则"><a href="#5-2-Basic-BRE-正则和Extended-ERE-正则" class="headerlink" title="5.2 Basic(BRE)正则和Extended(ERE)正则"></a>5.2 Basic(BRE)正则和Extended(ERE)正则</h3><h3 id="5-3-Basic正则语法"><a href="#5-3-Basic正则语法" class="headerlink" title="5.3 Basic正则语法"></a>5.3 Basic正则语法</h3><h3 id="5-4-Extended正则语法"><a href="#5-4-Extended正则语法" class="headerlink" title="5.4 Extended正则语法"></a>5.4 Extended正则语法</h3><h3 id="5-5-方括号用法"><a href="#5-5-方括号用法" class="headerlink" title="5.5 方括号用法"></a>5.5 方括号用法</h3><h3 id="5-6-正则扩展"><a href="#5-6-正则扩展" class="headerlink" title="5.6 正则扩展"></a>5.6 正则扩展</h3><h3 id="5-7-前引用与子表达"><a href="#5-7-前引用与子表达" class="headerlink" title="5.7 前引用与子表达"></a>5.7 前引用与子表达</h3><h3 id="5-8-针对特殊字符"><a href="#5-8-针对特殊字符" class="headerlink" title="5.8 针对特殊字符"></a>5.8 针对特殊字符</h3><h4 id="5-8-1-转义优先"><a href="#5-8-1-转义优先" class="headerlink" title="5.8.1 转义优先"></a>5.8.1 转义优先</h4><h3 id="5-9-多字节字符与Locale情况"><a href="#5-9-多字节字符与Locale情况" class="headerlink" title="5.9 多字节字符与Locale情况"></a>5.9 多字节字符与Locale情况</h3><h4 id="5-9-1-无效多字节字符"><a href="#5-9-1-无效多字节字符" class="headerlink" title="5.9.1 无效多字节字符"></a>5.9.1 无效多字节字符</h4><h4 id="5-9-2-大小写"><a href="#5-9-2-大小写" class="headerlink" title="5.9.2 大小写"></a>5.9.2 大小写</h4><h4 id="5-9-3-多字节正则类"><a href="#5-9-3-多字节正则类" class="headerlink" title="5.9.3 多字节正则类"></a>5.9.3 多字节正则类</h4><h2 id="6-sed高级用法-cycles和buffers"><a href="#6-sed高级用法-cycles和buffers" class="headerlink" title="6 sed高级用法:cycles和buffers"></a>6 <code>sed</code>高级用法:<code>cycles</code>和<code>buffers</code></h2><h2 id="7-一些脚本例子"><a href="#7-一些脚本例子" class="headerlink" title="7 一些脚本例子"></a>7 一些脚本例子</h2><h2 id="8-GUN版本sed的局限和优势"><a href="#8-GUN版本sed的局限和优势" class="headerlink" title="8 GUN版本sed的局限和优势"></a>8 <code>GUN</code>版本<code>sed</code>的局限和优势</h2><h2 id="9-其他学习资源"><a href="#9-其他学习资源" class="headerlink" title="9 其他学习资源"></a>9 其他学习资源</h2><h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p><a href="https://www.grymoire.com/Unix/Sed.html" target="_blank" rel="noopener">Tutorial</a></p>
 <p><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/" target="_blank" rel="noopener">WithExamples</a></p>
 <p><a href="https://www.gnu.org/software/sed/manual/sed.html" target="_blank" rel="noopener">Manual</a></p>
-<p><a href="https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083" target="_blank" rel="noopener">精通正则表达式 提取码：grep </a></p>
+<!-- [精通正则表达式 提取码：grep ](https://share.holyfuck.ml/share/folder/1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU?root=1zUw48Ug7Fgv7aR7ZXWyk04ZShep3cjbU&sig=95e3c349dc71c38c52130bc069ec7694748f27374aeeef407dc73404187d9083) -->
+
 <h2 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h2><blockquote>
 <p>本文为个人翻译学习，鉴于认知水平和能力有限，不当之处在所难免。希望确证准确。</p>
 </blockquote>
@@ -1183,9 +1143,49 @@
       </categories>
   </entry>
   <entry>
+    <title>Java探索之集合</title>
+    <url>/posts/703e.html</url>
+    <content><![CDATA[<h2 id="Java集合相关问题"><a href="#Java集合相关问题" class="headerlink" title="Java集合相关问题"></a>Java集合相关问题</h2><h3 id="List，Set，Map区别"><a href="#List，Set，Map区别" class="headerlink" title="List，Set，Map区别"></a>List，Set，Map区别</h3><p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/java.png" alt=""></p>
+<p><a href="https://www.javatpoint.com/collections-in-java" target="_blank" rel="noopener">Collections框架延伸</a></p>
+<p><a href="https://www.javatpoint.com/java-map" target="_blank" rel="noopener">Map延伸</a></p>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul>
+<li>List（顺序）：List接口存储一组不唯一（可以多个元素引用相同对象），有序的对象。</li>
+<li>Set（注重独一无二）：元素不可重复，不会多个元素引用相同对象。</li>
+<li>Map（Key来搜索）：键值对存储。Map会维护与Key有关联的值，两个Key可以引用相同的对象，Key不可重复。</li>
+</ul>
+<h3 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h3><ol>
+<li>是否保证线程安全：ArrayList 和LinkedList都是不同步的，线程不安全。</li>
+<li>底层数据结构：ArrayList底层用的Object数组；LinkedList底层使用双向链表数据结构（JDK1.6之前为循环链表，JDK1.7取消循环）<ol start="3">
+<li>插入和删除是否受元素位置影响：<ol>
+<li>ArrayList采用数组存储，所以插入和删除元素时间复杂度收到元素位置影响。add(E e)，会把元素追加到列表末尾，O(1);若在指定<code>i</code>处插入或删除，(add(int index,E element))，O(n-i)，因为在进行操作时候，集合中第i和第i个元素之后的（n-i）个元素都要执行向后/向前移一位的操作。</li>
+<li>LinkedList采用链表存储，碎玉add(E e)方法插入删除，时间复杂度都近似O(1)，如果要在指定位置i插入和删除元素，O(n)。</li>
+</ol>
+</li>
+<li></li>
+</ol>
+</li>
+</ol>
+<h3 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h3><h3 id="HashMap和Hashtable区别"><a href="#HashMap和Hashtable区别" class="headerlink" title="HashMap和Hashtable区别"></a>HashMap和Hashtable区别</h3><h3 id="HashMap和HashSet区别"><a href="#HashMap和HashSet区别" class="headerlink" title="HashMap和HashSet区别"></a>HashMap和HashSet区别</h3><h3 id="HashSet如何检查重复"><a href="#HashSet如何检查重复" class="headerlink" title="HashSet如何检查重复"></a>HashSet如何检查重复</h3><h3 id="HashMap底层实现原理"><a href="#HashMap底层实现原理" class="headerlink" title="HashMap底层实现原理"></a>HashMap底层实现原理</h3><h3 id="为何HashMap长度是2的幂次方"><a href="#为何HashMap长度是2的幂次方" class="headerlink" title="为何HashMap长度是2的幂次方"></a>为何HashMap长度是2的幂次方</h3><h3 id="HashMap多线程死循环问题"><a href="#HashMap多线程死循环问题" class="headerlink" title="HashMap多线程死循环问题"></a>HashMap多线程死循环问题</h3><h3 id="ConcurrentHashMap和HashTable的区别"><a href="#ConcurrentHashMap和HashTable的区别" class="headerlink" title="ConcurrentHashMap和HashTable的区别"></a>ConcurrentHashMap和HashTable的区别</h3><h3 id="ConcurrentHashMap线程安全的原理"><a href="#ConcurrentHashMap线程安全的原理" class="headerlink" title="ConcurrentHashMap线程安全的原理"></a>ConcurrentHashMap线程安全的原理</h3><h3 id="comparable和Compatator的区别"><a href="#comparable和Compatator的区别" class="headerlink" title="comparable和Compatator的区别"></a>comparable和Compatator的区别</h3><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4>]]></content>
+      <categories>
+        <category>Godway</category>
+        <category>Java</category>
+        <category>Basics</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Collections</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux命令之xargs</title>
     <url>/posts/db22.html</url>
     <content><![CDATA[<h2 id="Linux命令之xargs"><a href="#Linux命令之xargs" class="headerlink" title="Linux命令之xargs"></a>Linux命令之xargs</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Linux命令之cut</title>
+    <url>/posts/d2e2.html</url>
+    <content><![CDATA[<h2 id="Linux命令之cut"><a href="#Linux命令之cut" class="headerlink" title="Linux命令之cut"></a>Linux命令之cut</h2>]]></content>
   </entry>
   <entry>
     <title>Linux神器之asciinema</title>
@@ -1196,6 +1196,40 @@
 <li>to gif</li>
 </ul>
 <p><a href="https://github.com/asciinema/asciicast2gif" target="_blank" rel="noopener">https://github.com/asciinema/asciicast2gif</a></p>
+]]></content>
+      <categories>
+        <category>编程杂记</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux神器之tldr</title>
+    <url>/posts/a7c8.html</url>
+    <content><![CDATA[<h2 id="man命令和help命令"><a href="#man命令和help命令" class="headerlink" title="man命令和help命令"></a>man命令和help命令</h2><p>在使用linux过程中，帮助命令必不可少，是对于不熟练之手的神器。</p>
+<p>比如，tar命令，解压压缩都得加一堆参数，而用的少就记忆不深刻，那么<code>man tar</code>就哗哗出来一堆manual文档，虽然实时查找也不会费多少时间，但还是想更简洁明了些。</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/manual_tar.gif" alt=""></p>
+<p>尽管也能通过help命令获得帮助。或者加上<code>grep</code>过滤筛选也能快速查看，不过，得费点手，多敲几个命令。</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tarhelp.gif" alt=""></p>
+<p>然而，生命如此短暂，效率还得提升~</p>
+<p>有句话叫：TL;DR   Too Long；Don’t Read . 哎，生命短暂，不要浪费</p>
+<p>应运而生，<code>tldr</code>出来了</p>
+<h2 id="更好用的cheatsheet——tldr"><a href="#更好用的cheatsheet——tldr" class="headerlink" title="更好用的cheatsheet——tldr"></a>更好用的cheatsheet——tldr</h2><blockquote>
+<p> <a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a></p>
+</blockquote>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831172534.gif" alt=""></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tldr_tar.gif" alt=""></p>
+<p>太舒服了，常用命令参数信息，很清晰列出来了。</p>
+<p>相比manual，简直TLDR.</p>
+<h2 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h2><ul>
+<li><a href="https://github.com/tldr-pages/tldr#how-do-i-use-it" target="_blank" rel="noopener">文档写的非常清晰</a></li>
+</ul>
+<hr>
+<p>mac也有一款<a href="https://mediaatelier.com/CheatSheet/" target="_blank" rel="noopener">cheatsheet</a>，记忆好帮手，功能是显示各种快捷键的，也非常方便</p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831173454.png" alt=""></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/cheat.gif" alt=""></p>
+<p>忘记快捷键？没关系，长按<code>⌘</code>，软件各种快捷键都出来了。多个快捷键不好记，一个<code>⌘</code>不是有手就行么~</p>
+<hr>
+<p>熟能生巧，万物之理.</p>
 ]]></content>
       <categories>
         <category>编程杂记</category>
@@ -1299,40 +1333,6 @@
         <tag>SSH</tag>
         <tag>Termius</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Linux神器之tldr</title>
-    <url>/posts/a7c8.html</url>
-    <content><![CDATA[<h2 id="man命令和help命令"><a href="#man命令和help命令" class="headerlink" title="man命令和help命令"></a>man命令和help命令</h2><p>在使用linux过程中，帮助命令必不可少，是对于不熟练之手的神器。</p>
-<p>比如，tar命令，解压压缩都得加一堆参数，而用的少就记忆不深刻，那么<code>man tar</code>就哗哗出来一堆manual文档，虽然实时查找也不会费多少时间，但还是想更简洁明了些。</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/manual_tar.gif" alt=""></p>
-<p>尽管也能通过help命令获得帮助。或者加上<code>grep</code>过滤筛选也能快速查看，不过，得费点手，多敲几个命令。</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tarhelp.gif" alt=""></p>
-<p>然而，生命如此短暂，效率还得提升~</p>
-<p>有句话叫：TL;DR   Too Long；Don’t Read . 哎，生命短暂，不要浪费</p>
-<p>应运而生，<code>tldr</code>出来了</p>
-<h2 id="更好用的cheatsheet——tldr"><a href="#更好用的cheatsheet——tldr" class="headerlink" title="更好用的cheatsheet——tldr"></a>更好用的cheatsheet——tldr</h2><blockquote>
-<p> <a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a></p>
-</blockquote>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831172534.gif" alt=""></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/tldr_tar.gif" alt=""></p>
-<p>太舒服了，常用命令参数信息，很清晰列出来了。</p>
-<p>相比manual，简直TLDR.</p>
-<h2 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h2><ul>
-<li><a href="https://github.com/tldr-pages/tldr#how-do-i-use-it" target="_blank" rel="noopener">文档写的非常清晰</a></li>
-</ul>
-<hr>
-<p>mac也有一款<a href="https://mediaatelier.com/CheatSheet/" target="_blank" rel="noopener">cheatsheet</a>，记忆好帮手，功能是显示各种快捷键的，也非常方便</p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/20200831173454.png" alt=""></p>
-<p><img src= "https://cdn.jsdelivr.net/gh/GentlemanHu/GentlemanHu.github.io@0a07ead/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/gentlemanhu/public-store/images/cheat.gif" alt=""></p>
-<p>忘记快捷键？没关系，长按<code>⌘</code>，软件各种快捷键都出来了。多个快捷键不好记，一个<code>⌘</code>不是有手就行么~</p>
-<hr>
-<p>熟能生巧，万物之理.</p>
-]]></content>
-      <categories>
-        <category>编程杂记</category>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>Theia,可高度定制的IDE,兼容VSCode插件</title>
